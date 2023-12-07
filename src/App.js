@@ -1,11 +1,13 @@
 
 import './App.css';
+import HeaderComponent from './UI-Components/HeaderComponent';
 
 function App() {
   return (
-    <div className="App">
+    <>
+    <HeaderComponent/>
    
-    </div>
+    </>
   );
 }
 
