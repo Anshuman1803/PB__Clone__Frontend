@@ -15,7 +15,13 @@
   align-items: center;
   justify-content: space-between;
   padding-left: 3em;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  z-index: 400;
+  background-color: white;
 }
+
 
 .App__header_LogoContainer {
   width: 200px;
@@ -28,7 +34,6 @@
 }
 
 .App__navbar {
-  /* border: 2px solid blue; */
   width: calc(100% - 300px);
   height: 100%;
   display: flex;
@@ -39,7 +44,6 @@
 
 .App__navbar_ButtonsContainer {
   width: 100%;
-  /* border: 2px solid blue; */
   height: 60%;
   display: flex;
   align-items: flex-end;
@@ -73,7 +77,6 @@
 }
 
 .App__navbar__LinksContainer {
-  /* border: 2px solid red; */
   width: 100%;
   display: flex;
   align-items: center;
@@ -84,7 +87,6 @@
 }
 
 .App__navbar__ItemsContainer {
-  /* border: 2px solid black; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,14 +145,11 @@
 }
 
 .App__navbar__UserContainer {
-  /* border: 2px solid red; */
   height: 100%;
-
   width: fit-content;
 }
 
 .UserBox {
-  /* border: 2px solid blue; */
   height: 100%;
   display: flex;
   align-items: center;
@@ -184,15 +183,299 @@
   display: none;
 }
 
+.helpContainer__Message {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #03A6EC;
+  font-weight: 600;
+  font-size: 20px;
+  position: sticky;
+  bottom: 0;
+}
+
+/* Home Page CSS */
+.homeSection__Container {
+  width: 100%;
+  height: fit-content;
+}
+
+.homeSectionContainer__HeroContainer {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 500px 98px;
+  background-color: white;
+}
+
+.HeroContainer__LeftSection {
+  width: 100%;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4em;
+}
+
+.HeroLeftSection__FirstSentence {
+  width: 100%;
+  font-size: 3vw;
+  font-weight: 400;
+  color: #f78077;
+}
+
+.HeroLeftSection__SecondSentence {
+  font-size: 3vw;
+  width: 85%;
+  color: #3e4041;
+  font-weight: 600;
+}
+
+.HeroLeftSection__ThirdSentence {
+  margin: 20px 0px;
+  width: 100%;
+  color: #f78077;
+  font-weight: 500;
+  font-size: 1.6vw;
+}
+
+.knowMoreButton {
+  margin-top: 20px;
+  display: block;
+  background: #00a5ec;
+  border: none;
+  font-size: 18px;
+  width: 200px;
+  padding: 0.7em;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.knowMoreButton:hover {
+  cursor: pointer;
+  background: #09c;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .1607843137254902);
+}
+
+.HeroContainer__RightSection {
+  grid-column: 2/3;
+  width: 100%;
+  height: 100%;
+  grid-row: 1/2;
+}
+
+.RightSection_HeroPoster {
+  width: 100%;
+  height: 100%;
+}
+
+.HeroContainer__achievementContainer {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.achievementContainer_PosterContainer {
+  width: 130px;
+}
+
+.AchievementPoster {
+  width: 100%;
+  height: 100%;
+}
+
+.CodingJourney__Container {
+  /* border: 2px solid red; */
+  margin-top: 10px;
+  width: 100%;
+  height: fit-content;
+  background: #f8fafa;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.CodingJourneyContainer__LeftContainer {
+  /* border: 2px solid blue; */
+  width: 40%;
+  height: 100%;
+}
+
+.CodingJourneyContainer__RightContainer {
+  /* border: 2px solid blue; */
+  width: 60%;
+  height: 100%;
+}
 
 @media screen and (max-width: 1110px) {
-.App__navbar{
-  display: none;
+  .App__navbar {
+    display: none;
+  }
+
+  .header__hamMenuButton {
+    display: flex;
+    margin-right: 30px;
+    font-size: 25px;
+  }
+
+  .helpContainer__Message {
+    display: none;
+  }
+
 }
-.header__hamMenuButton{
-  display: flex;
-  margin-right: 30px;
-  font-size: 25px;
+
+@media screen and (max-width: 1024px) {
+
+  .HeroContainer__LeftSection {
+    padding: 1em 2em;
+  }
+
+  .HeroLeftSection__FirstSentence {
+    width: 100%;
+    font-size: 3.5vw;
+  }
+
+  .HeroLeftSection__SecondSentence {
+    width: 100%;
+    font-size: 3.5vw;
+  }
+
+  .HeroLeftSection__ThirdSentence {
+    width: 100%;
+    font-size: 2vw;
+  }
 }
-  
+
+@media screen and (max-width: 768px) {
+
+  .homeSectionContainer__HeroContainer {
+    grid-template-columns: 100%;
+    grid-template-rows: 600px 300px 98px;
+  }
+
+  .HeroContainer__LeftSection {
+    padding: 1em 2em;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-content: flex-start;
+  }
+
+  .HeroContainer__RightSection {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .HeroContainer__achievementContainer {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .HeroLeftSection__FirstSentence {
+    width: 100%;
+    font-size: 5vw;
+  }
+
+  .HeroLeftSection__SecondSentence {
+    width: 100%;
+    font-size: 4vw;
+  }
+
+  .HeroLeftSection__ThirdSentence {
+    width: 100%;
+    font-size: 3vw;
+  }
+
+  .knowMoreButton {
+    margin: 5px 0px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .App__header {
+    padding-left: 0.5em;
+  }
+
+  .App__header_LogoContainer {
+    width: 120px;
+  }
+
+  .homeSectionContainer__HeroContainer {
+    grid-template-columns: 100%;
+    grid-template-rows: 350px 250px 98px;
+  }
+
+  .HeroContainer__LeftSection {
+    padding: 1em;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-content: flex-start;
+  }
+
+  .HeroContainer__RightSection {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .RightSection_HeroPoster {
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .HeroContainer__achievementContainer {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .HeroLeftSection__FirstSentence {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .HeroLeftSection__SecondSentence {
+    width: 100%;
+    font-size: 4vw;
+  }
+
+  .HeroLeftSection__ThirdSentence {
+    width: 100%;
+    font-size: 3vw;
+  }
+
+}
+
+@media screen and (max-width: 425px) {
+
+  .homeSectionContainer__HeroContainer {
+    grid-template-columns: 100%;
+    grid-template-rows: 300px 230px 98px;
+  }
+
+  .HeroLeftSection__FirstSentence {
+    width: 100%;
+    font-size: 6vw;
+  }
+
+  .HeroLeftSection__SecondSentence {
+    width: 100%;
+    font-size: 5vw;
+  }
+
+  .HeroLeftSection__ThirdSentence {
+    width: 100%;
+    font-size: 4vw;
+  }
+
 }

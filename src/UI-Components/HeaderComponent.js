@@ -3,7 +3,7 @@ import Logo from "../Assets/logoPrepBytes.svg"
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 function HeaderComponent() {
-    const { isLoggedIN, User } = useSelector((state) => state.AppUser.UserDetails)
+    const { isLoggedIN} = useSelector((state) => state.AppUser.UserDetails)
     return (
         <header className='App__header'>
             <div className="App__header_LogoContainer">
