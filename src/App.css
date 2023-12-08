@@ -645,156 +645,6 @@
 
 /* Founder Know details */
 
-.FounderKnow__MainContainer {
-  position: relative;
-  background: #fdf0d7;
-  width: 100%;
-  min-height: 120vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.FounderKnow__PosterContainer {
-  width: 40%;
-  height: 100%;
-  display: flex;
-  padding: 2em 0em;
-}
-
-.FounderPosterBox {
-  width: 500px;
-  height: 600px;
-  margin: auto;
-  background: #fff;
-  box-shadow: 0 3px 32px rgba(0, 0, 0, .1607843137254902);
-  padding: 15px;
-  text-align: center;
-  position: relative;
-  border-radius: 4px;
-}
-
-.poster {
-  background-image: url("./Assets/FoundPosterBG.svg");
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-}
-
-.founderName {
-  color: #f78077;
-  font-size: 28px;
-  font-weight: 600;
-  margin-top: 14px;
-}
-
-.postName {
-  color: #858585;
-  font-size: 18px;
-}
-
-.PrevCompanyLogo {
-  margin-top: 20px;
-}
-
-.FounderKnow__DetailsContainer {
-  width: 40%;
-  min-height: 650px;
-
-  padding-top: 2em;
-  font-weight: 500;
-}
-
-.FounderDetailsContainer__Heading {
-  width: 100%;
-  color: #f78077;
-  font-weight: 600;
-  font-size: 2.5vw;
-}
-
-.hrLINE {
-  margin-top: 30px;
-  border-color: #b6b6b6;
-  border-width: 1px;
-}
-
-.FounderDetailsContainer__TextSecond {
-  width: 100%;
-  color: #858585;
-  font-size: 2.4vw;
-  font-weight: 400;
-  margin: 30px 0px;
-}
-
-.FounderDetailsContainer__TextSecond2 {
-  margin-top: 10px;
-  font-size: 2vw;
-}
-
-.FounderBottom__CardContainer {
-  position: absolute;
-  width: 100%;
-  height: fit-content;
-  bottom: -37%;
-  transform: translateY(-50%);
-  z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(4, 220px);
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
-
-.FounderBottom__Card {
-  background: #fff;
-  box-shadow: 0 3px 32px rgba(12, 71, 128, .10196078431372549);
-  flex: 0 0 14em;
-  border-radius: 8px;
-  width: 100%;
-  height: 280px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 1em 2em;
-}
-
-.cardNumbers {
-  text-align: center;
-  color: #424242;
-  font-size: 35px;
-  margin-top: 20px;
-  font-weight: 600;
-  width: 100%;
-
-}
-
-.cardBottom_title {
-  width: 80%;
-  text-align: center;
-  color: #858585;
-  font-size: 16px;
-}
-
-.ExpersContainer {
-  background: #bcf2fb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 20em;
-}
-
-.Experts_Poster {
-  width: 90%;
-  object-fit: cover;
-}
-
-.ExpertsPosterMobile {
-  display: none;
-}
-
 /* All screen sizes */
 
 @media screen and (max-width: 1110px) {
@@ -824,21 +674,6 @@
     justify-content: flex-start;
   }
 
-  .FounderDetailsContainer__Heading {
-    font-size: 3vw;
-  }
-
-
-  .FounderDetailsContainer__TextSecond {
-    font-size: 2.9vw;
-  }
-
-  .FounderDetailsContainer__TextSecond2 {
-    font-size: 2.5vw;
-  }
-  .FounderKnow__MainContainer {
-    gap: 20px;
-  }
 }
 
 @media screen and (max-width: 1025px) {
@@ -932,26 +767,6 @@
   .LeftContainer__KnowMoreButton {
     margin-left: 18%;
   }
-
-  .FounderKnow__PosterContainer,
-  .FounderKnow__DetailsContainer {
-    width: 45%;
-  }
-
-  .DetailsContainer_knowMoreButton {
-    margin: 0;
-  }
-
-  .FounderKnow__MainContainer {
-    min-height: 150vh;
-    align-items: flex-start;
-  }
-
-  .FounderBottom__CardContainer {
-    grid-template-columns: repeat(2, 220px);
-    justify-content: space-evenly;
-    bottom: -60%;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1019,47 +834,6 @@
   .LeftContainer__KnowMoreButton {
     margin-left: 10%;
   }
-
-  .FounderKnow__MainContainer {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 215vh;
-  }
-
-
-  .FounderBottom__CardContainer {
-    grid-template-columns: repeat(2, 220px);
-    justify-content: space-evenly;
-    bottom: -50%;
-  }
-
-  .FounderKnow__PosterContainer,
-  .FounderKnow__DetailsContainer {
-    width: 90%;
-  }
-
-  .FounderPosterBox {
-    width: 100%;
-  }
-
-  .FounderKnow__DetailsContainer {
-    text-align: center;
-  }
-
-  .DetailsContainer_knowMoreButton {
-    margin: auto;
-  }
-
-  .FounderDetailsContainer__Heading,
-  .FounderDetailsContainer__TextSecond,
-  .FounderDetailsContainer__TextSecond2 {
-    font-size: 4vw;
-  }
-.ExpersContainer{
-  min-height: 170vh;
-}
-
 }
 
 @media screen and (max-width: 650px) {
@@ -1127,17 +901,6 @@
     padding: 0em;
 
   }
-
-  .FounderBottom__CardContainer {
-    bottom: -35%;
-    grid-template-columns: repeat(2, 40%);
-    justify-content: center;
-  }
-
-  .DetailsContainer_knowMoreButton {
-    margin: auto;
-  }
-
 }
 
 @media screen and (max-width: 585px) {
@@ -1162,9 +925,6 @@
   .CodingJourney__finalGoalImage {
     width: 200px;
     width: 100%;
-  }
-   .FounderKnow__MainContainer {
-    min-height: 130vh;
   }
 }
 
@@ -1242,49 +1002,6 @@
     font-size: 700;
     color: #3e4041;
   }
-
-  .FounderKnow__MainContainer {
-    min-height: 210vh;
-  }
-
-  .FounderBottom__CardContainer {
-    bottom: -33%;
-  }
-
-  .FounderBottom__Card {
-    height: 200px;
-    padding: 0.5em;
-  }
-
-  .FounderBottom__Card img {
-    width: 70%;
-    height: 100px;
-  }
-
-  .cardNumbers {
-    font-size: 3vw;
-
-  }
-
-
-  .Experts_Poster {
-    display: none;
-  }
-
-  .ExpertsPosterMobile {
-    display: block;
-    width: 100%;
-  }
-
-  .ExpersContainer {
-    padding-top: 18em;
-  }
-
-  .FounderDetailsContainer__Heading,
-  .FounderDetailsContainer__TextSecond,
-  .FounderDetailsContainer__TextSecond2 {
-    font-size: 5vw;
-  }
 }
 
 
@@ -1334,7 +1051,6 @@
   .CarrerPlanBox {
     padding-right: 0.5em;
   }
-  .FounderDetailsContainer__Heading,
   .FounderDetailsContainer__TextSecond,
   .FounderDetailsContainer__TextSecond2 {
     font-size: 6vw;
