@@ -14,7 +14,13 @@ import FourIcon from './Assets/Journey__Four.svg'
 import ComptativePoster from './Assets/master_competetive_pgm.webp'
 import FullStackPoster from './Assets/Full_Stack.webp'
 import ProjectPoster from './Assets/Project_Poster.webp'
-import {Link} from 'react-router-dom'
+import CarrerFirstIMg from './Assets/CarrerImgOne.svg'
+import CarrerSecondIMg from './Assets/CarrerImgTwo.svg'
+import CarrerThirdIMg from './Assets/CarrerImgThree.svg'
+import CurriculumICON from './Assets/industry_vetted_curriculum.svg'
+import PlacementICON from './Assets/exclusive_placement.svg'
+import ProjectICON from './Assets/real_life_projects.svg'
+import { Link } from 'react-router-dom'
 function HomePage() {
     return (
         <section className='homeSection__Container'>
@@ -111,22 +117,55 @@ function HomePage() {
                     <Link className="CourseType__Card">
                         <img src={FullStackPoster} alt="Poster" className='CourseType_CardPoster' />
                         <p className="CourstType__CardText">PREPARE FOR CAMPUS PLACEMENTS</p>
-                   <p className="CourseType__CardArrowButton"><i className="fa-solid fa-arrow-right arrowICON"></i></p>
+                        <p className="CourseType__CardArrowButton"><i className="fa-solid fa-arrow-right arrowICON"></i></p>
                     </Link>
 
                     <Link className="CourseType__Card">
-                    <img src={ComptativePoster} alt="Poster" className='CourseType_CardPoster' />
+                        <img src={ComptativePoster} alt="Poster" className='CourseType_CardPoster' />
                         <p className="CourstType__CardText">MASTER COMPETITIVE PROGRAMMING</p>
                         <p className="CourseType__CardArrowButton"><i className="fa-solid fa-arrow-right arrowICON"></i></p>
                     </Link>
 
                     <Link className="CourseType__Card">
-                    <img src={ProjectPoster} alt="Poster" className='CourseType_CardPoster' />
+                        <img src={ProjectPoster} alt="Poster" className='CourseType_CardPoster' />
                         <p className="CourstType__CardText">BUILD DEVELOPMENT PROJECTS</p>
                         <p className="CourseType__CardArrowButton"><i className="fa-solid fa-arrow-right arrowICON"></i></p>
                     </Link>
 
                 </div>
+            </div>
+
+            <div className="SwitchCarrer__MainContainer">
+                <div className="SwitchCarrer__LeftContainer">
+
+                    <h3 className='LeftContainer__headingText'>Are you an Experienced Professional willing to Switch?</h3>
+
+                    <div className="CarrerPlanBox">
+                        <img src={CurriculumICON} alt="CarrterPlanICON" className='CarrerPlanICON' />
+                        <p className='CarrerPlanBox_Text'> INDUSTRY VETTED CURRICULUM STRUCTURED FOR YOU</p>
+                    </div>
+
+                    <div className="CarrerPlanBox">
+                        <img src={PlacementICON} alt="CarrterPlanICON" className='CarrerPlanICON' />
+                        <p className='CarrerPlanBox_Text'> REAL LIFE PROJECTS BUILT ON DEMAND TECH STACK</p>
+                    </div>
+
+                    <div className="CarrerPlanBox">
+                        <img src={ProjectICON} alt="CarrterPlanICON" className='CarrerPlanICON' />
+                        <p className='CarrerPlanBox_Text'> EXCLUSIVE PLACEMENT SUPPORT TEAM WITH JOB GURANTEE</p>
+                    </div>
+                    <p className="courseName">PrepBytes Elevation Academy - <span className='courseName_Text'> 4 months Full Stack Program with Job Guarantee</span></p>
+
+                    <button className='knowMoreButton LeftContainer__KnowMoreButton'>Know More</button>
+                </div>
+
+                <div className="SwitchCarrer__RightContainer">
+                    <img src={CarrerFirstIMg} alt="Poster" className='SwtichCarrerPoster CarrerFirstIMg' />
+                    <img src={CarrerSecondIMg} alt="Poster" className='SwtichCarrerPoster CarrerSecondIMg' />
+                    <img src={CarrerThirdIMg} alt="Poster" className='SwtichCarrerPoster CarrerThirdIMg' />
+                </div>
+                <h3 className='LeftContainer__headingText headingFirst'>Are you an Experienced Professional willing to Switch?</h3>
+
             </div>
 
         </section>

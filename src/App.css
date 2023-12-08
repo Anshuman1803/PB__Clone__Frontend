@@ -540,6 +540,105 @@
   box-shadow: 0 14px 28px rgb(0 0 0/25%), 0 10px 10px rgb(0 0 0/22%);
 }
 
+/* Swtich Carrer Container */
+.SwitchCarrer__MainContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 2em 1em;
+
+}
+
+.SwitchCarrer__LeftContainer {
+  width: 40%;
+  height: 100%;
+}
+
+.LeftContainer__headingText {
+  font-size: 2.5vw;
+  font-weight: 500;
+  width: 90%;
+  color: #424242;
+}
+
+.headingFirst {
+  display: none;
+}
+
+.CarrerPlanBox {
+  position: relative;
+  border-radius: 5px;
+  width: 500px;
+  margin-top: 20px;
+  background: #fff;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, .10196078431372549);
+  display: flex;
+  align-items: center;
+  padding: 1.5em 0em 1.5em 5em;
+}
+
+.CarrerPlanICON {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 78px;
+}
+
+.CarrerPlanBox_Text {
+  width: 70%;
+  font-size: 1vw;
+  color: #707070;
+  font-weight: 300;
+}
+
+.courseName {
+  margin-top: 20px;
+  width: 500px;
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+.courseName_Text {
+  color: #707070;
+  font-weight: 400;
+}
+
+.LeftContainer__KnowMoreButton:hover {
+  background-color: #00a5ec;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .1607843137254902);
+}
+
+.SwitchCarrer__RightContainer {
+  width: 40%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center;
+  justify-content: center;
+}
+
+.SwtichCarrerPoster {
+  width: 100%;
+  height: 100%;
+}
+
+.CarrerFirstIMg {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+.CarrerSecondIMg {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.CarrerThirdIMg {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
 /* All screen sizes */
 
 @media screen and (max-width: 1110px) {
@@ -617,6 +716,50 @@
   .StepContainer__arrowImages {
     width: 200px;
   }
+
+  .SwitchCarrer__MainContainer {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  .SwitchCarrer__LeftContainer {
+    width: 80%;
+  }
+
+  .LeftContainer__headingText {
+    display: none;
+  }
+
+  .SwitchCarrer__RightContainer {
+    width: 90%;
+  }
+
+  .headingFirst {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #3e4041;
+  }
+
+  .CarrerPlanBox {
+    margin: 20px auto;
+  }
+
+  .CarrerPlanBox_Text,
+  .courseName {
+    font-size: 18px;
+  }
+
+  .courseName {
+    margin: 20px auto;
+  }
+
+  .LeftContainer__KnowMoreButton {
+    margin-left: 18%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -671,6 +814,19 @@
     right: -25px;
     transform: none;
   }
+
+  .LeftContainer__KnowMoreButton {
+    margin-left: 5%;
+  }
+
+  .SwitchCarrer__LeftContainer,
+  .SwitchCarrer__RightContainer {
+    width: 80%;
+  }
+
+  .LeftContainer__KnowMoreButton {
+    margin-left: 10%;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -724,6 +880,21 @@
     font-size: 3vw;
   }
 
+  .CarrerPlanBox,
+  .courseName {
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  .LeftContainer__KnowMoreButton {
+    margin-left: 0%;
+  }
+
+  .SwitchCarrer__MainContainer {
+    padding: 0em;
+
+  }
+
 }
 
 @media screen and (max-width: 585px) {
@@ -749,6 +920,10 @@
     width: 200px;
     width: 100%;
   }
+
+  /* .SwitchCarrer__LeftContainer{
+    width: 80%;
+  } */
 }
 
 @media screen and (max-width: 426px) {
@@ -806,6 +981,25 @@
     right: 55%;
   }
 
+  .CarrerPlanICON {
+    top: 0;
+    width: 60px;
+    height: 66px;
+    left: -25px;
+  }
+
+  .CarrerPlanBox_Text {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .headingFirst {
+    text-align: left;
+    font-size: 26px;
+    padding-left: 0.5em;
+    font-size: 700;
+    color: #3e4041;
+  }
 }
 
 
@@ -827,11 +1021,29 @@
   .StepContainer__SecondArrowImages {
     right: 60vw;
   }
-  .CourseType__CardArrowButton{
+
+  .CourseType__CardArrowButton {
     width: 40px;
     height: 40px;
   }
+
   .CourseType__CardContainer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+  }
+
+  .CarrerPlanICON {
+    top: 0;
+    width: 60px;
+    height: 66px;
+    left: -25px;
+  }
+
+  .CarrerPlanBox_Text {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .CarrerPlanBox {
+    padding-right: 0.5em;
   }
 }
