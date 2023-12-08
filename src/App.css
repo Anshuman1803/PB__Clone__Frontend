@@ -296,28 +296,159 @@
 }
 
 .CodingJourney__Container {
-  /* border: 2px solid red; */
+  background: #f8fafa;
   margin-top: 10px;
   width: 100%;
   height: fit-content;
-  background: #f8fafa;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px
+}
+
+.CodingJourneyContainer__LeftContainer {
+  width: 45%;
+  height: 100%;
+  background: #f8fafa;
+}
+
+.CodingJourneyContainer__RightContainer {
+  background: #f8fafa;
+  width: 55%;
+  height: 100%;
+  padding-top: 3em;
+}
+
+.CodingJourneyContainer__LeftContainer img {
+  width: 100%;
+}
+
+.CodingJourneyRightContainer__heading {
+  color: #424242;
+  font-size: 2vw;
+  width: 80%;
+  font-weight: 600;
+}
+
+.CodingJourney__StepContainer {
+  width: 90%;
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 
 }
 
-.CodingJourneyContainer__LeftContainer {
-  /* border: 2px solid blue; */
-  width: 40%;
-  height: 100%;
+.StepContainer__First {
+  align-items: flex-start;
 }
 
-.CodingJourneyContainer__RightContainer {
-  /* border: 2px solid blue; */
-  width: 60%;
-  height: 100%;
+.StepContainer__Second {
+  align-items: end;
+}
+
+.StepContainer__Third {
+  align-items: flex-start;
+}
+
+.StepContainer__Fourth {
+  align-items: end;
+}
+
+.StepContainer__Box {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0em 1.5em 0em 3em;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, .10196078431372549);
+  border-radius: 5px;
+}
+
+.StepContainer_ICON {
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  transform: translate(0%, -50%);
+}
+
+.SetpContainer_Box_Text {
+  font-size: 18px;
+}
+
+.StepContainer__heading {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 20px;
+  width: 300px;
+}
+
+.StepContainer__FirstBox {
+  border: 1px dashed rgb(247, 128, 119);
+  color: rgb(247, 128, 119);
+  background: rgb(253, 240, 215);
+}
+
+.StepContainer__headingFirst {
+  color: rgb(247, 128, 119);
+
+}
+
+.StepContainer__SecondBox {
+  color: rgb(253, 205, 6);
+  background: rgb(255, 249, 228);
+  border: 1px dashed rgb(253, 205, 6);
+}
+
+.StepContainer__headingSecond {
+  color: rgb(253, 205, 6);
+}
+
+.StepContainer__ThirdBox {
+  color: rgb(15, 181, 130);
+  background: rgb(228, 246, 241);
+  border: 1px dashed rgb(15, 181, 130);
+}
+
+.StepContainer__headingThird {
+  color: rgb(15, 181, 130);
+}
+
+.StepContainer__FourthBox {
+  color: rgb(240, 119, 149);
+  background: rgb(255, 231, 237);
+  border: 1px dashed rgb(240, 119, 149);
+}
+
+.StepContainer__headingFourth {
+  color: rgb(240, 119, 149);
+}
+
+.StepContainer__arrowImages {
+  position: absolute;
+  width: 180px;
+  top: 5em;
+}
+
+.StepContainer__firstArrowImages {
+  left: 45%;
+}
+
+.StepContainer__SecondArrowImages {
+  right: 45%;
+  transform: scaleX(-1);
+}
+
+.CodingJourney__FinalGoalContainer {
+  width: 90%;
+}
+
+.CodingJourney__finalGoalImage {
+  width: 320px;
 }
 
 @media screen and (max-width: 1110px) {
@@ -335,9 +466,20 @@
     display: none;
   }
 
+  .StepContainer__firstArrowImages {
+    left: 60%
+  }
+
+  .StepContainer__SecondArrowImages {
+    right: 60%;
+  }
+
+  .CodingJourney__FinalGoalContainer {
+    justify-content: flex-start;
+  }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
 
   .HeroContainer__LeftSection {
     padding: 1em 2em;
@@ -356,6 +498,32 @@
   .HeroLeftSection__ThirdSentence {
     width: 100%;
     font-size: 2vw;
+  }
+
+  .CodingJourney__Container {
+    background-image: url("./Assets/StudentIMG.svg");
+    background-position: top;
+    background-size: 500px;
+    background-repeat: no-repeat;
+    justify-content: center;
+  }
+
+  .CodingJourneyContainer__LeftContainer {
+    display: none;
+  }
+
+  .CodingJourneyContainer__RightContainer {
+    width: 90%;
+    background: #f8fafabb;
+  }
+
+  .CodingJourneyRightContainer__heading {
+    width: 100%;
+    font-size: 2.5vw;
+    text-align: center;
+  }
+  .StepContainer__arrowImages {
+    width: 200px;
   }
 }
 
@@ -400,6 +568,10 @@
 
   .knowMoreButton {
     margin: 5px 0px;
+  }
+
+  .CodingJourney__StepContainer {
+    width: 100%;
   }
 }
 
@@ -456,7 +628,31 @@
 
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 585px) {
+  .StepContainer__Box {
+    position: relative;
+    width: 275px;
+  }
+
+  .StepContainer__arrowImages {
+    width: 120px;
+    top: 8em;
+  }
+
+  .StepContainer__firstArrowImages {
+    left: 65%;
+  }
+
+  .StepContainer__SecondArrowImages {
+    right: 65%;
+  }
+  .CodingJourney__finalGoalImage {
+    width: 200px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 426px) {
 
   .homeSectionContainer__HeroContainer {
     grid-template-columns: 100%;
@@ -478,4 +674,53 @@
     font-size: 4vw;
   }
 
+  .CodingJourneyContainer__RightContainer {
+      padding-left: 2em;
+      padding-right: 1em;
+    width: 100%;
+  }
+
+  .StepContainer__arrowImages {
+    width: 90px;
+    top: 8em;
+  }
+
+  .StepContainer__Box {
+    position: relative;
+    width: 180px;
+  }
+  .SetpContainer_Box_Text{
+    font-size: 14px;
+  }
+  .StepContainer__heading{
+    font-size: 16px;
+    width: 180px;
+  }
+  .StepContainer__firstArrowImages {
+    left: 55%;
+  }
+
+  .StepContainer__SecondArrowImages {
+    right: 55%;
+  }
+
+}
+
+
+@media screen and (max-width: 376px) {
+  .CodingJourneyContainer__RightContainer{
+    padding-left: 2em;
+    padding-right: 0;
+  }
+  .StepContainer__arrowImages {
+    width: 70px;
+    top: 10em;
+  }
+  .StepContainer__firstArrowImages {
+    left:60vw;
+  }
+
+  .StepContainer__SecondArrowImages {
+    right:60vw;
+  }
 }
