@@ -92,6 +92,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  text-decoration: none;
 }
 
 .navbar__ItemsContainer__Item {
@@ -643,7 +644,223 @@
   grid-row: 2/3;
 }
 
-/* Founder Know details */
+/* User Form Contaienr & LOGIN AND REGISTER */
+.UserForm__MainContainer {
+  background-image: url("https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/blue-background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.UserFormContainer__LeftContainer {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.illustratedIMG {
+  width: calc(100% - 250px);
+}
+
+.UserForm__Achievements {
+  width: 215px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  height: fit-content;
+  position: relative;
+  padding: 2.5em 0em 0.5em 0em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+}
+
+.UserForm_pbLOGO {
+  width: 70px;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translate(-60%);
+}
+
+.UserForm__AchievementBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.UserForm__AchievementICON {
+  width: 50px;
+}
+
+.userForm_AchievementText {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: calc(100% - 50px);
+  text-align: left;
+  padding: 0.5em;
+  font-size: 14px;
+  color: #423c3c;
+  font-weight: 400;
+}
+
+.AchievementCount {
+  font-weight: 600;
+  font-size: 18px;
+  color: #423c3c;
+
+}
+
+
+.UserFormContainer__FormContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FormContainer_Box {
+  width: 80%;
+  min-height: fit-content;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137254902);
+  border-radius: 10px;
+  background-color: #fffffe;
+  padding: 0em 2em;
+}
+
+.FormContainer__Heading {
+  width: 100%;
+  height: 80px;
+  border-bottom: 0.5px solid #4a8ce5;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.heading__navITEM {
+  text-decoration: none;
+  font-size: 20px;
+  height: 40px;
+  width: 40%;
+  text-align: center;
+  font-weight: 300;
+
+}
+
+.heading__navITEM.active {
+  border-bottom: 2px solid #4b8ce8;
+  color: #4b8ce8;
+  font-weight: 600;
+}
+
+.userLogin__FORM {
+  width: 100%;
+  height: 420px;
+}
+
+.userLOGINFORM_Heading {
+  color: #767779;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.form__itemBOX {
+  margin: 30px 0px;
+  width: 100%;
+  position: relative;
+  height: 50px;
+
+}
+
+.formITEM {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid black;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 0.3em;
+}
+
+.formITEM:hover {
+  border-bottom: 2px solid black;
+}
+
+.formITEM_LABEL {
+  background-color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  font-weight: 400;
+  font-size: 18px;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.form__itemBOX input:user-valid~.formITEM_LABEL,
+.form__itemBOX .formITEM:focus~.formITEM_LABEL {
+  font-size: 14px;
+  transform: translateY(-30px);
+}
+
+.form__itemBOX input:user-invalid~.formITEM_LABEL {
+  transform: translateY(0px);
+}
+
+.forgetlink {
+  color: #4b8ce8;
+  cursor: pointer;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+
+.formCommonBtn {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.singinButton {
+  border-radius: 5px;
+  background: transparent linear-gradient(180deg, #4b8ce8, #4b8ce8) 0 0 no-repeat padding-box;
+  color: #fff;
+}
+
+.loginByOTPBTN {
+  background: #f2f8ff 0 0 no-repeat padding-box;
+  border: 1px solid #4b8ce8;
+  border-radius: 4px;
+  color: #4b8ce8;
+}
+
+.formResponseMsg {
+  color: #c80000;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
 
 /* All screen sizes */
 
@@ -672,6 +889,10 @@
 
   .CodingJourney__FinalGoalContainer {
     justify-content: flex-start;
+  }
+
+  .FormContainer_Box {
+    margin: 20px 0px;
   }
 
 }
@@ -767,6 +988,46 @@
   .LeftContainer__KnowMoreButton {
     margin-left: 18%;
   }
+
+  .UserForm_pbLOGO {
+    display: none;
+  }
+
+  .UserForm__MainContainer {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .UserFormContainer__LeftContainer {
+    flex-direction: column;
+    width: 60%;
+  }
+
+  .UserForm__Achievements {
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0;
+    padding: 0.5em;
+    width: fit-content;
+  }
+
+  .userForm_AchievementText {
+    font-size: 12px;
+  }
+
+  .AchievementCount {
+    font-size: 14px;
+  }
+
+  .UserFormContainer__FormContainer {
+    width: 60%;
+    padding: 0;
+  }
+
+  .FormContainer_Box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -834,6 +1095,11 @@
   .LeftContainer__KnowMoreButton {
     margin-left: 10%;
   }
+
+  .UserFormContainer__FormContainer {
+    width: 65%;
+  }
+
 }
 
 @media screen and (max-width: 650px) {
@@ -901,6 +1167,25 @@
     padding: 0em;
 
   }
+
+  .illustratedIMG {
+    display: none;
+  }
+
+  .UserFormContainer__LeftContainer {
+    padding: 2em 0em;
+    width: 100%;
+  }
+
+  .UserFormContainer__FormContainer {
+    width: 80%;
+  }
+
+  .UserForm__Achievements {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
+
 }
 
 @media screen and (max-width: 585px) {
@@ -1002,6 +1287,11 @@
     font-size: 700;
     color: #3e4041;
   }
+
+  .UserFormContainer__FormContainer,
+  .UserForm__Achievements {
+    width: 95%;
+  }
 }
 
 
@@ -1032,6 +1322,7 @@
   .CourseType__CardContainer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
   }
+
   .FounderKnow__MainContainer {
     min-height: 220vh;
   }
@@ -1051,6 +1342,7 @@
   .CarrerPlanBox {
     padding-right: 0.5em;
   }
+
   .FounderDetailsContainer__TextSecond,
   .FounderDetailsContainer__TextSecond2 {
     font-size: 6vw;

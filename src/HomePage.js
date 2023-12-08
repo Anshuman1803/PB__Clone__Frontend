@@ -20,7 +20,7 @@ import CarrerThirdIMg from './Assets/CarrerImgThree.svg'
 import CurriculumICON from './Assets/industry_vetted_curriculum.svg'
 import PlacementICON from './Assets/exclusive_placement.svg'
 import ProjectICON from './Assets/real_life_projects.svg'
-import FounderImg from './Assets/mamta_mentor.png'
+// import FounderImg from './Assets/mamta_mentor.png'
 import { Link } from 'react-router-dom'
 function HomePage() {
     return (
@@ -168,6 +168,7 @@ function HomePage() {
                 <h3 className='LeftContainer__headingText headingFirst'>Are you an Experienced Professional willing to Switch?</h3>
 
             </div>
+            <div className='helpContainer__Message'>Need Help? Talk to us on  079 6900 2111 or Request Callback</div>
         </section>
     )
 }

@@ -1,21 +1,22 @@
 import React from 'react'
 import Logo from "../Assets/logoPrepBytes.svg"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 function HeaderComponent() {
-    const { isLoggedIN} = useSelector((state) => state.AppUser.UserDetails)
+    const { isLoggedIN } = useSelector((state) => state.AppUser.UserDetails)
+    const navigateTO = useNavigate();
     return (
         <header className='App__header'>
-            <div className="App__header_LogoContainer">
+            <Link  to="/" className="App__header_LogoContainer">
                 <img src={Logo} alt="PrepBytes__LOGO" className='LogoContainer__Logo' />
-            </div>
+            </Link>
 
             <nav className='App__navbar'>
 
                 {
                     !isLoggedIN && <div className="App__navbar_ButtonsContainer">
-                        <button className='navbar__buttonContainer__buttons'>Log In</button>
-                        <button className='navbar__buttonContainer__buttons'>Sign Up</button>
+                        <button className='navbar__buttonContainer__buttons' onClick={()=> navigateTO("/user/login")}>Log In</button>
+                        <button className='navbar__buttonContainer__buttons' onClick={()=> navigateTO("/user/register")}>Sign Up</button>
                     </div>
                 }
 
@@ -24,32 +25,32 @@ function HeaderComponent() {
                     <div className="App__navbar__ItemsContainer">
                         <span className='navbar__ItemsContainer__Item'>Studey Material <i className="fa-solid fa-caret-down"></i></span>
                         <div className="dropDownContainer">
-                            <Link className='dropDownContainer__Item'>Mock Tests</Link>
-                            <Link className='dropDownContainer__Item'>Video Tutorial</Link>
+                            <Link to="/mockTest" className='dropDownContainer__Item'>Mock Tests</Link>
+                            <Link to="/videoTutorial" className='dropDownContainer__Item'>Video Tutorial</Link>
                         </div>
                     </div>
 
                     <div className="App__navbar__ItemsContainer">
                         <span className='navbar__ItemsContainer__Item'> Courses and Programs <i className="fa-solid fa-caret-down"></i></span>
                         <div className="dropDownContainer">
-                            <Link className='dropDownContainer__Item'>Master Competitive Programming</Link>
-                            <Link className='dropDownContainer__Item'>Full Stack Program</Link>
+                            <Link to="/online-full-stack-developer-mern-certification-program"  className='dropDownContainer__Item'>Master Competitive Programming</Link>
+                            <Link to="/master-competitive-programming"  className='dropDownContainer__Item'>Full Stack Program</Link>
                         </div>
                     </div>
 
-                    <div className="App__navbar__ItemsContainer">
+                    <Link to="/elevation-academy" className="App__navbar__ItemsContainer">
                         <span className='navbar__ItemsContainer__Item'>  Elevation Academy </span>
-                    </div>
+                    </Link>
 
                     <div className="App__navbar__ItemsContainer">
                         <span className='navbar__ItemsContainer__Item'>Projects <i className="fa-solid fa-caret-down"></i></span>
                         <div className="dropDownContainer project__dropDownContainer">
-                            <Link className='dropDownContainer__Item'>HTML</Link>
-                            <Link className='dropDownContainer__Item'>CSS</Link>
-                            <Link className='dropDownContainer__Item'>JavaScript</Link>
-                            <Link className='dropDownContainer__Item'>React JS</Link>
-                            <Link className='dropDownContainer__Item'>Node Js</Link>
-                            <Link className='dropDownContainer__Item'>MongoDB</Link>
+                            <Link to="/project/HTML" className='dropDownContainer__Item'>HTML</Link>
+                            <Link to="/project/CSS" className='dropDownContainer__Item'>CSS</Link>
+                            <Link to="/project/JavaScript" className='dropDownContainer__Item'>JavaScript</Link>
+                            <Link to="/project/React" className='dropDownContainer__Item'>React JS</Link>
+                            <Link to="/project/Node" className='dropDownContainer__Item'>Node Js</Link>
+                            <Link to="/project/Mongo" className='dropDownContainer__Item'>MongoDB</Link>
                         </div>
                     </div>
 
