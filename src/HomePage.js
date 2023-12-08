@@ -20,6 +20,7 @@ import CarrerThirdIMg from './Assets/CarrerImgThree.svg'
 import CurriculumICON from './Assets/industry_vetted_curriculum.svg'
 import PlacementICON from './Assets/exclusive_placement.svg'
 import ProjectICON from './Assets/real_life_projects.svg'
+import FounderImg from './Assets/mamta_mentor.png'
 import { Link } from 'react-router-dom'
 function HomePage() {
     return (
@@ -168,6 +169,63 @@ function HomePage() {
 
             </div>
 
+            <div className="FounderKnow__MainContainer">
+
+                <div className="FounderKnow__PosterContainer">
+                    <div className="FounderPosterBox">
+                        <div className="poster">
+                            <img src={FounderImg} alt="" />
+                        </div>
+                        <p className="founderName">Mamta Kumari</p>
+                        <p className="postName">Co-Founder PrepBytes</p>
+                        <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Amazon%2Bsam.png" alt="CompanyLogo" className='PrevCompanyLogo' />
+                    </div>
+
+                </div>
+
+                <div className="FounderKnow__DetailsContainer">
+                    <h3 className='FounderDetailsContainer__Heading'>Attend Free sessions with industry experts and get valuable guidance</h3>
+                    <p className='FounderDetailsContainer__TextSecond'>How to master competitive coding ?</p>
+                    <button className='knowMoreButton LeftContainer__KnowMoreButton DetailsContainer_knowMoreButton'>Know More</button>
+
+                    <hr className='hrLINE' />
+                    <p className='FounderDetailsContainer__TextSecond FounderDetailsContainer__TextSecond2'>How to crack coding interviews?</p>
+                    <button className='knowMoreButton LeftContainer__KnowMoreButton DetailsContainer_knowMoreButton'>Know More</button>
+                </div>
+
+                <div className="FounderBottom__CardContainer">
+
+                    <div className="FounderBottom__Card">
+                        <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/100k_coding.svg" alt="CommunityPoster" className='CardPoster' />
+                        <p className="cardNumbers">100K+</p>
+                        <p className="cardBottom_title">Coding Community</p>
+                    </div>
+
+                    <div className="FounderBottom__Card">
+                        <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/1000%2B_hours_pf.svg" alt="CommunityPoster" className='CardPoster' />
+                        <p className="cardNumbers">1000+</p>
+                        <p className="cardBottom_title">Hours of Live session</p>
+                    </div>
+
+                    <div className="FounderBottom__Card">
+                        <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/10000_hours_learning.svg" alt="CommunityPoster" className='CardPoster' />
+                        <p className="cardNumbers">10000+</p>
+                        <p className="cardBottom_title">Hours of learning</p>
+                    </div>
+
+                    <div className="FounderBottom__Card">
+                        <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/doubts_solved.svg" alt="CommunityPoster" className='CardPoster' />
+                        <p className="cardNumbers">700K+</p>
+                        <p className="cardBottom_title">Doubts Solved</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="ExpersContainer">
+                <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Bespoke+Mentors.webp" alt="ExpertsContainer" className='Experts_Poster' />
+                
+                <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Selected_pool_of(mobile)+(1).webp" alt="ExpertsContainer" className='Experts_Poster ExpertsPosterMobile' />
+            </div>
         </section>
     )
 }
