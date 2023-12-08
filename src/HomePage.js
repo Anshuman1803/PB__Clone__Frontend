@@ -7,10 +7,14 @@ import leads_AchievementImg from "./Assets/leads_Achievement.webp"
 import StudentImage from './Assets/StudentIMG.svg'
 import Arrow from "./Assets/ArrowSign.svg"
 import finalGoal from "./Assets/achieve_your_coding_dream.svg"
-import FirstIcon from './Assets/Journey__One.svg' 
-import TwoIcon from './Assets/Journey__Two.svg' 
-import ThreeIcon from './Assets/Journey__Three.svg' 
-import FourIcon from './Assets/Journey__Four.svg' 
+import FirstIcon from './Assets/Journey__One.svg'
+import TwoIcon from './Assets/Journey__Two.svg'
+import ThreeIcon from './Assets/Journey__Three.svg'
+import FourIcon from './Assets/Journey__Four.svg'
+import ComptativePoster from './Assets/master_competetive_pgm.webp'
+import FullStackPoster from './Assets/Full_Stack.webp'
+import ProjectPoster from './Assets/Project_Poster.webp'
+import {Link} from 'react-router-dom'
 function HomePage() {
     return (
         <section className='homeSection__Container'>
@@ -87,7 +91,7 @@ function HomePage() {
                         <h3 className="StepContainer__heading StepContainer__headingFourth">DOUBT SOLVING BY CODING EXPERTS</h3>
                         <div className="StepContainer__Box StepContainer__FourthBox">
                             <p className='SetpContainer_Box_Text'>Getting Stuck While Coding? Get all your doubts resolved.</p>
-                        <img src={FourIcon} alt="Step__ICON" className='StepContainer_ICON' />
+                            <img src={FourIcon} alt="Step__ICON" className='StepContainer_ICON' />
                         </div>
                         <img src={Arrow} alt="ArrowSignImages" className='StepContainer__arrowImages StepContainer__SecondArrowImages' />
                     </div>
@@ -98,6 +102,33 @@ function HomePage() {
                 </div>
 
             </div>
+
+            <div className="CourseTypes__MainContainer">
+                <h2 className='CourseTypes__MainContainer__Heading'>I WANT TO</h2>
+
+                <div className="CourseType__CardContainer">
+
+                    <Link className="CourseType__Card">
+                        <img src={FullStackPoster} alt="Poster" className='CourseType_CardPoster' />
+                        <p className="CourstType__CardText">PREPARE FOR CAMPUS PLACEMENTS</p>
+                   <p className="CourseType__CardArrowButton"><i className="fa-solid fa-arrow-right arrowICON"></i></p>
+                    </Link>
+
+                    <Link className="CourseType__Card">
+                    <img src={ComptativePoster} alt="Poster" className='CourseType_CardPoster' />
+                        <p className="CourstType__CardText">MASTER COMPETITIVE PROGRAMMING</p>
+                        <p className="CourseType__CardArrowButton"><i className="fa-solid fa-arrow-right arrowICON"></i></p>
+                    </Link>
+
+                    <Link className="CourseType__Card">
+                    <img src={ProjectPoster} alt="Poster" className='CourseType_CardPoster' />
+                        <p className="CourstType__CardText">BUILD DEVELOPMENT PROJECTS</p>
+                        <p className="CourseType__CardArrowButton"><i className="fa-solid fa-arrow-right arrowICON"></i></p>
+                    </Link>
+
+                </div>
+            </div>
+
         </section>
     )
 }

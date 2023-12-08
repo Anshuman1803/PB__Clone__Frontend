@@ -295,6 +295,7 @@
   height: 100%;
 }
 
+/* Coding Journey part */
 .CodingJourney__Container {
   background: #f8fafa;
   margin-top: 10px;
@@ -451,6 +452,96 @@
   width: 320px;
 }
 
+/* Couse types section */
+.CourseTypes__MainContainer {
+  margin-top: 10px;
+  width: 100%;
+  background: #fff;
+}
+
+.CourseTypes__MainContainer__Heading {
+  color: #707070;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.CourseType__CardContainer {
+  width: 100%;
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(295px, 295px));
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 35px;
+  padding: 2em;
+}
+
+.CourseType__Card {
+  width: 100%;
+  position: relative;
+  height: 340px;
+  box-shadow: 0 3px 32px rgba(0, 0, 0, .10196078431372549);
+  border-radius: 8px;
+  padding: 0em 1em;
+  text-decoration: none;
+}
+
+.CourseType_CardPoster {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.CourstType__CardText {
+  font-size: 20px;
+  width: 100%;
+  padding-left: 2em;
+  padding-right: 0.5em;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.CourseType__Card:nth-child(1) {
+  color: rgb(0, 165, 236);
+}
+
+.CourseType__Card:nth-child(2) {
+  color: rgb(240, 119, 149);
+}
+
+.CourseType__Card:nth-child(3) {
+  color: rgb(15, 181, 130);
+}
+
+.CourseType__CardArrowButton {
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  bottom: -25px;
+  right: 40%;
+  transform: translate(-50%);
+  background-color: white;
+  box-shadow: 0 3px 32px rgba(0, 0, 0, .1607843137254902);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CourseType__CardArrowButton .arrowICON {
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(0, 165, 236);
+}
+
+.CourseType__Card:hover {
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgb(0 0 0/25%), 0 10px 10px rgb(0 0 0/22%);
+}
+
+/* All screen sizes */
+
 @media screen and (max-width: 1110px) {
   .App__navbar {
     display: none;
@@ -522,6 +613,7 @@
     font-size: 2.5vw;
     text-align: center;
   }
+
   .StepContainer__arrowImages {
     width: 200px;
   }
@@ -572,6 +664,12 @@
 
   .CodingJourney__StepContainer {
     width: 100%;
+  }
+
+  .CourseType__CardArrowButton {
+    top: 50%;
+    right: -25px;
+    transform: none;
   }
 }
 
@@ -646,6 +744,7 @@
   .StepContainer__SecondArrowImages {
     right: 65%;
   }
+
   .CodingJourney__finalGoalImage {
     width: 200px;
     width: 100%;
@@ -675,8 +774,8 @@
   }
 
   .CodingJourneyContainer__RightContainer {
-      padding-left: 2em;
-      padding-right: 1em;
+    padding-left: 2em;
+    padding-right: 1em;
     width: 100%;
   }
 
@@ -689,13 +788,16 @@
     position: relative;
     width: 180px;
   }
-  .SetpContainer_Box_Text{
+
+  .SetpContainer_Box_Text {
     font-size: 14px;
   }
-  .StepContainer__heading{
+
+  .StepContainer__heading {
     font-size: 16px;
     width: 180px;
   }
+
   .StepContainer__firstArrowImages {
     left: 55%;
   }
@@ -708,19 +810,28 @@
 
 
 @media screen and (max-width: 376px) {
-  .CodingJourneyContainer__RightContainer{
+  .CodingJourneyContainer__RightContainer {
     padding-left: 2em;
     padding-right: 0;
   }
+
   .StepContainer__arrowImages {
     width: 70px;
     top: 10em;
   }
+
   .StepContainer__firstArrowImages {
-    left:60vw;
+    left: 60vw;
   }
 
   .StepContainer__SecondArrowImages {
-    right:60vw;
+    right: 60vw;
+  }
+  .CourseType__CardArrowButton{
+    width: 40px;
+    height: 40px;
+  }
+  .CourseType__CardContainer {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
   }
 }
