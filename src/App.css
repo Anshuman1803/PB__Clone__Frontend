@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* Heading Part */
@@ -247,6 +248,8 @@
 }
 
 .knowMoreButton {
+  text-decoration: none;
+  text-align: center;
   margin-top: 20px;
   display: block;
   background: #00a5ec;
@@ -256,6 +259,7 @@
   padding: 0.7em;
   color: #fff;
   border-radius: 4px;
+  font-weight: 500;
 }
 
 .knowMoreButton:hover {

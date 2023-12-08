@@ -32,7 +32,7 @@ function HomePage() {
                     <h1 className='HeroLeftSection__FirstSentence'>Start your journey of success</h1>
                     <h2 className='HeroLeftSection__SecondSentence'>Personalised Coding Programs to make coding easier for you</h2>
                     <h3 className='HeroLeftSection__ThirdSentence'>Want to know how PrepBytes can help you?</h3>
-                    <button className='knowMoreButton'>Know More</button>
+                    <a href="#courseType" className='knowMoreButton'>Know More</a>
                 </div>
 
                 <div className="HeroContainer__RightSection">
@@ -109,7 +109,7 @@ function HomePage() {
 
             </div>
 
-            <div className="CourseTypes__MainContainer">
+            <div className="CourseTypes__MainContainer" id='courseType'>
                 <h2 className='CourseTypes__MainContainer__Heading'>I WANT TO</h2>
 
                 <div className="CourseType__CardContainer">
