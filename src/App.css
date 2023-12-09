@@ -133,6 +133,7 @@
 }
 
 .dropDownContainer__Item:hover {
+  cursor: pointer;
   color: #00afec;
   font-weight: 600;
 }
@@ -149,6 +150,7 @@
 .App__navbar__UserContainer {
   height: 100%;
   width: fit-content;
+  position: relative;
 }
 
 .UserBox {
@@ -157,13 +159,23 @@
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-
+  position: relative;
+  cursor: pointer;
+}
+.userDropownContainer{
+  display: block !important;
+  position: absolute;
+  left: 0%;
+  width: 100%;
+}
+.App__navbar__UserContainer:hover .userDropownContainer{
+  display: block;
 }
 
 .userInitials {
-  width: 40px;
+  width: 45px;
   background-color: #03A6EC;
-  height: 40px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,12 +183,15 @@
   color: white;
   font-size: 25px;
   font-weight: 400;
+  user-select: none;
 
 }
 
 .greetingText {
   color: #03A6EC;
   font-weight: 500;
+  min-width: 100px;
+  user-select: none;
 }
 
 .header__hamMenuButton {
@@ -729,6 +744,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 50px;
 }
 
 .FormContainer_Box {
@@ -768,6 +784,34 @@
 .userLogin__FORM {
   width: 100%;
   height: 420px;
+}
+
+.FormContainer_Box {
+  margin-top: 60px;
+}
+
+.userRegister__Form {
+  height: fit-content;
+}
+
+.form__ITEMBOX_Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+.signupButton{
+  margin: 20px 0px;
+}
+
+.form__ITEMBOX_Container .form__itemBOX {
+  margin: 0;
+    width: 60%;
+}
+
+.form__ITEMBOX_Container .form__itemBOX:nth-child(2) {
+  width: 40%;
 }
 
 .userLOGINFORM_Heading {
@@ -860,6 +904,7 @@
   width: 100%;
   text-align: center;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 /* All screen sizes */
@@ -1347,5 +1392,8 @@
   .FounderDetailsContainer__TextSecond2 {
     font-size: 6vw;
     width: 100%;
+  }
+  .term_ConditionBox{
+    font-size: 14px !important;
   }
 }

@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from "../Assets/logoPrepBytes.svg"
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { userLogOut } from '../ReduxSlice/UserReduxSlice'
+import { useDispatch } from 'react-redux'
 function HeaderComponent() {
-    const { isLoggedIN } = useSelector((state) => state.AppUser.UserDetails)
+    const dispatch = useDispatch();
+    const { isLoggedIN, User } = useSelector((state) => state.AppUser.UserDetails);
     const navigateTO = useNavigate();
+    const [useDropDownShow, setUserDropDown] = useState(false);
+
+    useEffect(()=>{
+        setUserDropDown(false)
+    }, []);
     return (
         <header className='App__header'>
-            <Link  to="/" className="App__header_LogoContainer">
+            <Link to="/" className="App__header_LogoContainer">
                 <img src={Logo} alt="PrepBytes__LOGO" className='LogoContainer__Logo' />
             </Link>
 
@@ -15,8 +23,8 @@ function HeaderComponent() {
 
                 {
                     !isLoggedIN && <div className="App__navbar_ButtonsContainer">
-                        <button className='navbar__buttonContainer__buttons' onClick={()=> navigateTO("/user/login")}>Log In</button>
-                        <button className='navbar__buttonContainer__buttons' onClick={()=> navigateTO("/user/register")}>Sign Up</button>
+                        <button className='navbar__buttonContainer__buttons' onClick={() => navigateTO("/user/login")}>Log In</button>
+                        <button className='navbar__buttonContainer__buttons' onClick={() => navigateTO("/user/register")}>Sign Up</button>
                     </div>
                 }
 
@@ -33,8 +41,8 @@ function HeaderComponent() {
                     <div className="App__navbar__ItemsContainer">
                         <span className='navbar__ItemsContainer__Item'> Courses and Programs <i className="fa-solid fa-caret-down"></i></span>
                         <div className="dropDownContainer">
-                            <Link to="/online-full-stack-developer-mern-certification-program"  className='dropDownContainer__Item'>Master Competitive Programming</Link>
-                            <Link to="/master-competitive-programming"  className='dropDownContainer__Item'>Full Stack Program</Link>
+                            <Link to="/online-full-stack-developer-mern-certification-program" className='dropDownContainer__Item'>Master Competitive Programming</Link>
+                            <Link to="/master-competitive-programming" className='dropDownContainer__Item'>Full Stack Program</Link>
                         </div>
                     </div>
 
@@ -56,11 +64,19 @@ function HeaderComponent() {
 
                     {
                         isLoggedIN && <div className="App__navbar__UserContainer">
-                            <div className="UserBox">
-                                <span className='userInitials'>A</span>
-                                <span className='greetingText'>Hi Anshuman</span>
+                            <div className="UserBox" onClick={() => setUserDropDown(!useDropDownShow)}>
+                                <span className='userInitials'>{User[0]?.userName[0]} </span>
+                                <span className='greetingText'>Hi {User[0]?.userName}</span>
                             </div>
-
+                            {
+                                useDropDownShow && <div className="dropDownContainer userDropownContainer">
+                                    <Link to="/user/dashboard" className='dropDownContainer__Item'>Dashboard</Link>
+                                    <span style={{ "color": "#ff8787" }} className='dropDownContainer__Item' onClick={() => {
+                                        dispatch(userLogOut());
+                                        navigateTO("/")
+                                    }} >Log Out</span>
+                                </div>
+                            }
                         </div>
                     }
                 </div>

@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import axios from "axios"
+import { useNavigate } from 'react-router-dom'
+import { userLoginAction } from '../../ReduxSlice/UserReduxSlice'
+import { useDispatch } from 'react-redux'
 function UserLogin() {
-
-
+  const navigateTO = useNavigate();
+  const dispath = useDispatch();
   const [IsUserLoading, setIsUserLoading] = useState(false)
   // const [IsShowPass, setIsShowPass] = useState(false);
   const [Message, setMessage] = useState({ "msgVal": "" });
@@ -26,6 +29,13 @@ function UserLogin() {
     } else {
       setIsUserLoading(true)
       axios.post("http://localhost:5000/user/login", userDetails).then((response) => {
+
+        if (response.data.UserDetails) {
+          dispath(userLoginAction(response.data.UserDetails))
+          navigateTO("/");
+          setIsUserLoading(false);
+          return
+        }
         setMessage({ "msgVal": response.data.resMsg })
         setIsUserLoading(false)
       })

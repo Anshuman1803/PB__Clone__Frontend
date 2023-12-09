@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import HomePage from '../HomePage'
+import HomePage from '../UI-Components/HomePage'
 import MockTestComponent from '../UI-Components/MockTestComponent'
 import VideoTutComponent from '../UI-Components/VideoTutComponent'
 import ProjectComponent from '../UI-Components/ProjectComponent'
@@ -10,6 +10,8 @@ import ElevationAcademyComponent from '../UI-Components/ElevationAcademyComponen
 import UserFormContainer from '../UI-Components/User_AuthComponents/UserFormContainer'
 import UserRegister from '../UI-Components/User_AuthComponents/UserRegister'
 import UserLogin from '../UI-Components/User_AuthComponents/UserLogin'
+import Dashboard from '../UI-Components/Dashboard/Dashboard'
+import OrderHistory from '../UI-Components/Dashboard/OrderHistory'
 
 function AppRouter() {
     return (
@@ -18,6 +20,7 @@ function AppRouter() {
             <Route path="/mockTest" element={<MockTestComponent />} />
             <Route path="/videoTutorial" element={<VideoTutComponent />} />
             <Route path='/project/:topic' element={<ProjectComponent />} />
+            
             <Route path='/online-full-stack-developer-mern-certification-program' element={<FullStackProgramComponent />} />
             <Route path='/master-competitive-programming' element={<CompetitiveProgrammingComponent />} />
             <Route path='/elevation-academy' element={<ElevationAcademyComponent />} />
@@ -25,6 +28,11 @@ function AppRouter() {
                 <Route path='/user/login' element={<UserLogin />} />
                 <Route path='/user/register' element={<UserRegister />} />
             </Route>
+
+            <Route path='/user/dashboard' element={<Dashboard />}>
+                <Route path='/user/dashboard/course' element={<OrderHistory />} />
+            </Route>
+            
         </Routes>
     )
 }

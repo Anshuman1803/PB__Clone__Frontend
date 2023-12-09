@@ -1,25 +1,25 @@
 import React from 'react'
-import Hero_Image from './Assets/Hero_BG.svg'
-import aws_AchievementImg from "./Assets/aws-Achievement.webp"
-import futerSkils_AchievementImg from "./Assets/futureSkils-Achievement.webp"
-import Google_AchievementImg from "./Assets/Google-launchpad_Achievement.webp"
-import leads_AchievementImg from "./Assets/leads_Achievement.webp"
-import StudentImage from './Assets/StudentIMG.svg'
-import Arrow from "./Assets/ArrowSign.svg"
-import finalGoal from "./Assets/achieve_your_coding_dream.svg"
-import FirstIcon from './Assets/Journey__One.svg'
-import TwoIcon from './Assets/Journey__Two.svg'
-import ThreeIcon from './Assets/Journey__Three.svg'
-import FourIcon from './Assets/Journey__Four.svg'
-import ComptativePoster from './Assets/master_competetive_pgm.webp'
-import FullStackPoster from './Assets/Full_Stack.webp'
-import ProjectPoster from './Assets/Project_Poster.webp'
-import CarrerFirstIMg from './Assets/CarrerImgOne.svg'
-import CarrerSecondIMg from './Assets/CarrerImgTwo.svg'
-import CarrerThirdIMg from './Assets/CarrerImgThree.svg'
-import CurriculumICON from './Assets/industry_vetted_curriculum.svg'
-import PlacementICON from './Assets/exclusive_placement.svg'
-import ProjectICON from './Assets/real_life_projects.svg'
+import Hero_Image from '../Assets/Hero_BG.svg'
+import aws_AchievementImg from "../Assets/aws-Achievement.webp"
+import futerSkils_AchievementImg from "../Assets/futureSkils-Achievement.webp"
+import Google_AchievementImg from "../Assets/Google-launchpad_Achievement.webp"
+import leads_AchievementImg from "../Assets/leads_Achievement.webp"
+import StudentImage from '../Assets/StudentIMG.svg'
+import Arrow from "../Assets/ArrowSign.svg"
+import finalGoal from "../Assets/achieve_your_coding_dream.svg"
+import FirstIcon from '../Assets/Journey__One.svg'
+import TwoIcon from '../Assets/Journey__Two.svg'
+import ThreeIcon from '../Assets/Journey__Three.svg'
+import FourIcon from '../Assets/Journey__Four.svg'
+import ComptativePoster from '../Assets/master_competetive_pgm.webp'
+import FullStackPoster from '../Assets/Full_Stack.webp'
+import ProjectPoster from '../Assets/Project_Poster.webp'
+import CarrerFirstIMg from '../Assets/CarrerImgOne.svg'
+import CarrerSecondIMg from '../Assets/CarrerImgTwo.svg'
+import CarrerThirdIMg from '../Assets/CarrerImgThree.svg'
+import CurriculumICON from '../Assets/industry_vetted_curriculum.svg'
+import PlacementICON from '../Assets/exclusive_placement.svg'
+import ProjectICON from '../Assets/real_life_projects.svg'
 // import FounderImg from './Assets/mamta_mentor.png'
 import { Link } from 'react-router-dom'
 function HomePage() {
@@ -115,19 +115,19 @@ function HomePage() {
 
                 <div className="CourseType__CardContainer">
 
-                    <Link className="CourseType__Card">
+                    <Link className="CourseType__Card" to={"/online-full-stack-developer-mern-certification-program"}>
                         <img src={FullStackPoster} alt="Poster" className='CourseType_CardPoster' />
                         <p className="CourstType__CardText">PREPARE FOR CAMPUS PLACEMENTS</p>
                         <p className="CourseType__CardArrowButton"><i className="fa-solid fa-arrow-right arrowICON"></i></p>
                     </Link>
 
-                    <Link className="CourseType__Card">
+                    <Link className="CourseType__Card" to={"/master-competitive-programming"}> 
                         <img src={ComptativePoster} alt="Poster" className='CourseType_CardPoster' />
                         <p className="CourstType__CardText">MASTER COMPETITIVE PROGRAMMING</p>
                         <p className="CourseType__CardArrowButton"><i className="fa-solid fa-arrow-right arrowICON"></i></p>
                     </Link>
 
-                    <Link className="CourseType__Card">
+                    <Link className="CourseType__Card" to={"/project/html"}>
                         <img src={ProjectPoster} alt="Poster" className='CourseType_CardPoster' />
                         <p className="CourstType__CardText">BUILD DEVELOPMENT PROJECTS</p>
                         <p className="CourseType__CardArrowButton"><i className="fa-solid fa-arrow-right arrowICON"></i></p>
