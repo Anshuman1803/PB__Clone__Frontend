@@ -1156,17 +1156,107 @@ mobile .mobileNavbar__Conainer {
 }
 
 .MockTest__CardContainer {
-  border: 2px solid red;
+  margin: 5em 0px;
+  border-top: 2px solid #22559c;
   position: relative;
   min-height: 600px;
   width: 100%;
-  padding: 2em 4em;
+  padding: 0em 4em;
+  padding-top: 3em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 220px));
+  align-items: center;
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 30px;
+  user-select: none;
 }
 
-.MockTestCompo__featuredHeading {
-  color: #22559c;
-  font-size: 30px;
+.TestHeading {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-60%, -50%);
+  background-color: white;
+  text-align: center;
+  color: #ffa000;
+  text-transform: uppercase;
   font-weight: 500;
+  font-size: 18px;
+  user-select: none;
+}
+
+.MockText_TopicCard {
+  user-select: none;
+  width: 100%;
+  height: 250px;
+  background: transparent linear-gradient(180deg, #c4dcf9, #fff 54%, #fff) 0 0 no-repeat padding-box;
+  box-shadow: 0 10px 30px rgba(95, 141, 196, .2);
+  border-radius: 5px;
+  color: #707070;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.7em;
+}
+.TestTopicIcon{
+  width: 50px;
+  height: 55px;
+}
+.Cardtest__Price {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.Cardtest_topicName {
+  width: 100%;
+  text-align: center;
+  color: #3969ad;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.TestNowButton {
+  background: #22559c;
+  box-shadow: 0 3px 6px rgba(95, 141, 196, .2);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.5em 1.2em;
+  font-size: 16px;
+  color: #fff;
+  margin: 10px 0;
+  text-decoration: none;
+  border: none;
+}
+
+/* Elevation Academy Component */
+.ElevationAcademy__MainContainer {
+  border: 2px solid red;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0em 5em;
+}
+
+.EA_MainContainer__TopMostContainer {
+  background-color: rgb(253, 240, 215);
+  min-height: 595px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.EA_TopMostContainer__Poster {
+  border: 2px solid red;
+  width: 45%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.EA_TopMostContainer__DetailsBox {
+  border: 2px solid blue;
+  width: 55%;
 }
 
 /* All screen sizes */
@@ -1459,6 +1549,9 @@ mobile .mobileNavbar__Conainer {
   .videoComponent__categoryText {
     padding-left: 2em;
   }
+  .MockComponent__header_desc{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -1650,6 +1743,11 @@ mobile .mobileNavbar__Conainer {
   .UserFormContainer__FormContainer,
   .UserForm__Achievements {
     width: 95%;
+  }
+  .MockComponent__header{
+    gap: 10px;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
   }
 }
 
