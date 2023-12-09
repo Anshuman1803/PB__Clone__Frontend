@@ -4,13 +4,15 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { userLogOut } from '../ReduxSlice/UserReduxSlice'
 import { useDispatch } from 'react-redux'
+import MobileNavBar from './MobileNavBar'
 function HeaderComponent() {
     const dispatch = useDispatch();
     const { isLoggedIN, User } = useSelector((state) => state.AppUser.UserDetails);
     const navigateTO = useNavigate();
     const [useDropDownShow, setUserDropDown] = useState(false);
+    const [ShwoMobileNav, setShowMobileNav] = useState(false)
 
-    useEffect(()=>{
+    useEffect(() => {
         setUserDropDown(false)
     }, []);
     return (
@@ -66,11 +68,11 @@ function HeaderComponent() {
                         isLoggedIN && <div className="App__navbar__UserContainer">
                             <div className="UserBox" onClick={() => setUserDropDown(!useDropDownShow)}>
                                 <span className='userInitials'>{User[0]?.userName[0]} </span>
-                                <span className='greetingText'>Hi {User[0]?.userName}</span>
+                                <span className='greetingText'>Hi {User[0]?.userName.split(" ")[0]}</span>
                             </div>
                             {
                                 useDropDownShow && <div className="dropDownContainer userDropownContainer">
-                                    <Link to="/user/dashboard" className='dropDownContainer__Item'>Dashboard</Link>
+                                    <Link to="/user/dashboard" className='dropDownContainer__Item'><i className="fa-solid fa-chalkboard-user"> </i>My Dashboard </Link>
                                     <span style={{ "color": "#ff8787" }} className='dropDownContainer__Item' onClick={() => {
                                         dispatch(userLogOut());
                                         navigateTO("/")
@@ -84,7 +86,11 @@ function HeaderComponent() {
 
 
             </nav>
-            <i className="fa-solid fa-bars header__hamMenuButton"></i>
+            <i className={`fa-solid ${ShwoMobileNav ? "fa-xmark" : "fa-bars"} header__hamMenuButton`} onClick={() => setShowMobileNav(!ShwoMobileNav)}></i>
+            {
+                ShwoMobileNav && <MobileNavBar />
+            }
+
         </header>
     )
 }

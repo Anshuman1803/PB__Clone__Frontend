@@ -162,13 +162,31 @@
   position: relative;
   cursor: pointer;
 }
-.userDropownContainer{
+
+.userDropownContainer {
+  box-shadow: none;
   display: block !important;
   position: absolute;
   left: 0%;
-  width: 100%;
+  top: 150%;
+  min-width: max-content;
+  width: 120%;
 }
-.App__navbar__UserContainer:hover .userDropownContainer{
+
+.userDropownContainer .dropDownContainer__Item {
+  padding-left: 1em;
+}
+
+.userDropownContainer .dropDownContainer__Item:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 400;
+  gap: 10px;
+  border-bottom: 1px solid #3e4041;
+}
+
+.App__navbar__UserContainer:hover .userDropownContainer {
   display: block;
 }
 
@@ -198,6 +216,7 @@
   font-size: 20px;
   color: rgb(24, 107, 225);
   display: none;
+  cursor: pointer;
 }
 
 .helpContainer__Message {
@@ -212,6 +231,71 @@
   font-size: 20px;
   position: sticky;
   bottom: 0;
+  z-index: 5;
+}
+
+mobile .mobileNavbar__Conainer {
+  /* border: 2px solid red; */
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 320px;
+  height: 640px;
+  background-color: #fff;
+  overflow: hidden;
+  overflow-y: auto;
+  display: none;
+}
+.mobileNavbar__Conainer .mobilenav__items, .mobileNavbar__Conainer .mobileNav__UserBox{
+  display: none;
+}
+.mobileNav__UserBox {
+  height: 120px;
+}
+
+.mobileNav__userGreeting {
+  border-bottom: 1px solid #767779;
+  width: 100%;
+  padding-left: 1em;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  height: 60px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #3e4041;
+}
+
+.mobileNav__userGreeting i {
+  font-size: 20px;
+}
+
+.mobilenav__items {
+  display: block;
+  height: 50px;
+  text-decoration: none;
+  width: 100%;
+  font-weight: 500;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1em;
+  font-size: 16px;
+  color: #424242;
+}
+
+.mobilenav__items:hover {
+  color: #4b8ce8;
+  cursor: pointer;
+}
+
+.Mobilenav__loginSignUpLink {
+  color: #f78077;
+  font-size: 20px;
 }
 
 /* Home Page CSS */
@@ -801,13 +885,14 @@
   margin-bottom: 20px;
   gap: 10px;
 }
-.signupButton{
+
+.signupButton {
   margin: 20px 0px;
 }
 
 .form__ITEMBOX_Container .form__itemBOX {
   margin: 0;
-    width: 60%;
+  width: 60%;
 }
 
 .form__ITEMBOX_Container .form__itemBOX:nth-child(2) {
@@ -939,7 +1024,16 @@
   .FormContainer_Box {
     margin: 20px 0px;
   }
-
+  .mobileNavbar__Conainer .mobilenav__items, .mobileNavbar__Conainer .mobileNav__UserBox{
+    display: block;
+  }
+  .mobileNavbar__Conainer {
+    background-color: white;
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+  }
 }
 
 @media screen and (max-width: 1025px) {
@@ -1393,7 +1487,8 @@
     font-size: 6vw;
     width: 100%;
   }
-  .term_ConditionBox{
+
+  .term_ConditionBox {
     font-size: 14px !important;
   }
 }
