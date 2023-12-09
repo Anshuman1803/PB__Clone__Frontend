@@ -247,9 +247,12 @@ mobile .mobileNavbar__Conainer {
   overflow-y: auto;
   display: none;
 }
-.mobileNavbar__Conainer .mobilenav__items, .mobileNavbar__Conainer .mobileNav__UserBox{
+
+.mobileNavbar__Conainer .mobilenav__items,
+.mobileNavbar__Conainer .mobileNav__UserBox {
   display: none;
 }
+
 .mobileNav__UserBox {
   height: 120px;
 }
@@ -992,6 +995,135 @@ mobile .mobileNavbar__Conainer {
   margin-bottom: 20px;
 }
 
+
+/* Video Components */
+
+.videoComponet__mainContainer {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0em 2em;
+  background-color: #f7f7f7;
+
+}
+
+.videoComponent__headerContainer {
+  background: #d9f5f9;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerContaienr__leftContainer {
+  width: 55%;
+  min-height: 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 3em;
+}
+
+.videoCompoLeftContainer__Text {
+  width: 60%;
+  font-size: 14px;
+  color: #424242;
+}
+
+.videoCompoLeftContainer__heading {
+  font-size: 32px;
+  font-weight: 600;
+  color: #00a5ec;
+}
+
+.headerContaienr__rightContainer {
+  width: 45%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerContainer__poster {
+  width: 70%;
+}
+
+.videoComponent__categoryText {
+  border-bottom: 2px solid #22559c;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 18px;
+  color: #22559c;
+}
+
+.videoComponent__CardContainer {
+  padding: 1em;
+  min-height: 600px;
+  margin: 20px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 330px));
+  justify-content: center;
+  align-content: center;
+  gap: 50px;
+}
+
+.video__Card {
+  width: 100%;
+  height: 460px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.8em;
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .11372549019607843);
+  position: relative;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Video_thumbnail {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.videocard__title {
+  padding-left: 1em;
+  width: 100%;
+  color: #424242;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.videocard__Desc {
+  padding-left: 1em;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #858585;
+}
+
+.videoCard__CountContainer {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  padding-left: 1em;
+}
+
+.videoCard__Count {
+  color: #858585;
+  font-size: 12px;
+}
+
 /* All screen sizes */
 
 @media screen and (max-width: 1110px) {
@@ -1024,9 +1156,12 @@ mobile .mobileNavbar__Conainer {
   .FormContainer_Box {
     margin: 20px 0px;
   }
-  .mobileNavbar__Conainer .mobilenav__items, .mobileNavbar__Conainer .mobileNav__UserBox{
+
+  .mobileNavbar__Conainer .mobilenav__items,
+  .mobileNavbar__Conainer .mobileNav__UserBox {
     display: block;
   }
+
   .mobileNavbar__Conainer {
     background-color: white;
     display: block;
@@ -1167,6 +1302,25 @@ mobile .mobileNavbar__Conainer {
     width: 100%;
     margin-bottom: 20px;
   }
+
+
+  .headerContaienr__leftContainer {
+    padding-left: 1em;
+  }
+
+  .videoCompoLeftContainer__Text {
+    width: 100%;
+  }
+
+  .videoCompoLeftContainer__heading {
+    font-size: 32px;
+    font-weight: 600;
+    color: #00a5ec;
+  }
+
+  .headerContainer__poster {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1239,6 +1393,26 @@ mobile .mobileNavbar__Conainer {
     width: 65%;
   }
 
+  .videoComponent__headerContainer {
+    flex-direction: column-reverse;
+  }
+
+  .videoComponet__mainContainer {
+    padding: 0;
+  }
+
+  .headerContaienr__leftContainer,
+  .headerContaienr__rightContainer {
+    width: 100%;
+    padding: 0.5em;
+  }
+
+  .headerContainer__poster {
+    width: 100%;
+  }
+  .videoComponent__categoryText{
+    padding-left: 2em;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -1491,4 +1665,10 @@ mobile .mobileNavbar__Conainer {
   .term_ConditionBox {
     font-size: 14px !important;
   }
+
+  .videoComponent__CardContainer {
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 310px));
+  }
+
 }
