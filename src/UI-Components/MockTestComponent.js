@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Footer from './Footer'
 import axios from 'axios'
 import PaymentPopup from '../PaymentInegration/PaymentPopup';
 import { useDispatch } from 'react-redux'
@@ -85,7 +86,7 @@ function MockTestComponent() {
           }
         </div>
         {IsPaymentClick && <PaymentPopup propFun={canclePayment} />}
-
+            <Footer></Footer>
       </section>
       <div className='helpContainer__Message'>Need Help? Talk to us on  079 6900 2111 or Request Callback</div>
     </>
