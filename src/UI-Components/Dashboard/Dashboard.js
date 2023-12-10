@@ -11,7 +11,6 @@ function Dashboard() {
   useEffect(() => {
     axios.get("http://localhost:5000/getTestdata").then((response) => {
       setTestData(response.data);
-      console.log(response.data);
     })
   }, [])
   return (
