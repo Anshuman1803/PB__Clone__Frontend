@@ -1,8 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
+import axios from 'axios';
 const initialState = {
     "UserDetails": {
         "User": localStorage.getItem("User") ? JSON.parse(localStorage.getItem("User")) : [],
         "isLoggedIN": localStorage.getItem("User") ? true : false,
+        "myOrder": localStorage.getItem("myOrder") ? JSON.parse(localStorage.getItem("myOrder")) : [],
+        "tempCourse": []
     }
 }
 
@@ -19,9 +22,26 @@ const UserReduxSlice = createSlice({
             state.UserDetails.User = []
             state.UserDetails.isLoggedIN = false;
             localStorage.removeItem("User")
+        },
+
+        addTempCourse(state, action) {
+            state.UserDetails.tempCourse = action.payload;
+        },
+
+        removeTempCourse(state, action) {
+            state.UserDetails.tempCourse = [];
+        },
+
+        confirmOrder(state, action) {
+            state.UserDetails.myOrder.push(action.payload);
+            localStorage.setItem("myOrder", JSON.stringify(state.UserDetails.myOrder));
+
+            axios.post("http://localhost:5000/storeData",action.payload).then((response)=>{
+                console.log(response.data)
+            })
         }
     }
 });
 
-export const { userLoginAction, userLogOut } = UserReduxSlice.actions;
+export const { userLoginAction, userLogOut, addTempCourse, removeTempCourse, confirmOrder } = UserReduxSlice.actions;
 export default UserReduxSlice.reducer

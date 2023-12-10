@@ -1201,10 +1201,12 @@ mobile .mobileNavbar__Conainer {
   gap: 10px;
   padding: 0.7em;
 }
-.TestTopicIcon{
+
+.TestTopicIcon {
   width: 50px;
   height: 55px;
 }
+
 .Cardtest__Price {
   font-size: 18px;
   font-weight: 600;
@@ -1229,6 +1231,69 @@ mobile .mobileNavbar__Conainer {
   margin: 10px 0;
   text-decoration: none;
   border: none;
+}
+
+/* Payment Popup */
+.paymentPopup__Container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.253);
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+.popupBox {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.795);
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2em;
+}
+
+.popupPrice {
+  width: 100%;
+  border-bottom: 2px solid #22559c;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #03A6EC;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.canclePayment,.loginButton {
+  border-radius: 10px;
+  border: none;
+  background-color: #22559c;
+  color: white;
+  font-weight: 600;
+  width: 70%;
+  padding: .4em;
+  font-size: 18px;
+}
+.loginButton{
+  position: absolute;
+  top: 50%;
+
+}
+.canclePayment:hover {
+  cursor: pointer;
+  background-color: #2e67b8;
 }
 
 /* Elevation Academy Component */
@@ -1549,7 +1614,8 @@ mobile .mobileNavbar__Conainer {
   .videoComponent__categoryText {
     padding-left: 2em;
   }
-  .MockComponent__header_desc{
+
+  .MockComponent__header_desc {
     width: 100%;
   }
 }
@@ -1638,6 +1704,9 @@ mobile .mobileNavbar__Conainer {
     width: 80%;
   }
 
+  .popupBox {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 585px) {
@@ -1744,7 +1813,8 @@ mobile .mobileNavbar__Conainer {
   .UserForm__Achievements {
     width: 95%;
   }
-  .MockComponent__header{
+
+  .MockComponent__header {
     gap: 10px;
     padding-left: 1em;
     padding-bottom: 0.5em;

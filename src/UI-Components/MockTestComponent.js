@@ -1,13 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import PaymentPopup from '../PaymentInegration/PaymentPopup';
+import { useDispatch } from 'react-redux'
+import { addTempCourse } from '../ReduxSlice/UserReduxSlice'
 function MockTestComponent() {
   const [TestData, setTestData] = useState([]);
+  const [IsPaymentClick, setIsPaymentClick] = useState(false)
+  const dispatch = useDispatch();
 
   useEffect(() => {
     axios.get("http://localhost:5000/mocktest").then((response) => {
       setTestData(response.data);
     });
   }, []);
+
+  const canclePayment = () => {
+    setIsPaymentClick(false)
+  }
+  const handleBuyNow = (e, testData) => {
+      e.preventDefault();
+      dispatch(addTempCourse(testData));
+      setIsPaymentClick(true)
+  }
   return (
     <>
       <section className='MockTestComponent__MainContainer'>
@@ -18,7 +32,7 @@ function MockTestComponent() {
         </div>
 
         <div className="MockTest__CardContainer">
-        <h1 className='TestHeading'>Aptitude-Tests</h1>
+          <h1 className='TestHeading'>Aptitude-Tests</h1>
 
           {
             TestData?.filter((data) => data.testCategory === "Aptitude").map((testData) => {
@@ -29,48 +43,48 @@ function MockTestComponent() {
                 <p className='Cardtest_topicName'>{testData.testName}</p>
                 <p className='Cardtest__Price'>₹{testData.testPrice}</p>
 
-                <button className='TestNowButton'>Buy Now</button>
+                <button className='TestNowButton' onClick={(e) => handleBuyNow(e, testData)}>Buy Now</button>
               </div>
             })
           }
         </div>
 
         <div className="MockTest__CardContainer">
-        <h1 className='TestHeading'>Computer Networks</h1>
+          <h1 className='TestHeading'>Computer Networks</h1>
 
           {
             TestData?.filter((data) => data.testCategory === "ComputerNetworks").map((testData) => {
               return <div className='MockText_TopicCard' key={testData._id}>
 
-                <img src={testData.testImg} alt="TestTopicIcon" className='TestTopicIcon'/>
+                <img src={testData.testImg} alt="TestTopicIcon" className='TestTopicIcon' />
 
                 <p className='Cardtest_topicName'>{testData.testName}</p>
                 <p className='Cardtest__Price'>₹{testData.testPrice}</p>
 
-                <button className='TestNowButton'>Buy Now</button>
+                <button className='TestNowButton' onClick={(e) => handleBuyNow(e, testData)}>Buy Now</button>
               </div>
             })
           }
         </div>
 
         <div className="MockTest__CardContainer">
-        <h1 className='TestHeading'>Data Structures</h1>
+          <h1 className='TestHeading'>Data Structures</h1>
 
           {
             TestData?.filter((data) => data.testCategory === "DataStructures").map((testData) => {
               return <div className='MockText_TopicCard' key={testData._id}>
 
-                <img src={testData.testImg} alt="TestTopicIcon" className='TestTopicIcon'/>
+                <img src={testData.testImg} alt="TestTopicIcon" className='TestTopicIcon' />
 
                 <p className='Cardtest_topicName'>{testData.testName}</p>
                 <p className='Cardtest__Price'>₹{testData.testPrice}</p>
 
-                <button className='TestNowButton'>Buy Now</button>
+                <button className='TestNowButton' onClick={(e) => handleBuyNow(e, testData)}>Buy Now</button>
               </div>
             })
           }
         </div>
-
+        {IsPaymentClick && <PaymentPopup propFun={canclePayment} />}
 
       </section>
       <div className='helpContainer__Message'>Need Help? Talk to us on  079 6900 2111 or Request Callback</div>
