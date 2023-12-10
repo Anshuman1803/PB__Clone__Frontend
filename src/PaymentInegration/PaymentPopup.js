@@ -52,7 +52,7 @@ function PaymentPopup({ propFun }) {
         <div className='paymentPopup__Container'>
 
             <div className="popupBox">
-                <h2 className='popupPrice'>{isLoggedIN ? <> Total Price : {tempCourse.testPrice}</> : <>Permission Denied</>}</h2>
+                <h2 className='popupPrice'>{isLoggedIN ? <> Total Price : {tempCourse.testPrice}</> : <>Locked for you!</>}</h2>
                 {
                     isLoggedIN ? <>
                         {

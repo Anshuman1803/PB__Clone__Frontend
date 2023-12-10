@@ -11,7 +11,6 @@ import UserFormContainer from '../UI-Components/User_AuthComponents/UserFormCont
 import UserRegister from '../UI-Components/User_AuthComponents/UserRegister'
 import UserLogin from '../UI-Components/User_AuthComponents/UserLogin'
 import Dashboard from '../UI-Components/Dashboard/Dashboard'
-import OrderHistory from '../UI-Components/Dashboard/OrderHistory'
 
 function AppRouter() {
     return (
@@ -34,7 +33,6 @@ function AppRouter() {
             </Route>
 
             <Route path='/user/dashboard' element={<Dashboard />}>
-                <Route path='/user/dashboard/course' element={<OrderHistory />} />
             </Route>
 
         </Routes>

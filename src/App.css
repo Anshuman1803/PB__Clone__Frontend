@@ -1276,7 +1276,8 @@ mobile .mobileNavbar__Conainer {
   font-weight: 400;
 }
 
-.canclePayment,.loginButton {
+.canclePayment,
+.loginButton {
   border-radius: 10px;
   border: none;
   background-color: #22559c;
@@ -1286,14 +1287,187 @@ mobile .mobileNavbar__Conainer {
   padding: .4em;
   font-size: 18px;
 }
-.loginButton{
+
+.loginButton {
   position: absolute;
   top: 50%;
-
+width: 200px;
 }
+
 .canclePayment:hover {
   cursor: pointer;
   background-color: #2e67b8;
+}
+
+/* Dashboard  */
+.Dashbord__Container {
+  width: 100%;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard__sideBar {
+  background-color: white;
+  position: relative;
+  top: 0;
+  box-shadow: 10px 0 10px -5px rgb(33 35 38/10%);
+  width: 80px;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+
+}
+
+.activeSidebar {
+  background-color: white;
+  position: relative;
+  top: 0;
+  box-shadow: 10px 0 10px -5px rgb(33 35 38/10%);
+  height: 100%;
+  width: 300px;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes fadeINText {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.dashboard__sidebarHamMenu {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transform: translateY(-50%)
+}
+
+.Dashboard_sideBar__item {
+  margin-top: 20px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1em;
+  font-size: 20px;
+  gap: 20px;
+  color: #3e4041;
+}
+
+.Dashboard_sideBar__item.activeItem {
+  background-color: #ecf9ff;
+  color: #5393ec;
+  border-right: 3px solid #5393ec;
+}
+
+.sidebar_item_text {
+  font-size: 16px;
+  font-weight: 600;
+  width: 90%;
+  animation: fadeINText 0.5 ease-in-out .9s;
+}
+
+.dashboard__sideBar .Dashboard_sideBar__item .sidebar_item_text {
+  display: none;
+}
+
+.dashboard__courseDetails {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  width: calc(100% - 80px);
+  padding: 2em 4em;
+}
+
+.CourseDetails__headingContainer {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.CourseDetails__tabText {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  color: #00a5ec;
+  font-weight: 500;
+  border-bottom: 3px solid #00a5ec;
+}
+
+.courseDetails__cardContainer {
+  /* border: 2px solid red; */
+  margin-top: 20px;
+  min-height: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(304px, 304px));
+  padding-top: 2em;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.courseDetails__card {
+  box-shadow: 0 4px 0.9em #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  background: transparent linear-gradient(180deg, #fff, #fff 24%, #fff 38%, hsla(0, 0%, 100%, .03137254901960784)) 0 0 no-repeat padding-box;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  width: 304px;
+  height: 320px;
+  background-image: url("https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/bg-card+(1).png");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+}
+
+.card__itemText {
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.CourseDetails_cardICON {
+  width: 55px;
+}
+
+.card__itemText:nth-child(2) {
+  font-weight: 500;
+}
+
+.card__itemText:nth-child(3) {
+  font-weight: 700;
+  color: #707070;
+}
+
+.card__itemText:nth-child(4) {
+  font-size: 14px;
+  color: #f78077;
+  font-weight: 400;
 }
 
 /* Elevation Academy Component */
@@ -1324,6 +1498,42 @@ mobile .mobileNavbar__Conainer {
   width: 55%;
 }
 
+.UnauthorizedPageContainer{
+  background-image: url("./Assets/download.svg");
+  background-size: 550px;
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  padding-bottom: 5em;
+}
+.UnauthorizedPageContainer .knowMoreButton{
+  background-color: transparent;
+  border: 1px solid #f78077;
+  width: 300px;
+  color: #f78077;
+  transition: all 0.3s ease-in-out;
+}
+.UnauthorizedPageContainer .knowMoreButton:hover{
+ cursor: pointer;
+ background-color: #f78077;
+ color: white;
+}
+.unAuthMsg{
+  color:#707070;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  color: tomato;
+  font-size: 30px;
+  user-select: none;
+}
 /* All screen sizes */
 
 @media screen and (max-width: 1110px) {
@@ -1731,6 +1941,24 @@ mobile .mobileNavbar__Conainer {
   .CodingJourney__finalGoalImage {
     width: 200px;
     width: 100%;
+  }
+  .dashboard__sideBar {
+    display: none;
+  }
+
+  .dashboard__courseDetails {
+    width: 100%;
+    padding: 0;
+  }
+
+  .activeSidebar {
+    background-color: white;
+    z-index: 4;
+    position: absolute;
+    width: 100%;
+  }
+  .dashboard__sidebarHamMenu{
+    z-index: 5;
   }
 }
 
