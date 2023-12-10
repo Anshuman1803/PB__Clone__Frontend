@@ -11,6 +11,7 @@ function Dashboard() {
   useEffect(() => {
     axios.get("http://localhost:5000/getTestdata").then((response) => {
       setTestData(response.data);
+      console.log(response.data);
     })
   }, [])
   return (
@@ -43,6 +44,7 @@ function Dashboard() {
                       <p className='card__itemText'>{data.testName}</p>
                       <p className='card__itemText'>₹{data.testPrice}</p>
                       <p className='card__itemText'>topic: {data.testCategory}</p>
+                      {data.testDate && <p className='card__itemText'>Starting : {data.testDate}</p>}
 
                     </div>
                   })

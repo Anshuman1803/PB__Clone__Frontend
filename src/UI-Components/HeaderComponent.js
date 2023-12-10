@@ -43,8 +43,8 @@ function HeaderComponent() {
                     <div className="App__navbar__ItemsContainer">
                         <span className='navbar__ItemsContainer__Item'> Courses and Programs <i className="fa-solid fa-caret-down"></i></span>
                         <div className="dropDownContainer">
-                            <Link to="/online-full-stack-developer-mern-certification-program" className='dropDownContainer__Item'>Master Competitive Programming</Link>
-                            <Link to="/master-competitive-programming" className='dropDownContainer__Item'>Full Stack Program</Link>
+                            <Link to="/online-full-stack-developer-mern-certification-program" className='dropDownContainer__Item'>Full Stack Program</Link>
+                            <Link to="/master-competitive-programming" className='dropDownContainer__Item'>Master Competitive Programming</Link>
                         </div>
                     </div>
 
