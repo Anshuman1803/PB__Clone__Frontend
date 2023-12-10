@@ -22,6 +22,7 @@ import PlacementICON from '../Assets/exclusive_placement.svg'
 import ProjectICON from '../Assets/real_life_projects.svg'
 // import FounderImg from './Assets/mamta_mentor.png'
 import { Link } from 'react-router-dom'
+import Footer from './Footer'
 function HomePage() {
     return (
         <section className='homeSection__Container'>
@@ -168,6 +169,8 @@ function HomePage() {
                 <h3 className='LeftContainer__headingText headingFirst'>Are you an Experienced Professional willing to Switch?</h3>
 
             </div>
+
+            <Footer></Footer>
             <div className='helpContainer__Message'>Need Help? Talk to us on  079 6900 2111 or Request Callback</div>
         </section>
     )
