@@ -12,6 +12,7 @@ function MockTestComponent() {
   useEffect(() => {
     axios.get("http://localhost:5000/mocktest").then((response) => {
       setTestData(response.data);
+      window.scrollTo(0, 0);
     });
   }, []);
 

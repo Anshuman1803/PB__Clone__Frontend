@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Hero_Image from '../Assets/Hero_BG.svg'
 import aws_AchievementImg from "../Assets/aws-Achievement.webp"
 import futerSkils_AchievementImg from "../Assets/futureSkils-Achievement.webp"
@@ -23,7 +23,11 @@ import ProjectICON from '../Assets/real_life_projects.svg'
 // import FounderImg from './Assets/mamta_mentor.png'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
+
 function HomePage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     return (
         <section className='homeSection__Container'>
 
@@ -122,7 +126,7 @@ function HomePage() {
                         <p className="CourseType__CardArrowButton"><i className="fa-solid fa-arrow-right arrowICON"></i></p>
                     </Link>
 
-                    <Link className="CourseType__Card" to={"/master-competitive-programming"}> 
+                    <Link className="CourseType__Card" to={"/master-competitive-programming"}>
                         <img src={ComptativePoster} alt="Poster" className='CourseType_CardPoster' />
                         <p className="CourstType__CardText">MASTER COMPETITIVE PROGRAMMING</p>
                         <p className="CourseType__CardArrowButton"><i className="fa-solid fa-arrow-right arrowICON"></i></p>
@@ -158,7 +162,7 @@ function HomePage() {
                     </div>
                     <p className="courseName">PrepBytes Elevation Academy - <span className='courseName_Text'> 4 months Full Stack Program with Job Guarantee</span></p>
 
-                    <button className='knowMoreButton LeftContainer__KnowMoreButton'>Know More</button>
+                    <Link className='knowMoreButton LeftContainer__KnowMoreButton' to={"/elevation-academy"}>Know More</Link>
                 </div>
 
                 <div className="SwitchCarrer__RightContainer">

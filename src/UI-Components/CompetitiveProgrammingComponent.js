@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Footer from './Footer'
 import PaymentPopup from '../PaymentInegration/PaymentPopup';
 import { useDispatch } from 'react-redux'
 import { addTempCourse } from '../ReduxSlice/UserReduxSlice'
 function CompetitiveProgrammingComponent() {
+  const dispatch = useDispatch();
   const [IsPaymentClick, setIsPaymentClick] = useState(false);
 
   const [tempData, setTempData] = useState({
@@ -16,8 +17,10 @@ function CompetitiveProgrammingComponent() {
     "testDate": "1st May"
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
-  const dispatch = useDispatch();
 
   const handleActiveOption = (e, batchDate) => {
     setTempData({ ...tempData, "testDate": batchDate });
@@ -258,10 +261,10 @@ function CompetitiveProgrammingComponent() {
 
         </div>
 
-<div className="CP_codingContests_container">
-  <h2 className='CodingContests_container_heading'>Crack Reputed Coding Contests</h2>
-  <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/MCP-company-new.webp" alt="Poster" className='CP_CodingContests_Poster' />
-</div>
+        <div className="CP_codingContests_container">
+          <h2 className='CodingContests_container_heading'>Crack Reputed Coding Contests</h2>
+          <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/MCP-company-new.webp" alt="Poster" className='CP_CodingContests_Poster' />
+        </div>
 
 
         <div className="batchSelectionContainer" id='selectBatch'>

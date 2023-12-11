@@ -1964,18 +1964,213 @@ mobile .mobileNavbar__Conainer {
   flex-direction: column;
   justify-content: flex-start;
 }
-.CodingContests_container_heading{
+
+.CodingContests_container_heading {
   font-weight: 400;
   font-size: 2vw;
 }
-.CP_CodingContests_Poster{
+
+.CP_CodingContests_Poster {
   margin: 20px auto;
   width: 70%;
 }
 
+
+/* FullStackProgramCompo */
+.FullStackProgramCompo__mainContainer {
+  background-image: url("https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/development-programs/full-stack-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.FSP__TopContainer {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FSP__topContainer_LeftBox {
+  width: 45%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+  color: white;
+}
+
+.partnerwithText {
+  font-size: 16px;
+  font-weight: 500;
+
+}
+
+.FSP_partnerBox {
+  border-radius: 10px;
+  background: transparent linear-gradient(90deg, #fff, #c7eaff);
+  opacity: 1;
+  width: fit-content;
+}
+
+.FSP_TopContainer__mainHeading {
+  font-weight: 600;
+  font-size: 2vw;
+  margin: 1em 0em;
+}
+
+.FSP_TopContainer__SecondaryHeading {
+  font-weight: 400;
+  font-size: 1.2vw;
+  margin-bottom: 30px;
+}
+
+.downloadSyllabusButton {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8em;
+  font-size: 18px;
+  font-weight: 400;
+  width: 300px;
+  background: transparent;
+  box-shadow: 0 3px 6px rgba(95, 141, 196, .2);
+  border-radius: 5px;
+  color: #ff219f;
+  border: 1px solid #ff219f;
+  cursor: pointer;
+}
+
+.FSP__topContainer_RightBox {
+  width: 40%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 2em;
+  gap: 40px;
+}
+
+.FSP_rightContainer_Cards {
+  width: 300px;
+  height: 90px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1607843137254902);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.FSP_cards_firstItem {
+  font-size: 15px;
+  color: #424242;
+  font-weight: 500;
+}
+
+.FSP_cards_secondItem {
+  font-size: 14px;
+  font-weight: 400;
+  color: #858585;
+}
+
+.FSP__BatchSelectionContainer {
+  background: #fff;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2em 0em;
+}
+
+.FSP_batchSelectioNText {
+  width: 150px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: #707070;
+}
+
+.FSP_Batch_cardMainContainer {
+  min-height: 150px;
+  width: calc(100% - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FSP_BatchDate__cardContainer {
+  width: 70%;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+
+.FSP__PriceCheckoutContainer {
+  width: 30%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.FSP_PriceTag {
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0;
+  color: #f78077;
+  font-weight: 700;
+}
+
+.fsp_Enrol {
+  background: #f78077;
+  border-radius: 10px;
+}
+
+.FSP_BatchDate_Card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1607843137254902);
+  background: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+  width: 225px;
+  height: 80px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.5em 1em;
+  gap: 10px;
+}
+
+.FSP_BatchDate_Card:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.FSP_batchInfo {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+}
+
 /* Footer Detains*/
 .footer {
-  margin-top: 20px;
   width: 100%;
   background: rgb(213, 255, 255);
   font-family: Poppins, sans-serif;
@@ -2078,9 +2273,6 @@ mobile .mobileNavbar__Conainer {
 
 
 /* All screen sizes */
-
-
-
 
 
 @media screen and (max-width: 1110px) {
@@ -2354,12 +2546,27 @@ mobile .mobileNavbar__Conainer {
   .statesbox_desc {
     font-size: 1.7vw;
   }
-  .CodingContests_container_heading{
+
+  .CodingContests_container_heading {
     font-weight: 400;
     font-size: 3vw;
   }
-  .CP_CodingContests_Poster{
+
+  .CP_CodingContests_Poster {
     width: 80%;
+  }
+
+  .FSP__topContainer_LeftBox {
+    width: 60%;
+    padding-left: 1em;
+  }
+
+  .FSP_TopContainer__mainHeading {
+    font-size: 2.6vw;
+  }
+
+  .FSP_TopContainer__SecondaryHeading {
+    font-size: 2vw;
   }
 }
 
@@ -2590,11 +2797,53 @@ mobile .mobileNavbar__Conainer {
     font-size: 4vw;
   }
 
-  .CodingContests_container_heading{
+  .CodingContests_container_heading {
     font-size: 3.5vw;
   }
-  .CP_CodingContests_Poster{
+
+  .CP_CodingContests_Poster {
     width: 100%;
+  }
+
+  .FSP__TopContainer {
+    flex-direction: column;
+  }
+
+  .FSP__topContainer_LeftBox {
+    width: 100%;
+  }
+
+  .FSP__topContainer_RightBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    row-gap: 30px;
+    min-height: fit-content;
+    background-color: #fff;
+    padding: 2em 0em;
+  }
+
+  .FSP_TopContainer__mainHeading {
+    font-size: 3.5vw;
+    width: 90%;
+  }
+
+  .FSP_TopContainer__SecondaryHeading {
+    font-size: 2.9vw;
+    width: 90%;
+  }
+
+  .FSP_BatchDate__cardContainer {
+    width: 50%;
+
+  }
+
+  .FSP__PriceCheckoutContainer {
+    width: 50%;
   }
 }
 
@@ -2718,6 +2967,15 @@ mobile .mobileNavbar__Conainer {
   .statesbox_desc {
     font-size: 5vw;
   }
+
+  .FSP_Batch_cardMainContainer {
+    flex-direction: column;
+  }
+
+  .FSP_BatchDate__cardContainer,
+  .FSP__PriceCheckoutContainer {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 585px) {
@@ -2776,6 +3034,14 @@ mobile .mobileNavbar__Conainer {
 
   .SelectBatchText {
     font-size: 4vw;
+  }
+
+  .FSP_TopContainer__mainHeading {
+    font-size: 4.5vw;
+  }
+
+  .FSP_TopContainer__SecondaryHeading {
+    font-size: 3.3vw;
   }
 }
 
@@ -2893,8 +3159,22 @@ mobile .mobileNavbar__Conainer {
   .statesbox_desc {
     font-size: 6vw;
   }
-  .CodingContests_container_heading{
+
+  .CodingContests_container_heading {
     font-size: 5.5vw;
+  }
+
+  .FSP__BatchSelectionContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .FSP_batchSelectioNText {
+    width: 100%;
+  }
+
+  .FSP_Batch_cardMainContainer {
+    width: 100%;
   }
 }
 
@@ -3001,5 +3281,21 @@ mobile .mobileNavbar__Conainer {
 
   .statesbox_desc {
     font-size: 7vw;
+  }
+
+  .FSP_TopContainer__mainHeading {
+    font-size: 6vw;
+  }
+
+  .FSP_TopContainer__SecondaryHeading {
+    font-size: 4vw;
+  }
+
+  .FSP__topContainer_LeftBox {
+    padding-right: 1em;
+  }
+
+  .downloadSyllabusButton {
+    width: 95%;
   }
 }
