@@ -125,6 +125,145 @@ function CompetitiveProgrammingComponent() {
           </div>
         </div>
 
+        <h2 className="Cp_ProvidedFacility__heading">Master Competitive Programming With Us</h2>
+
+        <div className="Cp_ProvidedFacility_MainContainer">
+
+          <div className="CP_ProvidedFacility__leftContainer">
+
+            <div className="CP_ProvidedFacility_ListBox">
+              <div className="Cp_ProvidedFacilityIConContainer">
+                <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/Course+Feature+Section/Icons_Personalised+Program.webp" alt="FaciltyICON" className='CP_ProvidedFacility__ICON' />
+              </div>
+              <div className="CP_ProvidedFacility_DescBox">
+                <h4 className='CP_ProvidedFacilityDESC_title'>Personalised Program</h4>
+                <p className="CP_ProvidedFacility_DESC">Master your skills from where you are, with India's only personalised program</p>
+              </div>
+
+            </div>
+
+            <div className="CP_ProvidedFacility_ListBox">
+              <div className="Cp_ProvidedFacilityIConContainer">
+                <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/Course+Feature+Section/Icons_Quick+Doubt+Support.webp" alt="FaciltyICON" className='CP_ProvidedFacility__ICON' />
+              </div>
+              <div className="CP_ProvidedFacility_DescBox">
+                <h4 className='CP_ProvidedFacilityDESC_title'>Quick Doubt Support</h4>
+                <p className="CP_ProvidedFacility_DESC">Get your doubts cleared by coding experts and have a smooth learning</p>
+              </div>
+
+            </div>
+
+
+
+            <div className="CP_ProvidedFacility_ListBox">
+              <div className="Cp_ProvidedFacilityIConContainer">
+                <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/Course+Feature+Section/Icons_250+Coding+Questions.webp" alt="FaciltyICON" className='CP_ProvidedFacility__ICON' />
+              </div>
+              <div className="CP_ProvidedFacility_DescBox">
+                <h4 className='CP_ProvidedFacilityDESC_title'>250+ Coding Questions</h4>
+                <p className="CP_ProvidedFacility_DESC">Best way to master a language is by coding in the language</p>
+              </div>
+
+            </div>
+
+
+            <div className="CP_ProvidedFacility_ListBox">
+              <div className="Cp_ProvidedFacilityIConContainer">
+                <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/Course+Feature+Section/Icons_80+Hours+of+Videos.webp" alt="FaciltyICON" className='CP_ProvidedFacility__ICON' />
+              </div>
+              <div className="CP_ProvidedFacility_DescBox">
+                <h4 className='CP_ProvidedFacilityDESC_title'>50+ Hours of Videos</h4>
+                <p className="CP_ProvidedFacility_DESC">Recorded video lectures by experts to help you understand the concepts easily</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div className="CP_ProvidedFacility__MiddleContainer">
+            <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/Vector.svg" alt="MiddleImage" className='CP_providiedFacility__poster' />
+          </div>
+
+          <div className="CP_ProvidedFacility__RightContainer">
+
+            <div className="CP_ProvidedFacility_ListBox CP_ProvidedFacility_RightListBox">
+              <div className="Cp_ProvidedFacilityIConContainer">
+                <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/Course+Feature+Section/Icons_Expert+Mentors.webp" alt="FaciltyICON" className='CP_ProvidedFacility__ICON' />
+              </div>
+              <div className="CP_ProvidedFacility_DescBox">
+                <h4 className='CP_ProvidedFacilityDESC_title'>Expert Mentors</h4>
+                <p className="CP_ProvidedFacility_DESC">Get career guidance, mentorship, time management strategies from industry experts</p>
+              </div>
+
+            </div>
+
+            <div className="CP_ProvidedFacility_ListBox CP_ProvidedFacility_RightListBox">
+              <div className="Cp_ProvidedFacilityIConContainer">
+                <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/Course+Feature+Section/Icons_Get+certificate-01.webp" alt="FaciltyICON" className='CP_ProvidedFacility__ICON' />
+              </div>
+              <div className="CP_ProvidedFacility_DescBox">
+                <h4 className='CP_ProvidedFacilityDESC_title'>Get Certified</h4>
+                <p className="CP_ProvidedFacility_DESC">Get recognized on course completion with highly reputed PrepBytes certificates</p>
+              </div>
+
+            </div>
+
+
+            <div className="CP_ProvidedFacility_ListBox CP_ProvidedFacility_RightListBox">
+              <div className="Cp_ProvidedFacilityIConContainer">
+                <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/Course+Feature+Section/Icons_20+Live+Coding+Sessions.webp" alt="FaciltyICON" className='CP_ProvidedFacility__ICON' />
+              </div>
+              <div className="CP_ProvidedFacility_DescBox">
+                <h4 className='CP_ProvidedFacilityDESC_title'>20+ Live Coding Sessions</h4>
+                <p className="CP_ProvidedFacility_DESC">Code live and get mentorship with the top-rated coders of the country.</p>
+              </div>
+
+            </div>
+
+            <div className="CP_ProvidedFacility_ListBox CP_ProvidedFacility_RightListBox">
+              <div className="Cp_ProvidedFacilityIConContainer">
+                <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/Course+Feature+Section/Icons_80+Tech-Apti+MCQ+Tests.webp" alt="FaciltyICON" className='CP_ProvidedFacility__ICON' />
+              </div>
+              <div className="CP_ProvidedFacility_DescBox">
+                <h4 className='CP_ProvidedFacilityDESC_title'>40+ Coding quizes</h4>
+                <p className="CP_ProvidedFacility_DESC">Small quizzes after every topic to give you a quick check on your understandings</p>
+              </div>
+
+            </div>
+
+
+
+
+
+          </div>
+
+        </div>
+
+        <div className="CP_StatesContainer">
+
+          <div className="CP_statesBOX">
+            <p className="StatesBox_title">10K+</p>
+            <p className="statesbox_desc">Students Enrolled</p>
+          </div>
+
+          <div className="CP_statesBOX">
+            <p className="StatesBox_title">1000K+</p>
+            <p className="statesbox_desc">Doubts Solved</p>
+          </div>
+
+          <div className="CP_statesBOX">
+            <p className="StatesBox_title">2k+ hrs</p>
+            <p className="statesbox_desc">Mentor Interaction</p>
+          </div>
+
+        </div>
+
+<div className="CP_codingContests_container">
+  <h2 className='CodingContests_container_heading'>Crack Reputed Coding Contests</h2>
+  <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/MCP-company-new.webp" alt="Poster" className='CP_CodingContests_Poster' />
+</div>
+
+
         <div className="batchSelectionContainer" id='selectBatch'>
           <p className='SelectBatchText'>Select Batch</p>
 

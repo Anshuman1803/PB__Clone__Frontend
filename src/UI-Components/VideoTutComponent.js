@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Footer from "./Footer"
 function VideoTutComponent() {
   const [videoData, setVideoData] = useState([]);
   useEffect(() => {
@@ -39,7 +40,7 @@ function VideoTutComponent() {
             })
           }
         </section>
-
+<Footer></Footer>
       </div>
 
       <div className='helpContainer__Message'>Need Help? Talk to us on  079 6900 2111 or Request Callback</div>

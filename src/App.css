@@ -1821,6 +1821,158 @@ mobile .mobileNavbar__Conainer {
   color: white;
 }
 
+
+.Cp_ProvidedFacility_MainContainer {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: 20px auto;
+  gap: 5px;
+}
+
+.Cp_ProvidedFacility__heading {
+  text-align: center;
+  margin-top: 3em;
+  color: #151414;
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+.CP_ProvidedFacility__leftContainer {
+  width: 40%;
+  height: 100%;
+}
+
+.CP_ProvidedFacility_ListBox {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.Cp_ProvidedFacilityIConContainer {
+  height: 65px;
+  width: 60px;
+  border-radius: 50%;
+  background: #fff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 15px rgba(138, 138, 138, .1607843137);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CP_ProvidedFacility__ICON {
+  width: 30px;
+
+}
+
+.CP_ProvidedFacility_DescBox {
+  width: calc(100% - 60px);
+
+}
+
+.CP_ProvidedFacilityDESC_title {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 600;
+  color: #151414;
+}
+
+.CP_ProvidedFacility_DESC {
+  margin-top: 10px;
+  text-align: right;
+  font-size: 14px;
+  color: #3e4041;
+  font-weight: 400;
+}
+
+.CP_ProvidedFacility__MiddleContainer {
+  background: #f8fbff;
+  width: 20%;
+  display: flex;
+  height: 400px;
+}
+
+.CP_providiedFacility__poster {
+  width: 100%;
+  object-fit: cover;
+  margin: auto;
+}
+
+.CP_ProvidedFacility__RightContainer {
+  width: 40%;
+  height: 100%;
+}
+
+.CP_ProvidedFacility_RightListBox {
+  flex-direction: row;
+  gap: 10px;
+}
+
+.CP_ProvidedFacility_RightListBox .CP_ProvidedFacility_DescBox .CP_ProvidedFacilityDESC_title,
+.CP_ProvidedFacility_RightListBox .CP_ProvidedFacility_DescBox .CP_ProvidedFacility_DESC {
+  text-align: left;
+}
+
+.CP_StatesContainer {
+  width: 70%;
+  margin: 10px auto;
+  border-top: 1px solid #c2c2c2;
+  border-bottom: 1px solid #c2c2c2;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.CP_statesBOX {
+  height: 200px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.StatesBox_title {
+  text-align: center;
+  color: #00a6eb;
+  font-size: 2.7vw;
+  font-weight: 600;
+}
+
+.statesbox_desc {
+  text-align: center;
+  font-size: 1.3vw;
+  color: #322e2e;
+  font-weight: 500;
+}
+
+.CP_codingContests_container {
+  padding-top: 20px;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.CodingContests_container_heading{
+  font-weight: 400;
+  font-size: 2vw;
+}
+.CP_CodingContests_Poster{
+  margin: 20px auto;
+  width: 70%;
+}
+
 /* Footer Detains*/
 .footer {
   margin-top: 20px;
@@ -2168,6 +2320,47 @@ mobile .mobileNavbar__Conainer {
   .CP_mentorInforContainer_Heading:nth-child(2) {
     font-size: 2.5vw;
   }
+
+  .Cp_ProvidedFacility_MainContainer {
+    width: 95%;
+  }
+
+  .CP_StatesContainer {
+    width: 100%;
+  }
+
+  .StatesBox_title {
+    font-size: 3vw;
+  }
+
+  .statesbox_desc {
+    font-size: 1.7vw;
+  }
+
+  .CP_StatesContainer {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .CP_statesBOX {
+    height: 200px;
+    width: 30%;
+  }
+
+  .StatesBox_title {
+    font-size: 3vw;
+  }
+
+  .statesbox_desc {
+    font-size: 1.7vw;
+  }
+  .CodingContests_container_heading{
+    font-weight: 400;
+    font-size: 3vw;
+  }
+  .CP_CodingContests_Poster{
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2341,6 +2534,68 @@ mobile .mobileNavbar__Conainer {
   .batchPrice_text {
     font-size: 3vw;
   }
+
+  .CP_ProvidedFacility__MiddleContainer {
+    display: none;
+  }
+
+  .Cp_ProvidedFacility_MainContainer {
+    flex-direction: column;
+  }
+
+  .CP_ProvidedFacility_ListBox {
+    width: 100%;
+  }
+
+  .CP_ProvidedFacility__leftContainer,
+  .CP_ProvidedFacility__RightContainer {
+    width: 100%;
+  }
+
+  .CP_ProvidedFacility_RightListBox {
+    flex-direction: row;
+  }
+
+  .CP_ProvidedFacilityDESC_title,
+  .CP_ProvidedFacility_DESC {
+    text-align: left;
+  }
+
+  .CP_ProvidedFacility_ListBox {
+    flex-direction: row;
+  }
+
+  .Cp_ProvidedFacility__heading {
+    font-size: 3vw;
+    width: 95%;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .CP_StatesContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .CP_statesBOX {
+    height: 150px;
+    width: 100%;
+  }
+
+  .StatesBox_title {
+    font-size: 5vw;
+  }
+
+  .statesbox_desc {
+    font-size: 4vw;
+  }
+
+  .CodingContests_container_heading{
+    font-size: 3.5vw;
+  }
+  .CP_CodingContests_Poster{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -2454,6 +2709,14 @@ mobile .mobileNavbar__Conainer {
 
   .CP_mentorInforContainer_Heading:nth-child(2) {
     font-size: 3.5vw;
+  }
+
+  .StatesBox_title {
+    font-size: 6vw;
+  }
+
+  .statesbox_desc {
+    font-size: 5vw;
   }
 }
 
@@ -2615,6 +2878,24 @@ mobile .mobileNavbar__Conainer {
   .batchPrice_text {
     font-size: 5.5vw;
   }
+
+  .Cp_ProvidedFacility__heading {
+    font-size: 5vw;
+    width: 95%;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .StatesBox_title {
+    font-size: 7vw;
+  }
+
+  .statesbox_desc {
+    font-size: 6vw;
+  }
+  .CodingContests_container_heading{
+    font-size: 5.5vw;
+  }
 }
 
 
@@ -2709,4 +2990,16 @@ mobile .mobileNavbar__Conainer {
     font-size: 8vw;
   }
 
+  .Cp_ProvidedFacility__heading {
+    font-size: 5vw;
+    width: 90%;
+  }
+
+  .StatesBox_title {
+    font-size: 8vw;
+  }
+
+  .statesbox_desc {
+    font-size: 7vw;
+  }
 }
