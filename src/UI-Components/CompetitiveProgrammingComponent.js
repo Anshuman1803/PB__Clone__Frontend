@@ -13,7 +13,7 @@ function CompetitiveProgrammingComponent() {
     "testName": "master-competitive-programming",
     "testCategory": 'Programming-Course',
     "testPrice": 25000,
-    "testDate": ""
+    "testDate": "1st May"
   });
 
 
