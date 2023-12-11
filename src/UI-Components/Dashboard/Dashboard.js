@@ -9,7 +9,7 @@ function Dashboard() {
 
 
   useEffect(() => {
-    axios.get("http://localhost:5000/getTestdata").then((response) => {
+    axios.get("https://pb-clone.onrender.com/getTestdata").then((response) => {
       setTestData(response.data);
     })
   }, [])

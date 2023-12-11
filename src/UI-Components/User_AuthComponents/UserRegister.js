@@ -33,7 +33,7 @@ function UserRegister() {
     }
     else {
       setIsUserLoading(true)
-      axios.post("http://localhost:5000/user/register", userDetails).then((response) => {
+      axios.post("https://pb-clone.onrender.com/user/register", userDetails).then((response) => {
         setMessage({ "msgVal": response.data.resMsg })
         setIsUserLoading(false)
       })

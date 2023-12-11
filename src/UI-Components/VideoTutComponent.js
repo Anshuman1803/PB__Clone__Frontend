@@ -4,7 +4,7 @@ import Footer from "./Footer"
 function VideoTutComponent() {
   const [videoData, setVideoData] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5000/video").then((response) => {
+    axios.get("https://pb-clone.onrender.com/video").then((response) => {
       setVideoData(response.data)
     })
   }, [])

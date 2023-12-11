@@ -10,7 +10,7 @@ function MockTestComponent() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    axios.get("http://localhost:5000/mocktest").then((response) => {
+    axios.get("https://pb-clone.onrender.com/mocktest").then((response) => {
       setTestData(response.data);
       window.scrollTo(0, 0);
     });
