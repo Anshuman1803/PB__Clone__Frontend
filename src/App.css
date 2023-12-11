@@ -27,6 +27,9 @@
 .App__header_LogoContainer {
   width: 200px;
   height: 100%;
+  text-decoration: none;
+  border: none;
+  outline: none;
 }
 
 .LogoContainer__Logo {
@@ -1153,15 +1156,17 @@ mobile .mobileNavbar__Conainer {
   font-size: 16px;
   color: white;
 }
-.MockComponent__mainHeading{
+
+.MockComponent__mainHeading {
   margin-top: 2em;
   display: flex;
   align-items: center;
   color: #22559c;
-    font-size: 28px;
-    font-weight: 500;
-    padding-left: 2.8em;
+  font-size: 28px;
+  font-weight: 500;
+  padding-left: 2.8em;
 }
+
 .MockTest__CardContainer {
   margin: 3em 0px;
   border-top: 2px solid #22559c;
@@ -2162,12 +2167,13 @@ mobile .mobileNavbar__Conainer {
 }
 
 .FSP__BatchSelectionContainer {
+  border: 0.5px solid #c2c2c2;
   background: #fff;
   min-height: 150px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 2em 0em;
+  padding: 0.5em 0em;
 }
 
 .FSP_batchSelectioNText {
@@ -2247,6 +2253,54 @@ mobile .mobileNavbar__Conainer {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+}
+
+.FSP__Tool__Container {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.FSP__TOOlDetailsBox {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.FSP_TOO_Heading {
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  color: rgba(10, 45, 71, .9294117647058824);
+  font-size: 2vw;
+
+}
+
+.FSP_Tool_DESC {
+  width: 90%;
+  text-align: center;
+  color: rgba(106, 127, 134, .9294117647058824);
+  font-weight: 300;
+  font-size: 1.2vw;
+
+}
+
+.FSP_toolPosterContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+}
+
+.FSP_ToolPoster {
+  width: 85%;
+  margin: auto;
 
 }
 
@@ -2445,6 +2499,16 @@ mobile .mobileNavbar__Conainer {
   .SelectBatchText {
     font-size: 2.2vw;
   }
+
+  .FSP_TOO_Heading {
+    font-size: 2.5vw;
+  }
+
+  .FSP_Tool_DESC {
+    font-size: 1.6vw;
+  }
+
+
 }
 
 @media screen and (max-width: 1025px) {
@@ -2677,8 +2741,21 @@ mobile .mobileNavbar__Conainer {
   .FSP_TopContainer__SecondaryHeading {
     font-size: 2vw;
   }
-  .MockComponent__mainHeading{
-   padding-left: 0.2em;
+
+  .MockComponent__mainHeading {
+    padding-left: 0.2em;
+  }
+
+  .FSP_toolPosterContainer {
+    width: 50%;
+  }
+
+  .FSP_TOO_Heading {
+    font-size: 2.9vw;
+  }
+
+  .FSP_Tool_DESC {
+    font-size: 2vw;
   }
 }
 
@@ -2957,6 +3034,27 @@ mobile .mobileNavbar__Conainer {
   .FSP__PriceCheckoutContainer {
     width: 50%;
   }
+
+  .FSP__Tool__Container {
+    flex-direction: column;
+  }
+
+  .FSP__TOOlDetailsBox,
+  .FSP_toolPosterContainer {
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .FSP_TOO_Heading {
+    width: 100%;
+    font-size: 4vw;
+  }
+
+  .FSP_Tool_DESC {
+    width: 100%;
+    font-size: 3vw;
+  }
+
 }
 
 @media screen and (max-width: 650px) {
@@ -3154,6 +3252,14 @@ mobile .mobileNavbar__Conainer {
 
   .FSP_TopContainer__SecondaryHeading {
     font-size: 3.3vw;
+  }
+
+  .FSP_TOO_Heading {
+    font-size: 5vw;
+  }
+
+  .FSP_Tool_DESC {
+    font-size: 3.5vw;
   }
 }
 
@@ -3408,6 +3514,15 @@ mobile .mobileNavbar__Conainer {
   }
 
   .downloadSyllabusButton {
+    width: 95%;
+  }
+  .FSP_TOO_Heading {
+    font-size: 7.5vw;
+    width: 95%;
+  }
+
+  .FSP_Tool_DESC {
+    font-size: 4.6vw;
     width: 95%;
   }
 }

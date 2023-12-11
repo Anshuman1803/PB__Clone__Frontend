@@ -113,6 +113,19 @@ function FullStackProgramComponent() {
           {IsPaymentClick && <PaymentPopup propFun={canclePayment} />}
         </div>
 
+        <div className="FSP__Tool__Container">
+
+          <div className="FSP__TOOlDetailsBox">
+            <h3 className="FSP_TOO_Heading">Languages & Tools you will learn</h3>
+            <p className="FSP_Tool_DESC">Start learning web development from basics of HTML, CSS, Javascript.Master latest technologies like React, Node, Express. Get hands on Github, MongoDB, Google Analytics, Facebook Analytics</p>
+          </div>
+          <div className="FSP_toolPosterContainer">
+            <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/full-stack-course/tools1.png" alt=" ToolsPoster" className='FSP_ToolPoster' />
+          </div>
+
+        </div>
+
+
         <Footer></Footer>
       </section>
 
