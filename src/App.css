@@ -8,6 +8,40 @@
   scroll-behavior: smooth;
 }
 
+
+
+/* Loading page */
+.loading {
+  background-color: white;
+  height: 90vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  transition: 800ms;
+  position: fixed;
+  top: 0;
+  z-index: 401;
+}
+
+.loader__LOGO {
+  width: 5em;
+  animation: beat 1s ease infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* Heading Part */
 .App__header {
   box-shadow: 0 3px 6px rgba(0, 0, 0, .05);
@@ -2399,36 +2433,6 @@ mobile .mobileNavbar__Conainer {
   margin-top: 10px;
 }
 
-
-/* Loading page */
-.loading {
-  height: 90vh;
-  width: 100%;
-  display: grid;
-  place-items: center;
-  transition: 800ms;
-  position: absolute;
-  z-index: 15;
-}
-
-.loader__LOGO {
-  width: 5em;
-  animation: beat 1s ease infinite;
-}
-
-@keyframes beat {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(.8);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
 
 
 
