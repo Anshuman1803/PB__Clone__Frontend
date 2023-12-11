@@ -11,7 +11,7 @@ function CompetitiveProgrammingComponent() {
   const [tempData, setTempData] = useState({
     "testID": 1,
     "testImg": 'https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/master_competetive_pgm.webp',
-    "testName": "master-competitive-programming",
+    "testTitle": "master-competitive-programming",
     "testCategory": 'Programming-Course',
     "testPrice": 25000,
     "testDate": "1st May"

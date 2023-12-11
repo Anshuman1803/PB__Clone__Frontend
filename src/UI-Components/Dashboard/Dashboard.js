@@ -42,8 +42,8 @@ function Dashboard() {
                       <img src={data.testImg} alt="icon" className='CourseDetails_cardICON' />
                       <p className='card__itemText'>{data.testName}</p>
                       <p className='card__itemText'>₹{data.testPrice}</p>
-                      <p className='card__itemText'>topic: {data.testCategory}</p>
-                      {data.testDate && <p className='card__itemText'>Starting : {data.testDate}</p>}
+                      <p className='card__itemText'> {data.testTitle}</p>
+                      {data.testDate && <p className='card__itemText'>Date : {data.testDate}</p>}
 
                     </div>
                   })

@@ -1153,9 +1153,17 @@ mobile .mobileNavbar__Conainer {
   font-size: 16px;
   color: white;
 }
-
+.MockComponent__mainHeading{
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  color: #22559c;
+    font-size: 28px;
+    font-weight: 500;
+    padding-left: 2.8em;
+}
 .MockTest__CardContainer {
-  margin: 5em 0px;
+  margin: 3em 0px;
   border-top: 2px solid #22559c;
   position: relative;
   min-height: 600px;
@@ -1200,6 +1208,79 @@ mobile .mobileNavbar__Conainer {
   gap: 10px;
   padding: 0.7em;
 }
+
+.MockText_ComapnyCard {
+  background: linear-gradient(180deg, #ffe4b6, #fff 54%, #fff);
+  box-shadow: 0 10px 30px rgba(95, 141, 196, .2);
+  border-radius: 5px;
+  color: #707070;
+  height: 200px;
+  width: 100%;
+}
+
+.MockTest__PastCardContainer {
+  grid-template-columns: repeat(auto-fit, minmax(290px, 290px));
+}
+
+.MockTest_PastCard {
+  width: 100%;
+  padding: 10px;
+  height: 420px;
+  background: transparent linear-gradient(180deg, #e0ebf9, #fff 54%, #fff);
+  box-shadow: 0 10px 30px rgba(95, 141, 196, .2);
+  border-radius: 5px;
+  color: #707070;
+  justify-content: flex-start;
+}
+
+.PastCard__iconContainer {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.testPoster {
+  width: 90px;
+}
+
+.PastCard__testTitle {
+  text-align: center;
+  color: #3969ad;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.PastCard_testInfoBox {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PastCard_InfoText {
+  border-right: 2px solid #e0ebf9;
+  ;
+  width: 33%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 14px;
+  padding: 0em 0.2em;
+}
+
+.PastCard_InfoText:nth-child(3) {
+  border: none;
+}
+
+.topicWiseIcon {
+  width: 60px;
+}
+
 
 .TestTopicIcon {
   width: 50px;
@@ -1450,7 +1531,7 @@ mobile .mobileNavbar__Conainer {
 }
 
 .CourseDetails_cardICON {
-  width: 55px;
+  width: 70px;
 }
 
 .card__itemText:nth-child(2) {
@@ -2567,6 +2648,9 @@ mobile .mobileNavbar__Conainer {
 
   .FSP_TopContainer__SecondaryHeading {
     font-size: 2vw;
+  }
+  .MockComponent__mainHeading{
+   padding-left: 0.2em;
   }
 }
 

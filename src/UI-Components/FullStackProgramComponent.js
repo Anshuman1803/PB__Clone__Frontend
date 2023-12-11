@@ -9,7 +9,7 @@ function FullStackProgramComponent() {
   const [tempData, setTempData] = useState({
     "testID": 3,
     "testImg": 'https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/master_competetive_pgm.webp',
-    "testName": "Full Stack Web Development",
+    "testTitle": "Full Stack Web Development",
     "testCategory": 'Web-Development',
     "testPrice": 30000,
     "testDate": "1st May"
