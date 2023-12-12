@@ -10,7 +10,7 @@ function ProjectComponent() {
   const { topic } = useParams();
   useEffect(() => {
     setIsloading(true)
-    axios.get(`http://localhost:5000/project/${topic}`).then((response) => {
+    axios.get(`https://pb-clone.onrender.com/project/${topic}`).then((response) => {
       setCurrentProject(response.data[0]);
       setIsloading(false)
     });
