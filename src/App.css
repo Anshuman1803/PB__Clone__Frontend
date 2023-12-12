@@ -1603,15 +1603,514 @@ mobile .mobileNavbar__Conainer {
   justify-content: center;
 }
 
+.EA_topPosterContainer {
+  width: 55%;
+  display: grid;
+  place-items: center;
+}
+
 .EA_TopMostContainer__Poster {
-  width: 45%;
-  object-fit: contain;
-  object-position: bottom;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 
 .EA_TopMostContainer__DetailsBox {
-  border: 2px solid blue;
-  width: 55%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0em 1em;
+}
+
+.EA_detailsBox_heading {
+  color: #3e4041;
+  font-weight: 600;
+  font-size: 2.5vw;
+}
+
+.EA_DetailsBox_Desc {
+  width: 100%;
+  line-height: 1.5;
+  font-size: 1.5vw;
+  color: #424242;
+  margin: 20px 0px;
+}
+
+.EA_DetailsBox_ExtraDesc {
+  margin-top: 10px;
+  font-size: 1.3vw;
+  color: #424242;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.rightArrowICON {
+  font-size: 12px;
+}
+
+.EA_TopMost_container_buttoncontainer {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.EA_AppyNowButton {
+  width: 200px;
+  background: #00a5ec;
+  border: none;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 0.7em;
+}
+
+.EA_AppyNowButton:nth-child(1):hover {
+  cursor: pointer;
+  background: #09c;
+}
+
+.EA_AppyNowButton:nth-child(2) {
+  border: 1px solid #00a5ec;
+  background: transparent;
+  box-shadow: 0 3px 6px rgba(95, 141, 196, .2);
+  border-radius: 5px;
+  color: #00a5ec;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.EA_BatchInformationContainer {
+  width: 100%;
+  min-height: 150px;
+  background: #e5f4fb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.EA_batchFor_Container {
+  min-height: 150px;
+  width: 35%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.EA_BatchYear {
+  color: #424242;
+  font-size: 1.7vw;
+  font-weight: 600;
+  margin: 0px 20px;
+}
+
+.EA_Batch_startingDateLabel {
+  color: #f7f7f7;
+  background: #00a5ec 0 0 no-repeat padding-box;
+  display: inline-block;
+  padding: 7px 12px;
+  font-size: 1.4vw;
+  font-weight: 600;
+}
+
+.EA_Batch__SessionInforContainer {
+  width: calc(100% - 37%);
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0em 1em;
+}
+
+.EA_Batch_SessionBox {
+  min-height: 150px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Ea_SessionBoxTitle {
+  color: #095170;
+  font-size: 1vw;
+  font-weight: 600;
+}
+
+.Ea_session_date {
+  font-size: 1vw;
+  background: #d6f3ff;
+  border: 0.5px dashed #00a5ec;
+  border-radius: 6px;
+  text-align: center;
+  color: #424242;
+  padding: 0.3em;
+
+}
+
+.Ea_batch_SessionIconContainer {
+  position: relative;
+}
+
+.Ea_batch_SessionIconContainer:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: transparent linear-gradient(90deg, #00a5ec, #99e0ff);
+  position: absolute;
+  top: 28px;
+  left: 100%;
+  width: 15vw;
+}
+
+.EA__Job_PathMainContainer {
+  width: 100%;
+  min-height: 600px;
+  margin-top: 6em;
+}
+
+.EA_jobPath_heading {
+  color: #424242;
+  font-size: 2vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin-bottom: 1em;
+}
+
+.EA_jobpathContainer {
+  width: 100%;
+  min-height: calc(600px - 50px);
+  display: flex;
+  justify-content: center;
+  padding: 2em 0em;
+}
+
+.EA_JobPath_List_Container {
+  width: 40%;
+}
+
+.EA_JobList_Box {
+  font-size: 1.1vw;
+  border-radius: 10px;
+  padding: 1em 0em;
+  width: 65%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  background: #fff;
+  border: 0.5px solid #c2c2c2;
+  position: relative;
+  margin-top: 40px;
+  font-weight: 600;
+
+}
+
+.EA_JobList_Box::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: transparent linear-gradient(90deg, #00a5ec, #99e0ff);
+  width: 61.5%;
+  right: -61.5%;
+}
+
+.EA_jobList_number {
+  width: 45px;
+  height: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1607843137254902);
+  border-radius: 10px;
+  color: #424242;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -22px;
+}
+
+.EA_JobList_Box:nth-child(1) {
+  color: rgb(255, 158, 82);
+}
+
+.EA_JobList_Box:nth-child(2) {
+  color: rgb(232, 63, 63);
+}
+
+.EA_JobList_Box:nth-child(3) {
+  color: rgb(192, 39, 175);
+}
+
+.EA_JobList_Box:nth-child(4) {
+  color: rgb(32, 142, 189);
+}
+
+.EA_JobList_Box:nth-child(5) {
+  color: rgb(31, 194, 92);
+}
+
+.EA_JobList_Box:nth-child(1) .EA_jobList_number {
+  border: 1px dashed rgb(255, 158, 82);
+  background-color: rgb(255, 251, 248);
+  ;
+}
+
+.EA_JobList_Box:nth-child(2) .EA_jobList_number {
+  border: 1px dashed rgb(232, 63, 63);
+  background-color: rgb(255, 242, 242);
+}
+
+.EA_JobList_Box:nth-child(3) .EA_jobList_number {
+  background-color: rgb(255, 241, 253);
+  border: 1px dashed rgb(192, 39, 175);
+}
+
+.EA_JobList_Box:nth-child(4) .EA_jobList_number {
+  background-color: rgb(226, 246, 255);
+  border: 1px dashed rgb(32, 142, 189);
+}
+
+.EA_JobList_Box:nth-child(5) .EA_jobList_number {
+  background-color: rgb(231, 255, 240);
+  border: 1px dashed rgb(31, 194, 92);
+}
+
+
+
+.EA_JobPath_List_Desc_Container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7;
+  border-radius: 10px;
+  border: 1px;
+  padding: 0em 2em;
+  padding-bottom: 2em;
+}
+
+.EA_jobPath_descBox {
+  display: flex;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1607843137254902);
+  border-radius: 10px;
+  background: transparent linear-gradient(101deg, #fff, #f3fcff) 0 0 no-repeat padding-box;
+  height: 100px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0em 0.5em;
+  position: relative;
+  z-index: 2;
+}
+
+.EA_jobPath_descBox_text {
+  width: calc(100% - 150px);
+  color: #424242;
+  font-size: 0.9vw;
+}
+
+.Ea_JobPath_descBox_poster {
+  width: 130px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.EA__CardContaienr__heading {
+  color: #3e4041;
+  font-size: 2.6vw;
+  margin-top: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.EA_CardContainer {
+  margin-top: 15px;
+  width: 100%;
+  min-height: 400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 0em;
+}
+
+.EA__Card {
+
+  width: 100%;
+  height: 255px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1607843137254902);
+  border: 0.5px solid #c2c2c2;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 1em;
+}
+
+.EA_cardICon_Container {
+  background: #fdf0d7 0 0 no-repeat padding-box;
+  border-radius: 10px;
+  height: 73px;
+  width: 73px;
+  padding: 15px;
+}
+
+.EA_cardTitle {
+  color: #3e4041;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.EA_CardDesc {
+  color: #858585;
+  font-size: 16px;
+}
+
+/* Popup Form Container */
+.popupForm_mainContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.575);
+  z-index: 4002;
+  display: flex;
+}
+
+.FormContainer {
+  width: 70%;
+  min-height: 550px;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137254902);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PopupFormPoster {
+  width: 40%;
+  height: 100%;
+}
+
+.Popup__formBox {
+  height: 100%;
+  width: 60%;
+  position: relative;
+}
+
+.Popup_formBox_heading {
+  color: #424242;
+  text-align: center;
+  font-size: 20px;
+  width: 100%;
+  margin-top: 4em;
+  text-align: center;
+  font-size: 18px;
+}
+
+.popup__formItemBox {
+  width: 100%;
+  margin-top: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0em 1.5em;
+}
+
+.Poup_formItem {
+  display: block;
+  width: calc(100% - 250px);
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid #dfdfdf;
+  color: #707070;
+  outline: none;
+  font-size: 16px;
+}
+
+.optionValue {
+  font-size: 18px;
+  color: #424242;
+}
+
+.Popup_formitem__label {
+  width: 250px;
+  color: #707070;
+  font-size: 14px;
+}
+
+.formPopup__ProfessioanlButtonContainer {
+  width: calc(100% - 250px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.optionButtons {
+  width: 95px;
+  height: 38px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.PopupForm_term_ConditionBox {
+  padding-left: 2em;
+  margin-top: 10px;
+}
+
+.submitButton {
+  display: block;
+  font-size: 16px;
+  border: none;
+  box-shadow: 0 3px 6px rgba(95, 141, 196, .2);
+  border-radius: 5px;
+  color: #fff;
+  background: #f78077;
+  font-weight: 600;
+  margin: 20px auto;
+  cursor: pointer;
+  padding: 0.7em 2em;
+}
+
+.closePopupBtn_ICON {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: coral;
+  font-weight: 900;
+  font-size: 29px;
+  cursor: pointer;
 }
 
 /* Unauthorized Page */
@@ -2338,6 +2837,7 @@ mobile .mobileNavbar__Conainer {
 
 }
 
+
 /* Footer Detains*/
 .footer {
   width: 100%;
@@ -2349,6 +2849,10 @@ mobile .mobileNavbar__Conainer {
   padding: 2% 12% 5% 12%;
 }
 
+.followusICON {
+  font-size: 30px;
+}
+
 .footer_head,
 .footer_foot {
   width: 100%;
@@ -2357,10 +2861,10 @@ mobile .mobileNavbar__Conainer {
 }
 
 .column1 {
-  min-height: 280px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
+  gap: 20px;
 }
 
 .column2 {
@@ -2437,10 +2941,7 @@ mobile .mobileNavbar__Conainer {
 
 
 
-
-
 /* All screen sizes */
-
 
 @media screen and (max-width: 1110px) {
   .App__navbar {
@@ -2512,6 +3013,13 @@ mobile .mobileNavbar__Conainer {
     font-size: 1.6vw;
   }
 
+  .PopupFormPoster {
+    display: none;
+  }
+
+  .Popup__formBox {
+    width: 100%;
+  }
 
 }
 
@@ -2761,6 +3269,56 @@ mobile .mobileNavbar__Conainer {
   .FSP_Tool_DESC {
     font-size: 2vw;
   }
+
+  .ElevationAcademy__MainContainer {
+    padding: 0;
+  }
+
+  .EA_MainContainer__TopMostContainer {
+    width: 100%;
+  }
+
+  .EA_detailsBox_heading {
+    font-size: 3vw;
+  }
+
+  .EA_DetailsBox_Desc {
+    font-size: 2vw;
+  }
+
+  .EA_DetailsBox_ExtraDesc {
+    font-size: 1.8vw;
+  }
+
+  .EA_TopMostContainer__DetailsBox {
+    width: 55%
+  }
+
+  .EA_topPosterContainer {
+    width: 45%;
+  }
+
+  .Ea_SessionBoxTitle,
+  .Ea_session_date {
+    font-size: 1.2vw;
+  }
+
+  .EA_jobPath_heading {
+    font-size: 3vw;
+  }
+
+  .EA_jobPath_descBox_text {
+    font-size: 1.2vw;
+  }
+
+  .EA_JobList_Box {
+    font-size: 1.5vw;
+  }
+
+  /* EA_jobList_number
+EA_JobPath_List_Desc_Container
+EA_jobPath_descBox
+EA_jobPath_descBox_text */
 }
 
 @media screen and (max-width: 768px) {
@@ -3059,6 +3617,75 @@ mobile .mobileNavbar__Conainer {
     font-size: 3vw;
   }
 
+  .EA_MainContainer__TopMostContainer {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .EA_TopMostContainer__DetailsBox,
+  .EA_topPosterContainer {
+    width: 100%;
+  }
+
+  .EA_detailsBox_heading {
+    font-size: 5vw;
+  }
+
+  .EA_DetailsBox_Desc {
+    font-size: 4vw;
+  }
+
+  .EA_DetailsBox_ExtraDesc {
+    font-size: 3.2vw;
+  }
+
+  .EA_BatchInformationContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .EA_batchFor_Container,
+  .EA_Batch__SessionInforContainer {
+    width: 100%;
+    padding: 0;
+  }
+
+  .EA_BatchYear {
+    font-size: 3vw;
+  }
+
+  .EA_Batch_startingDateLabel {
+    font-size: 2vw;
+  }
+
+  .Ea_SessionBoxTitle,
+  .Ea_session_date {
+    font-size: 2vw;
+  }
+
+  .Ea_batch_SessionIconContainer:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: transparent linear-gradient(90deg, #00a5ec, #99e0ff);
+    position: absolute;
+    top: 28px;
+    left: 100%;
+    width: 15vw;
+    width: 30vw;
+  }
+
+  .EA__CardContaienr__heading {
+    font-size: 4vw;
+  }
+
+  .EA_CardContainer {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+  }
+  .FormContainer{
+    width: 95%;
+  }
+
 }
 
 @media screen and (max-width: 650px) {
@@ -3190,6 +3817,46 @@ mobile .mobileNavbar__Conainer {
   .FSP__PriceCheckoutContainer {
     width: 100%;
   }
+
+
+  .EA_Batch__SessionInforContainer {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .EA_Batch_SessionBox {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 15px;
+    padding: 0em 2em;
+  }
+
+  .EA_BatchYear {
+    font-size: 4vw;
+  }
+
+  .EA_Batch_startingDateLabel {
+    font-size: 3vw;
+  }
+
+  .Ea_SessionBoxTitle,
+  .Ea_session_date {
+    font-size: 3vw;
+  }
+
+  .Ea_batch_SessionIconContainer:nth-child(1)::after {
+    left: 50%;
+    top: 60px;
+    width: 2px;
+    height: 18vh;
+  }
+
+  .EA__Job_PathMainContainer {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 585px) {
@@ -3264,6 +3931,30 @@ mobile .mobileNavbar__Conainer {
 
   .FSP_Tool_DESC {
     font-size: 3.5vw;
+  }
+
+  .EA_Batch_SessionBox {
+    gap: 10px;
+    padding: 0em 1em;
+  }
+
+  .EA_BatchYear {
+    font-size: 4.3vw;
+  }
+
+  .EA_Batch_startingDateLabel {
+    font-size: 3vw;
+  }
+
+  .Ea_SessionBoxTitle,
+  .Ea_session_date {
+    font-size: 3.2vw;
+  }
+  .popup__formItemBox{
+    flex-direction: column;
+  }
+  .Popup_formitem__label, .Poup_formItem, .formPopup__ProfessioanlButtonContainer{
+width: 100%;
   }
 }
 
@@ -3398,6 +4089,21 @@ mobile .mobileNavbar__Conainer {
   .FSP_Batch_cardMainContainer {
     width: 100%;
   }
+
+  .EA_TopMost_container_buttoncontainer {
+    height: fit-content;
+    flex-direction: column;
+    padding: 1em 0em;
+    align-items: flex-start;
+  }
+
+  .EA_AppyNowButton {
+    width: 90%;
+  }
+
+  .EA__CardContaienr__heading {
+    font-size: 5vw;
+  }
 }
 
 
@@ -3520,6 +4226,7 @@ mobile .mobileNavbar__Conainer {
   .downloadSyllabusButton {
     width: 95%;
   }
+
   .FSP_TOO_Heading {
     font-size: 7.5vw;
     width: 95%;
@@ -3528,5 +4235,30 @@ mobile .mobileNavbar__Conainer {
   .FSP_Tool_DESC {
     font-size: 4.6vw;
     width: 95%;
+  }
+
+  .EA_detailsBox_heading {
+    font-size: 7vw;
+  }
+
+  .EA_DetailsBox_Desc {
+    font-size: 5vw;
+  }
+
+  .EA_DetailsBox_ExtraDesc {
+    font-size: 4.2vw;
+  }
+
+  .EA_BatchYear {
+    font-size: 5vw;
+  }
+
+  .EA_Batch_startingDateLabel {
+    font-size: 4vw;
+  }
+
+  .Ea_SessionBoxTitle,
+  .Ea_session_date {
+    font-size: 3.8vw;
   }
 }

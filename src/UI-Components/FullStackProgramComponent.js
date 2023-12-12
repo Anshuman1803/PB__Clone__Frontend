@@ -110,7 +110,6 @@ function FullStackProgramComponent() {
           </div>
 
 
-          {IsPaymentClick && <PaymentPopup propFun={canclePayment} />}
         </div>
 
         <div className="FSP__Tool__Container">
@@ -123,7 +122,9 @@ function FullStackProgramComponent() {
             <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/full-stack-course/tools1.png" alt=" ToolsPoster" className='FSP_ToolPoster' />
           </div>
 
+          {IsPaymentClick && <PaymentPopup propFun={canclePayment} />}
         </div>
+
 
 
         <Footer></Footer>

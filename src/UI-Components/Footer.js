@@ -8,10 +8,10 @@ export default function Footer() {
                     <div className='followUs'>
                         FOLLOW US
                         <div className='brands'>
-                            <i className="fa-brands fa-square-facebook" style={{ "color": "#3c5b90" }}></i>
-                            <i className="fa-brands fa-square-instagram" style={{ "color": "red" }}></i>
-                            <i className="fa-brands fa-linkedin" style={{ "color": "#3668bf" }}></i>
-                            <i className="fa-brands fa-square-youtube" style={{ "color": "red" }}></i>
+                            <i className="fa-brands fa-square-facebook followusICON" style={{ "color": "#3c5b90" }}></i>
+                            <i className="fa-brands fa-square-instagram followusICON" style={{ "color": "red" }}></i>
+                            <i className="fa-brands fa-linkedin followusICON" style={{ "color": "#3668bf" }}></i>
+                            <i className="fa-brands fa-square-youtube followusICON" style={{ "color": "red" }}></i>
                         </div>
                     </div>
                     <div className='contactUs'>
