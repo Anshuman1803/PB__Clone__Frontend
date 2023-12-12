@@ -28,7 +28,10 @@ function AppRouter() {
             <Route path="/videoTutorial" element={<Suspense fallback={<Loader />}>
                 <VideoTutComponent /> </Suspense>} />
             <Route path='/project/:topic' element={<Suspense fallback={<Loader />}>
-                <ProjectComponent /> </Suspense>} />
+                <ProjectComponent /> 
+                
+                
+                </Suspense>} />
 
             <Route path='/online-full-stack-developer-mern-certification-program' element={<Suspense fallback={<Loader />}>
                 <FullStackProgramComponent /> </Suspense>} />

@@ -2113,6 +2113,8 @@ mobile .mobileNavbar__Conainer {
   cursor: pointer;
 }
 
+/*  */
+
 /* Unauthorized Page */
 
 .UnauthorizedPageContainer {
@@ -2937,9 +2939,110 @@ mobile .mobileNavbar__Conainer {
   margin-top: 10px;
 }
 
+/* Project Componetn */
+.project__LInksContainer {
+  border-bottom: 2px solid #3e404170;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.projectNavigation_LinkItem {
+  font-weight: 700;
+  text-decoration: none;
+  color: #646566;
+  font-size: 1vw;
+}
+
+.projectNavigation_LinkItem:hover {
+  cursor: pointer;
+  color: crimson;
+}
+
+.ProjectInformationContainer {
+  margin: 20px 0px;
+  padding: 1em 0em;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.CurrentProject__leftContainer {
+  width: 70%;
+}
+
+.posterContainer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CurrentProjectPoster {
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.project_DESCContainer {
+  height: 50%;
+}
+
+.Project_title {
+  display: block;
+  width: 100%;
+  height: 70px;
+  padding-left: 3em;
+  font-size: 2vw;
+  color: #f78077;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.projectDesc {
+  margin-top: 20px;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #646566;
+  padding-left: 3em;
+  width: 80%;
+}
+
+.CurrentProject__rightContainer {
+  width: 30%;
+  padding-bottom: 2em;
+}
 
 
+.topicsCovered {
+  width: 100%;
+  color: #f78077;
+  background-color: #0398d31f;
+  height: 50px;
+  width: 90%;
+  margin: 20px auto 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1.4vw;
+  padding: 1em 0em;
+  border-radius: 10px;
+}
 
+.rightContainer_heading {
+  text-align: center;
+  color: #f78077;
+  font-weight: 600;
+  font-size: 2vw;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
 
 /* All screen sizes */
 
@@ -3021,6 +3124,30 @@ mobile .mobileNavbar__Conainer {
     width: 100%;
   }
 
+  .projectNavigation_LinkItem {
+    font-size: 2vw;
+  }
+
+  .Project_title {
+    padding-left: 1em;
+    font-size: 2vw;
+  }
+
+  .projectDesc {
+    padding-left: 1em;
+    font-size: 1.3vw;
+    width: 95%;
+    text-align: justify;
+  }
+
+  .topicsCovered {
+    font-size: 2vw;
+  }
+
+  .posterContainer {
+    padding-left: 1em;
+    justify-content: flex-start;
+  }
 }
 
 @media screen and (max-width: 1025px) {
@@ -3314,11 +3441,14 @@ mobile .mobileNavbar__Conainer {
   .EA_JobList_Box {
     font-size: 1.5vw;
   }
+  .Project_title {
+   font-size: 3vw;
+  }
 
-  /* EA_jobList_number
-EA_JobPath_List_Desc_Container
-EA_jobPath_descBox
-EA_jobPath_descBox_text */
+  .projectDesc {
+  font-size: 1.6vw;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -3682,9 +3812,17 @@ EA_jobPath_descBox_text */
   .EA_CardContainer {
     grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
   }
-  .FormContainer{
+
+  .FormContainer {
     width: 95%;
   }
+  .Project_title {
+    font-size: 3.5vw;
+   }
+ 
+   .projectDesc {
+   font-size: 1.6vw;
+   }
 
 }
 
@@ -3857,6 +3995,33 @@ EA_jobPath_descBox_text */
   .EA__Job_PathMainContainer {
     display: none;
   }
+
+  .ProjectInformationContainer {
+    flex-direction: column;
+  }
+
+  .CurrentProject__leftContainer {
+    width: 100%;
+
+  }
+
+  .project_DESCContainer {
+    width: 100%;
+
+  }
+
+  .CurrentProject__rightContainer {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .posterContainer {
+    width: 100%;
+  }
+
+  .CurrentProjectPoster {
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 585px) {
@@ -3950,11 +4115,15 @@ EA_jobPath_descBox_text */
   .Ea_session_date {
     font-size: 3.2vw;
   }
-  .popup__formItemBox{
+
+  .popup__formItemBox {
     flex-direction: column;
   }
-  .Popup_formitem__label, .Poup_formItem, .formPopup__ProfessioanlButtonContainer{
-width: 100%;
+
+  .Popup_formitem__label,
+  .Poup_formItem,
+  .formPopup__ProfessioanlButtonContainer {
+    width: 100%;
   }
 }
 
@@ -4104,6 +4273,42 @@ width: 100%;
   .EA__CardContaienr__heading {
     font-size: 5vw;
   }
+
+  .Project_title {
+    font-size: 3vw;
+  }
+
+  .projectDesc {
+    font-size: 3vw;
+  }
+
+  .CurrentProject__rightContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0em 1em;
+  }
+
+  .rightContainer_heading {
+    display: none;
+  }
+
+  .topicsCovered {
+    font-size: 3vw;
+    width: 150px;
+  }
+
+  .projectNavigation_LinkItem {
+    font-size: 3.2vw;
+  }
+  .Project_title {
+    margin-top: 10px;
+    font-size: 9vw;
+   }
+   .posterContainer{
+    justify-content: center;
+   }
 }
 
 
@@ -4260,5 +4465,24 @@ width: 100%;
   .Ea_SessionBoxTitle,
   .Ea_session_date {
     font-size: 3.8vw;
+  }
+
+  .Project_title {
+    font-size: 6vw;
+  }
+
+  .projectDesc {
+    font-size: 5vw;
+  }
+
+  .topicsCovered {
+    font-size: 4vw;
+    text-align: center;
+    height: 70px;
+    width: 100%;
+  }
+
+  .projectNavigation_LinkItem {
+    font-size: 4vw;
   }
 }
