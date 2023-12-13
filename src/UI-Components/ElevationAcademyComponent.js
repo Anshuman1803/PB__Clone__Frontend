@@ -335,7 +335,7 @@ function PopupForm({ closeFun }) {
       setMessage({ "msgVal": "Please agree to the terms and conditions" });
     } else {
       setIsUserLoading(true)
-      axios.post("http://localhost:5000/EA_registration", userDetails).then((response) => {
+      axios.post("https://pb-clone.onrender.com/EA_registration", userDetails).then((response) => {
         setIsUserLoading(false);
 
         if (response.data.resMsg === 'Registred Successfully') {
