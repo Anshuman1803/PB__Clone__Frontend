@@ -3022,7 +3022,58 @@ mobile .mobileNavbar__Conainer {
 
 }
 
-
+.FSP_Mentor_cardContainer{
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 0em 1em;
+}
+.FSP_mentorCard{
+  width: 320px;
+  height: 450px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  border-bottom: 10px solid rgba(244,163,76,.9294117647058824);
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+.FSP_mentorCard_Profile{
+  width: 130px;
+  position: relative;
+  left: 50%;
+  top: -60px;
+  transform: translate(-50%);
+}
+.FSP_Mentorcard_mentorName{
+  color: rgba(10,45,71,.9294117647058824);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    width: 90%;
+    margin: 0px auto;
+}
+.FSP_MentorCard__metnorEXP{
+  width: 90%;
+  text-align: center;
+  margin:20px auto;
+  color: rgba(106,127,134,.9294117647058824);
+  font-size: 17px;
+  font-weight: 300;
+}
+.FSP_Bottom_PosterContainer{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+.FSP_BottomPoster{
+  width: 90%;
+}
 /* Footer Detains*/
 .footer {
   width: 100%;
@@ -4482,6 +4533,12 @@ mobile .mobileNavbar__Conainer {
   .FSP_batchSelectioNText {
     width: 100%;
   }
+  .FSP_Bottom_PosterContainer{
+    padding: 0.5em;
+  }
+  .FSP_BottomPoster{
+    width: 100%;
+  }
 
   .FSP_Batch_cardMainContainer {
     width: 100%;
@@ -4701,6 +4758,7 @@ mobile .mobileNavbar__Conainer {
     font-size: 4.6vw;
     width: 95%;
   }
+
 
   .EA_detailsBox_heading {
     font-size: 7vw;
