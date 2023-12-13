@@ -4745,4 +4745,10 @@ mobile .mobileNavbar__Conainer {
   .projectNavigation_LinkItem {
     font-size: 4vw;
   }
+  .EA_ProgramSyllabus_plusICon{
+    font-size: 20px;
+  }
+  .EA_ProgramSyllabus_Content{
+    font-size: 14px;
+  }
 }
