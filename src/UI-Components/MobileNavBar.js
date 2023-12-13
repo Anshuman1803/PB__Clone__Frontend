@@ -23,7 +23,7 @@ function MobileNavBar() {
 
             <Link to="/master-competitive-programming" className='mobilenav__items'>Full Stack Program</Link>
 
-            <Link className='mobilenav__items'>  Elevation Academy </Link>
+            <Link to="/elevation-academy" className='mobilenav__items'>  Elevation Academy </Link>
 
             <Link to="/project/HTML" className='mobilenav__items'>Project</Link>
 

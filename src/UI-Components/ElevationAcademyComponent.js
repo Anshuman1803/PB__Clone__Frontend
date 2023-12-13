@@ -3,6 +3,10 @@ import Footer from './Footer'
 import poster from "../Assets/FormPopupImgae.svg"
 import axios from 'axios'
 import Loader from './Loader';
+import PaymentPopup from '../PaymentInegration/PaymentPopup';
+import { useDispatch } from 'react-redux'
+import { addTempCourse } from '../ReduxSlice/UserReduxSlice'
+
 function ElevationAcademyComponent() {
   const [PopupFormVisible, setPopupForm] = useState(false);
   const [ShowSyllabus, setShowSyllabus] = useState(false);
@@ -265,6 +269,83 @@ export default ElevationAcademyComponent
 
 
 function PopupForm({ closeFun }) {
+
+  const [IstermChecked, setTermChecked] = useState(false)
+  const [Message, setMessage] = useState({ "msgVal": "" });
+  const [IsUserLoading, setIsUserLoading] = useState(false);
+  const [ShowPaymentPopup, setShowPaymentPopup] = useState(false);
+  const dispatch = useDispatch();
+  const [userDetails, setUserDetails] = useState({
+    "userName": "",
+    "userEmail": "",
+    "userPhone": "",
+    "userDegree": "",
+    "userBranch": "",
+    "IsProfessional": "",
+  });
+  const tempData = {
+    "testID": 10,
+    "testImg": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/Application%2B%2BShortlisting.webp",
+    "testTitle": "Elevation Academy",
+    "testCategory": "Full-Stack-Web Development",
+    "testPrice": 70000,
+  }
+
+  const canclePayment = (e) => {
+    setShowPaymentPopup(false)
+  }
+
+  const handleOnChangeInput = (e) => {
+    setMessage({ "msgVal": "" })
+    setUserDetails({
+      ...userDetails, [e.target.name]: e.target.value
+    });
+  }
+
+  const handlecheckedMark = (e) => {
+    setTermChecked(!IstermChecked);
+    setMessage({ "msgVal": "" })
+  }
+
+  const handleyesnoClick = (e) => {
+    setMessage({ "msgVal": "" })
+    if (e.target.innerHTML === 'Yes') {
+      setUserDetails({
+        ...userDetails, "IsProfessional": true
+      });
+      e.target.classList.add("activeProfessional");
+      e.target.nextSibling.classList.remove("activeProfessional")
+    } else {
+      setUserDetails({
+        ...userDetails, "IsProfessional": false
+      });
+      e.target.classList.add("activeProfessional");
+      e.target.previousSibling.classList.remove("activeProfessional")
+    }
+  }
+
+  const handleSubmitClick = (e) => {
+    e.preventDefault();
+
+    if (userDetails.userName.length === 0 || userDetails.userEmail.length === 0 || userDetails.userPhone.length === 0 || userDetails.userDegree.length === 0 || userDetails.userBranch.length === 0) {
+      setMessage({ "msgVal": "One or more required fields is missing or invalid" });
+    } else if (userDetails.IsProfessional.length === 0) {
+      setMessage({ "msgVal": "Please select 'Are you a Working Professional?" });
+    } else if (!IstermChecked) {
+      setMessage({ "msgVal": "Please agree to the terms and conditions" });
+    } else {
+      setIsUserLoading(true)
+      axios.post("http://localhost:5000/EA_registration", userDetails).then((response) => {
+        setIsUserLoading(false);
+
+        if (response.data.resMsg === 'Registred Successfully') {
+          setShowPaymentPopup(true);
+          dispatch(addTempCourse(tempData))
+        }
+        setMessage({ "msgVal": response.data.resMsg });
+      });
+    }
+  }
   return (
     <div className='popupForm_mainContainer'>
       <div className="FormContainer">
@@ -274,9 +355,25 @@ function PopupForm({ closeFun }) {
           <i className="fa-solid fa-xmark closePopupBtn_ICON" onClick={closeFun}></i>
           <h2 className='Popup_formBox_heading'>Take a step towards your dream job</h2>
 
+
+          <div className="popup__formItemBox">
+            <label htmlFor="nameBox" className='Popup_formitem__label' >Name *</label>
+            <input type="text" className='Poup_formItem' id='nameBox' onChange={handleOnChangeInput} name="userName" />
+          </div>
+
+          <div className="popup__formItemBox">
+            <label htmlFor="emailBox" className='Popup_formitem__label' >Email *</label>
+            <input type="text" className='Poup_formItem' id='emailBox' onChange={handleOnChangeInput} name="userEmail" />
+          </div>
+
+          <div className="popup__formItemBox">
+            <label htmlFor="phoneBox" className='Popup_formitem__label' >Phone *</label>
+            <input type="text" className='Poup_formItem' id='phoneBox' onChange={handleOnChangeInput} name="userPhone" />
+          </div>
+
           <div className="popup__formItemBox">
             <label htmlFor="degreeBox" className='Popup_formitem__label'>Highest Degree *</label>
-            <select name="degreeBox" id="degreeBox" className='Poup_formItem'>
+            <select name="userDegree" id="degreeBox" className='Poup_formItem' onChange={handleOnChangeInput}>
               <option className="optionValue" value=""></option>
               <option className="optionValue" value="B.Tech / BE">B.Tech / BE</option>
               <option className="optionValue" value="BCA">BCA</option>
@@ -299,7 +396,7 @@ function PopupForm({ closeFun }) {
 
           <div className="popup__formItemBox">
             <label htmlFor="batchBox" className='Popup_formitem__label'>Branch</label>
-            <select name="batchBox" id="batchBox" className='Poup_formItem'>
+            <select name="userBranch" id="batchBox" className='Poup_formItem' onChange={handleOnChangeInput}>
               <option className="optionValue" value=""></option>
               <option className="optionValue" value="CSE / IT">CSE / IT</option>
               <option className="optionValue" value="Electrical/Electronics">Electrical/Electronics</option>
@@ -310,20 +407,29 @@ function PopupForm({ closeFun }) {
           <div className="popup__formItemBox">
             <span className='Popup_formitem__label'>Are you a Working Professional? *</span>
             <div className="formPopup__ProfessioanlButtonContainer">
-              <p className='optionButtons'>Yes</p>
-              <p className='optionButtons'>No</p>
+              <button className='optionButtons' onClick={handleyesnoClick}>Yes</button>
+              <button className='optionButtons' onClick={handleyesnoClick}>No</button>
             </div>
           </div>
 
           <div className="PopupForm_term_ConditionBox" style={{ "fontSize": "16px" }}>
-            <input type="checkbox" name='termCheckbox' /> I agree to the <span style={{ "color": "#4b8ce8" }}>terms and conditions.</span>
+            <input type="checkbox" name='termCheckbox' onClick={handlecheckedMark} /> I agree to the <span style={{ "color": "#4b8ce8" }}>terms and conditions.</span>
           </div>
 
-          <button className='submitButton'>Submit</button>
+          <button className='submitButton' onClick={handleSubmitClick}>Submit</button>
+          {
+            Message.msgVal && <p className='formResponseMsg'>{Message.msgVal}</p>
+          }
+          {
+            IsUserLoading && <p className='formResponseMsg'>Registering...</p>
+          }
         </div>
 
       </div>
-
+      {ShowPaymentPopup && <PaymentPopup propFun={canclePayment} />}
     </div>
   )
 }
+
+
+

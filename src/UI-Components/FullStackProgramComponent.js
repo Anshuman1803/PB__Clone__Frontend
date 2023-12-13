@@ -147,14 +147,14 @@ function FullStackProgramComponent() {
             <p className="FSP_MentorCard__metnorEXP">Harshita is currently working in AskSid.ai and has worked in MindTree as Full Stack Developer. Apart from Web Development she also have experience in developing Voice-based Chatbots using Dialogflow from Google.</p>
           </div>
 
-          
+
 
 
         </div>
 
 
         <div className="FSP_Bottom_PosterContainer">
-<img src={FSPbottomPoster} alt="Poster" className='FSP_BottomPoster' />
+          <img src={FSPbottomPoster} alt="Poster" className='FSP_BottomPoster' />
         </div>
         <Footer></Footer>
       </section>
