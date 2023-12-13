@@ -1985,6 +1985,189 @@ mobile .mobileNavbar__Conainer {
   font-size: 16px;
 }
 
+.EA_ProgramSyllabus_MainContainer {
+  min-height: 500px;
+}
+
+.EA_ProgramSyllabus__Mainheading {
+  color: #3e4041;
+  text-align: center;
+  margin: 10px auto;
+  font-size: 2.5vw;
+  font-weight: 500;
+}
+
+.EA_ProgramSyllabus__Secondaryheading {
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.2vw;
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  color: rgba(106, 127, 134, .9294117647058824);
+}
+
+.EA_programSyllabus_Container {
+  width: 100%;
+  min-height: 150px;
+  margin: 20px 0px;
+}
+
+.EA_ProgramSyllabus_Container_heading {
+  background: rgb(247, 128, 119);
+  font-weight: 300;
+  font-size: 1.3vw;
+  text-align: center;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0px auto;
+}
+
+.EA_programSyllabus_box {
+  border: 0.25px solid hsla(0, 0%, 43.9%, .2);
+  margin: 30px auto 0px auto;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0em 2em;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  gap: 20px;
+  border-left: 0.5em solid #f78077;
+}
+
+.EA_programSyllabus_box::after {
+  content: "";
+  position: absolute;
+  border: 0.25px solid hsla(0, 0%, 43.9%, .2);
+  left: 50%;
+  top: -54%;
+  height: 4vh;
+}
+
+.EA_programSyllabus_numbering {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #f78077;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+.EA_programSyllabus_numbering span {
+  background-color: #f78077;
+  width: 90%;
+  display: block;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.EA_programSyllabus_topic {
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: #292626;
+}
+
+.EA_ProgramSyllabus_plusICon {
+  position: absolute;
+  font-size: 33px;
+  color: #f78077;
+  right: 30px;
+  cursor: pointer;
+}
+
+.EA_ProgramSyllabus_ContentBox {
+  background: #f6f8ff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: 8px solid #f78077;
+  max-height: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.EA_ProgramSyllabus_ActiveContentBox {
+  padding: 2em 0.5em 1em 1em;
+  max-height: fit-content;
+}
+
+
+
+.EA_programSyllabus_content_heading {
+  font-weight: 400;
+  font-size: 1.3vw;
+  background: #e8f7ed;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2em;
+  color: #292626;
+  width: 100%;
+}
+
+.EA_ProgramSyllabus_Content {
+  border: 1px solid #f78077;
+  padding: 1em;
+  border-radius: 3px;
+  background-color: white;
+}
+
+
+.EA_ProgramSyllabus_MainContainer .EA_programSyllabus_Container:nth-child(3) .EA_ProgramSyllabus_Container_heading {
+  background-color: #f78077;
+}
+
+.EA_ProgramSyllabus_MainContainer .EA_programSyllabus_Container:nth-child(4) .EA_ProgramSyllabus_Container_heading {
+  background: rgb(101, 187, 229);
+}
+
+.EA_ProgramSyllabus_MainContainer .EA_programSyllabus_Container:nth-child(5) .EA_ProgramSyllabus_Container_heading {
+  background: rgb(101, 187, 229);
+}
+
+.EA_ProgramSyllabus_MainContainer .EA_programSyllabus_Container:nth-child(6) .EA_ProgramSyllabus_Container_heading {
+  background: rgb(247, 182, 67);
+}
+
+.EA_ProgramSyllabus_MainContainer .EA_programSyllabus_Container:nth-child(7) .EA_ProgramSyllabus_Container_heading {
+  background-color: #f78077;
+}
+
+.EA_ProgramSyllabus_MainContainer .EA_programSyllabus_Container:nth-child(8) .EA_ProgramSyllabus_Container_heading {
+  background: rgb(101, 187, 229);
+}
+
+.EA_ProgramSyllabus_MainContainer .EA_programSyllabus_Container:nth-child(9) .EA_ProgramSyllabus_Container_heading {
+  background: rgb(247, 182, 67);
+}
+
+.EA_ProgramSyllabus_MainContainer .EA_programSyllabus_Container:nth-child(10) .EA_ProgramSyllabus_Container_heading {
+  background: rgb(247, 182, 67);
+}
+
+.EA_ProgramSyllabus_MainContainer .EA_programSyllabus_Container:nth-child(11) .EA_ProgramSyllabus_Container_heading {
+  background: rgb(101, 187, 229);
+}
+
 /* Popup Form Container */
 .popupForm_mainContainer {
   position: fixed;
@@ -3441,14 +3624,37 @@ mobile .mobileNavbar__Conainer {
   .EA_JobList_Box {
     font-size: 1.5vw;
   }
+
   .Project_title {
-   font-size: 3vw;
+    font-size: 3vw;
   }
 
   .projectDesc {
-  font-size: 1.6vw;
+    font-size: 1.6vw;
   }
 
+  .EA_ProgramSyllabus__Mainheading {
+    font-size: 3vw;
+  }
+
+  .EA_ProgramSyllabus__Secondaryheading {
+    font-size: 1.7vw;
+  }
+
+  .EA_ProgramSyllabus_Container_heading,
+  .EA_programSyllabus_box,
+  .EA_ProgramSyllabus_ContentBox {
+    width: 90%;
+  }
+
+  .EA_ProgramSyllabus_Container_heading {
+    font-size: 2vw;
+  }
+
+  .EA_programSyllabus_topic,
+  .EA_programSyllabus_content_heading {
+    font-size: 1.6vw;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -3816,14 +4022,36 @@ mobile .mobileNavbar__Conainer {
   .FormContainer {
     width: 95%;
   }
+
   .Project_title {
     font-size: 3.5vw;
-   }
- 
-   .projectDesc {
-   font-size: 1.6vw;
-   }
+  }
 
+  .projectDesc {
+    font-size: 1.6vw;
+  }
+
+  .EA_ProgramSyllabus__Mainheading {
+    font-size: 5vw;
+  }
+
+  .EA_ProgramSyllabus__Secondaryheading {
+    font-size: 2.5vw;
+    width: 70%;
+  }
+
+  .EA_ProgramSyllabus_Container_heading {
+    font-size: 2.7vw;
+  }
+
+  .EA_programSyllabus_topic,
+  .EA_programSyllabus_content_heading {
+    font-size: 2.4vw;
+  }
+
+  .EA_ProgramSyllabus_ContentBox {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -4302,15 +4530,47 @@ mobile .mobileNavbar__Conainer {
   .projectNavigation_LinkItem {
     font-size: 3.2vw;
   }
+
   .Project_title {
     margin-top: 10px;
     font-size: 9vw;
-   }
-   .posterContainer{
-    justify-content: center;
-   }
-}
+  }
 
+  .posterContainer {
+    justify-content: center;
+  }
+
+  .EA_ProgramSyllabus__Mainheading {
+    font-size: 8vw;
+  }
+
+  .EA_ProgramSyllabus__Secondaryheading {
+    font-size: 4vw;
+    width: 90%;
+  }
+
+  .EA_ProgramSyllabus_Container_heading {
+    font-size: 5vw;
+  }
+
+  .EA_programSyllabus_topic,
+  .EA_programSyllabus_content_heading {
+    font-size: 2.8vw;
+  }
+
+  .EA_ProgramSyllabus_Content {
+    text-align: center;
+  }
+
+  .EA_programSyllabus_box {
+    padding-left: 0.5em;
+    gap: 5px;
+  }
+
+  .EA_ProgramSyllabus_plusICon {
+    right: 5px;
+  }
+}
 
 @media screen and (max-width: 376px) {
   .CodingJourneyContainer__RightContainer {

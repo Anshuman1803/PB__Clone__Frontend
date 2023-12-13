@@ -1,11 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import Footer from './Footer'
 import poster from "../Assets/FormPopupImgae.svg"
+import axios from 'axios'
 function ElevationAcademyComponent() {
+  const [PopupFormVisible, setPopupForm] = useState(false);
+  const [ShowSyllabus, setShowSyllabus] = useState(false);
+  const [Syllabus, setSyllabus] = useState([])
   useEffect(() => {
+    axios.get("https://pb-clone.onrender.com/project/getSyllabus").then((response) => {
+      setSyllabus(response.data)
+    })
     window.scrollTo(0, 0);
   }, []);
-  const [PopupFormVisible, setPopupForm] = useState(false);
+
+
+  const handleShowSyllabus = (e) => {
+    e.preventDefault();
+    e.target.classList.toggle("fa-circle-minus")
+    e.target.classList.toggle("fa-circle-plus")
+    e.target.parentElement.nextSibling.classList.toggle("EA_ProgramSyllabus_ActiveContentBox")
+    setShowSyllabus(!ShowSyllabus)
+
+  }
   const handleShowForm = (e) => {
     e.preventDefault();
     setPopupForm(true)
@@ -201,7 +217,32 @@ function ElevationAcademyComponent() {
 
         </div>
 
+        <div className="EA_ProgramSyllabus_MainContainer">
 
+          <h2 className="EA_ProgramSyllabus__Mainheading">Program Syllabus</h2>
+          <h2 className="EA_ProgramSyllabus__Secondaryheading">Learn from the best and be prepared to crack full stack developer jobs</h2>
+
+          {
+            Syllabus?.map((ele) => {
+              return <div className="EA_programSyllabus_Container" key={ele.syllabusID}>
+                <h2 className="EA_ProgramSyllabus_Container_heading">{ele.syllabusDuration}</h2>
+
+                <div className="EA_programSyllabus_box">
+                  <p className="EA_programSyllabus_numbering"> <span>{ele.syllabusID}</span></p>
+                  <p className="EA_programSyllabus_topic">{ele.syllabusTitle}</p>
+                  <i className={`fa-solid fa-circle-plus EA_ProgramSyllabus_plusICon`} onClick={handleShowSyllabus}></i>
+                </div>
+                <div className="EA_ProgramSyllabus_ContentBox">
+                  <h3 className="EA_programSyllabus_content_heading">{ele.syllabusContentTitle}</h3>
+                  {
+                    ele?.syllabusContent.map((content, index) => <p className="EA_ProgramSyllabus_Content" key={index + ele.syllabusID}>{content}</p>)
+                  }
+                </div>
+
+              </div>
+            })
+          }
+        </div>
 
       </section>
       <Footer></Footer>
