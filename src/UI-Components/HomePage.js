@@ -174,6 +174,9 @@ function HomePage() {
 
             </div>
 
+            <div className="HomePageBottom__posterContainer">
+                <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/you_could_be_the(web_1366).png" alt="Poster" className='homePageBottom_poster' />
+            </div>
             <Footer></Footer>
             <div className='helpContainer__Message'>Need Help? Talk to us on  079 6900 2111 or Request Callback</div>
         </section>

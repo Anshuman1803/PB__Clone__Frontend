@@ -12,6 +12,9 @@ function HeaderComponent() {
     const [useDropDownShow, setUserDropDown] = useState(false);
     const [ShwoMobileNav, setShowMobileNav] = useState(false)
 
+    const handleHideNav = (e)=>{
+        setShowMobileNav(false)
+    }
     useEffect(() => {
         setUserDropDown(false)
     }, []);
@@ -88,7 +91,7 @@ function HeaderComponent() {
             </nav>
             <i className={`fa-solid ${ShwoMobileNav ? "fa-xmark" : "fa-bars"} header__hamMenuButton`} onClick={() => setShowMobileNav(!ShwoMobileNav)}></i>
             {
-                ShwoMobileNav && <MobileNavBar />
+                ShwoMobileNav && <MobileNavBar handleHideNav= {handleHideNav}/>
             }
 
         </header>
