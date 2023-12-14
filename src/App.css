@@ -2388,6 +2388,84 @@ mobile .mobileNavbar__Conainer {
   background: rgb(101, 187, 229);
 }
 
+.EA_PlacementInformationContainer {
+  padding: 2em 0em;
+}
+
+.EA_PlacementInformationContainer__MainHeading {
+  font-size: 2.3vw;
+  text-align: center;
+  color: #3e4041;
+  font-weight: 600;
+}
+
+.EA_PlacementInformationContainer__SecondaryHeading {
+  text-align: center;
+  color: #858585;
+  font-size: 16px;
+  width: 30%;
+  margin: 0.2em auto 1em auto;
+  font-weight: 400;
+}
+
+.EA_placementCompanyPostersContainer {
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.EA_PlacementCompany_Cards {
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 10px 35px rgba(4, 4, 4, .0784313725490196);
+  border-radius: 6px;
+}
+
+.EA_PlacementCompnayImages {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.EA_newBatchInformatioNContainer {
+  width: 100%;
+  width: 100%;
+  margin: 20px 0px;
+  min-height: 200px;
+  background: #fdf0d7;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1em 2em;
+}
+
+.EA_newBatchInformation_mainheading {
+  font-size: 1.5vw;
+  width: 70%;
+  color: #424242;
+  margin-bottom: 10px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.EA_newBatchPoster {
+  width: 250px;
+}
+
+.applyNowButton {
+  border-radius: 4px;
+  border: none;
+  padding: 10px 16px;
+  background: #f78077;
+  color: #f7f7f7;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* Popup Form Container */
 .popupForm_mainContainer {
   position: fixed;
@@ -3913,6 +3991,14 @@ mobile .mobileNavbar__Conainer {
     font-size: 1.5vw;
   }
 
+  .EA_placementCompanyPostersContainer {
+    grid-template-columns: repeat(5, 100px);
+  }
+
+  .EA_PlacementCompnayImages {
+    object-fit: contain;
+  }
+
   .Project_title {
     font-size: 3vw;
   }
@@ -4330,6 +4416,19 @@ mobile .mobileNavbar__Conainer {
     grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
   }
 
+  .EA_PlacementInformationContainer__MainHeading {
+    font-size: 3vw;
+  }
+
+  .EA_PlacementInformationContainer__SecondaryHeading {
+    width: 60%;
+    font-size: 2.8vw;
+  }
+
+  .EA_newBatchInformation_mainheading {
+    font-size: 2vw;
+  }
+
   .FormContainer {
     width: 95%;
   }
@@ -4559,12 +4658,29 @@ mobile .mobileNavbar__Conainer {
     height: 18vh;
   }
 
+  .EA_newBatchInformatioNContainer {
+    flex-direction: column;
+  }
+
   .EA__Job_PathMainContainer {
     display: none;
   }
 
+  .EA_newBatchInformation_details,
+  .EA_newBatchInformation_mainheading {
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .EA_newBatchInformation_mainheading {
+    font-size: 3vw;
+    margin-bottom: 20px;
+  }
+
   .ProjectInformationContainer {
     flex-direction: column;
+    gap: 20px;
   }
 
   .CurrentProject__leftContainer {
@@ -4600,6 +4716,19 @@ mobile .mobileNavbar__Conainer {
 
   .Right_FounderDetailsBox_TernaryHeading {
     font-size: 3.5vw;
+  }
+
+  .EA_PlacementInformationContainer__MainHeading {
+    font-size: 4vw;
+  }
+
+  .EA_PlacementInformationContainer__SecondaryHeading {
+    width: 80%;
+    font-size: 3vw;
+  }
+
+  .EA_placementCompanyPostersContainer {
+    grid-template-columns: repeat(3, 100px);
   }
 }
 
@@ -4883,6 +5012,21 @@ mobile .mobileNavbar__Conainer {
     font-size: 5vw;
   }
 
+  .EA_PlacementInformationContainer__MainHeading {
+    font-size: 5vw;
+  }
+
+  .EA_PlacementInformationContainer__SecondaryHeading {
+    width: 95%;
+    font-size: 4vw;
+  }
+
+  .EA_placementCompanyPostersContainer {
+    grid-template-columns: repeat(3, 100px);
+  }
+  .EA_newBatchInformation_mainheading {
+    font-size: 5vw;
+  }
   .Project_title {
     font-size: 3vw;
   }
@@ -5121,6 +5265,20 @@ mobile .mobileNavbar__Conainer {
     font-size: 3.8vw;
   }
 
+  .EA_PlacementInformationContainer__MainHeading {
+    font-size: 6vw;
+    width: 95%;
+    margin: 5px auto;
+  }
+
+  .EA_PlacementInformationContainer__SecondaryHeading {
+    font-size: 5vw;
+  }
+
+  .EA_placementCompanyPostersContainer {
+    grid-template-columns: repeat(2, 120px);
+  }
+
   .Project_title {
     font-size: 6vw;
   }
@@ -5151,6 +5309,7 @@ mobile .mobileNavbar__Conainer {
   .popup__formItemBox {
     padding: 0.5em;
   }
+
   .PBMentors__TopCOntainer_Heading {
     font-size: 8vw;
   }

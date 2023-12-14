@@ -241,12 +241,13 @@ function HomePage() {
                                                 <p className="mentorProfile_MentorPost">{mentor.mentorPost}</p>
                                             </div>
                                             <p className="PB_mentorDesc">{mentor.mentorDesc}</p>
-                                            <img src={mentor.mentorCompanyPoster}alt="CompanyLOGO" className='PB_mentorCompany' />
+                                            <img src={mentor.mentorCompanyPoster} alt="CompanyLOGO" className='PB_mentorCompany' />
                                         </div>
                                     })
                                 }
                             </div>
                         </div>
+                        
                         <Footer></Footer>
                         <div className='helpContainer__Message'>Need Help? Talk to us on  079 6900 2111 or Request Callback</div>
                     </section>

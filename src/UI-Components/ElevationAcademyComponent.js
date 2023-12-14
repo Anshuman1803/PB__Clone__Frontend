@@ -11,11 +11,15 @@ function ElevationAcademyComponent() {
   const [PopupFormVisible, setPopupForm] = useState(false);
   const [ShowSyllabus, setShowSyllabus] = useState(false);
   const [Syllabus, setSyllabus] = useState([])
+  const [Mentors, setMentors] = useState([])
   const [isLoading, setIsloading] = useState(false)
   useEffect(() => {
     setIsloading(true)
     axios.get("https://pb-clone.onrender.com/getSyllabus").then((response) => {
       setSyllabus(response.data)
+    });
+    axios.get("https://pb-clone.onrender.com/mentors").then((response) => {
+      setMentors(response.data)
       setIsloading(false)
     })
     window.scrollTo(0, 0);
@@ -37,6 +41,45 @@ function ElevationAcademyComponent() {
   const closeFun = (e) => {
     setPopupForm(false)
   }
+
+  const placementCompanyImages = [
+    {
+      "SRC": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/Paytm_Logo.webp"
+    },
+    {
+      "SRC": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/info_edge_Logo.svg"
+    },
+    {
+      "SRC": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/SAP_Logo.svg"
+    },
+    {
+      "SRC": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/Intuit_Logo.svg"
+    },
+    {
+      "SRC": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/Microsoft_Logo.svg"
+    },
+    {
+      "SRC": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/Thoughtfocus_Logo.svg"
+    },
+    {
+      "SRC": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/99_Games_Logo.svg"
+    },
+    {
+      "SRC": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/Samsung_Logo.svg"
+    },
+    {
+      "SRC": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/Amazon_Logo.svg"
+    },
+    {
+      "SRC": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/Buy_Hatke_logo.svg"
+    },
+    {
+      "SRC": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/Intel_logo.svg"
+    },
+    {
+      "SRC": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/Teksystems_logo.svg"
+    },
+  ]
   return (
     <>
       {
@@ -253,6 +296,61 @@ function ElevationAcademyComponent() {
                 })
               }
             </div>
+
+            <div className="EA_newBatchInformatioNContainer">
+              <div className="EA_newBatchInformation_details">
+                <p className="EA_newBatchInformation_mainheading">
+                Upcoming Elevation Academy Batch - Full Stack Web Development Career - May 2023 now OPEN
+                </p>
+                <button className='applyNowButton' onClick={handleShowForm}>Apply Now</button>
+              </div>
+              <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/batches-back.webp" alt="Poster" className='EA_newBatchPoster' />
+
+            </div>
+
+            <div className="EA_PlacementInformationContainer">
+              <h2 className="EA_PlacementInformationContainer__MainHeading">Where our Students are placed</h2>
+              <h3 className="EA_PlacementInformationContainer__SecondaryHeading">"You guarantee hard work, We guarantee placements"</h3>
+              <div className="EA_placementCompanyPostersContainer">
+                {
+                  placementCompanyImages.map((images, index) => {
+                    return <div className='EA_PlacementCompany_Cards' key={index + 7781} >
+                      <img src={images.SRC} alt="PlacmentCompany" className='EA_PlacementCompnayImages' />
+                    </div>
+                  })
+                }
+
+
+
+              </div>
+
+            </div>
+
+            <div className="HomePage__PBMentors_CardContainer">
+              <div className="PBMentors__TopCOntainer">
+                <h2 className='PBMentors__TopCOntainer_Heading'>Our Mentors</h2>
+                <p className='PBMentors__TopCOntainer_SecondaryHeading'>Learn directly from experienced software developers and master full stack.</p>
+              </div>
+
+              <div className="PBMentors__BottomCOntainer">
+
+                {
+                  Mentors.filter((mentor, index) => index <=2).map((mentor)=>{
+                    return <div className="PB_mentorBottom_Cards" key={mentor._id}>
+                    <div className="MentorProfileBox">
+                      <img src={mentor.mentorCoverPoster} alt="COver" className='mentorProfile_coverImg' />
+                      <img src={mentor.mentorPfoile} alt="Profile" className='mentorProfile_ProfileImage' />
+                      <p className="mentorProfile_mentorName">{mentor.mentorName}</p>
+                      <p className="mentorProfile_MentorPost">{mentor.mentorPost}</p>
+                    </div>
+                    <p className="PB_mentorDesc">{mentor.mentorDesc}</p>
+                    <img src={mentor.mentorCompanyPoster} alt="CompanyLOGO" className='PB_mentorCompany' />
+                  </div>
+                  })
+                }
+              </div>
+            </div>
+
 
           </section>
           <Footer></Footer>
