@@ -3093,7 +3093,7 @@ mobile .mobileNavbar__Conainer {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 3em auto;
+  margin: 3em auto 0em auto;
   border-top: 0.5px solid #c2c2c2;
   border-bottom: 0.5px solid #c2c2c2;
   padding: 1em 0em;
