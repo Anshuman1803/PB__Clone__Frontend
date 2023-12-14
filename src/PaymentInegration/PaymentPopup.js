@@ -20,7 +20,7 @@ function PaymentPopup({ propFun }) {
     }
 
     const createOrder = (data) => {
-        return fetch("http://localhost:5000/api/orders", {
+        return fetch("https://pb-clone.onrender.com/api/orders", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -33,7 +33,7 @@ function PaymentPopup({ propFun }) {
             .then((order) => order.id);
     };
     const onApprove = (data) => {
-        return fetch("http://localhost:5000/api/orders", {
+        return fetch("https://pb-clone.onrender.com/api/orders", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

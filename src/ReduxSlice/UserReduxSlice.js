@@ -36,7 +36,7 @@ const UserReduxSlice = createSlice({
             state.UserDetails.myOrder.push(action.payload);
             localStorage.setItem("myOrder", JSON.stringify(state.UserDetails.myOrder));
 
-            axios.post("http://localhost:5000/storeData",action.payload).then((response)=>{
+            axios.post("https://pb-clone.onrender.com/storeData",action.payload).then((response)=>{
                 console.log(response.data)
             })
         }
