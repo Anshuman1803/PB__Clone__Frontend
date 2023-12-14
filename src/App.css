@@ -908,6 +908,99 @@ mobile .mobileNavbar__Conainer {
   width: 100%;
 }
 
+.HomePage__PBMentors_CardContainer {
+  padding: 2em 0em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.PBMentors__TopCOntainer {
+  width: 100%;
+  padding: 1em 0em;
+  text-align: center;
+}
+
+.PBMentors__TopCOntainer_Heading {
+  color: #3e4041;
+  font-size: 3vw;
+  font-weight: 500;
+}
+
+.PBMentors__TopCOntainer_SecondaryHeading {
+  margin: 7px auto;
+  color: #858585;
+  font-size: 1.5vw;
+  width: 50%;
+}
+
+.PBMentors__BottomCOntainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+
+.PB_mentorBottom_Cards {
+  width: 100%;
+  height: 400px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 3px 36px rgba(0, 0, 0, .1607843137254902);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  padding-bottom: 1em;
+}
+
+.MentorProfileBox {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.347);
+  padding-bottom: 1em;
+  position: relative;
+}
+
+.mentorProfile_coverImg {
+  width: 100%;
+}
+
+.mentorProfile_ProfileImage {
+  width: 120px;
+  position: absolute;
+  top: 45px;
+  left: 10px;
+}
+
+.mentorProfile_mentorName {
+  margin-top: 50px;
+  color: #424242;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 15px;
+  text-transform: capitalize;
+}
+
+.mentorProfile_MentorPost {
+  font-size: 14px;
+  color: #858585;
+  margin-left: 15px;
+}
+
+.PB_mentorDesc {
+  padding: 0px 10px;
+  color: #4f4f53;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.PB_mentorCompany {
+  margin: 0px auto;
+}
 
 /* User Form Contaienr & LOGIN AND REGISTER */
 .UserForm__MainContainer {
@@ -3864,6 +3957,15 @@ mobile .mobileNavbar__Conainer {
   .Right_FounderDetailsBox_TernaryHeading {
     font-size: 2.5vw;
   }
+
+  .PBMentors__TopCOntainer_Heading {
+    font-size: 4vw;
+  }
+
+  .PBMentors__TopCOntainer_SecondaryHeading {
+    font-size: 3vw;
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -4487,6 +4589,7 @@ mobile .mobileNavbar__Conainer {
   .CurrentProjectPoster {
     width: 70%;
   }
+
   .Right_FounderDetailsBox_MainHeading {
     font-size: 5vw;
   }
@@ -4606,8 +4709,22 @@ mobile .mobileNavbar__Conainer {
   .formPopup__ProfessioanlButtonContainer {
     width: 100%;
   }
-  .Left__FouderDetailsCard{
+
+  .Left__FouderDetailsCard {
     width: 95%;
+  }
+
+  .PBMentors__TopCOntainer_Heading {
+    font-size: 6vw;
+  }
+
+  .PBMentors__TopCOntainer_SecondaryHeading {
+    font-size: 4vw;
+
+  }
+
+  .PBMentors__BottomCOntainer {
+    grid-template-columns: repeat(auto-fit, minmax(90%, 90%));
   }
 }
 
@@ -5033,5 +5150,18 @@ mobile .mobileNavbar__Conainer {
 
   .popup__formItemBox {
     padding: 0.5em;
+  }
+  .PBMentors__TopCOntainer_Heading {
+    font-size: 8vw;
+  }
+
+  .PBMentors__TopCOntainer_SecondaryHeading {
+    font-size: 5vw;
+
+  }
+
+  .PBMentors__BottomCOntainer {
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(95%, 95%));
   }
 }
