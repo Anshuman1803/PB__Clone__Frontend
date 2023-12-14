@@ -17,6 +17,7 @@ function ElevationAcademyComponent() {
     setIsloading(true)
     axios.get("https://pb-clone.onrender.com/getSyllabus").then((response) => {
       setSyllabus(response.data)
+      setIsloading(false)
     });
     axios.get("https://pb-clone.onrender.com/mentors").then((response) => {
       setMentors(response.data)

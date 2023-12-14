@@ -287,6 +287,36 @@ function CompetitiveProgrammingComponent() {
           {IsPaymentClick && <PaymentPopup propFun={canclePayment} />}
         </div>
 
+
+        <div className="CP_bottomCard_Container">
+          <h3 className="CP_bottomContainer_heading">By The End Of This Course, You Will Be Able To</h3>
+
+          <div className="CP_bottomCard_Box">
+
+            <div className="CP__Bottom_card">
+              <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/1.webp" alt="Number" className='CP_bottomCard_imges'/>
+            <p className="CP_bottomCard_DESC">4 star and above in CodeChef</p>
+            </div>
+
+            <div className="CP__Bottom_card">
+              <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/2.webp" alt="Number" className='CP_bottomCard_imges'/>
+            <p className="CP_bottomCard_DESC">Crack contests like Facebook Hacker Cup, Google Kickstart, ACM ICPC</p>
+            </div>
+
+            <div className="CP__Bottom_card">
+              <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/3.webp" alt="Number" className='CP_bottomCard_imges'/>
+            <p className="CP_bottomCard_DESC">Candidate master and above in CodeForces</p>
+            </div>
+
+            <div className="CP__Bottom_card">
+              <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/4.webp" alt="Number" className='CP_bottomCard_imges'/>
+            <p className="CP_bottomCard_DESC">Specialist and above in SPOJ.com</p>
+            </div>
+
+
+          </div>
+        </div>
+
         <Footer></Footer>
       </section>
       <div className='helpContainer__Message'>Need Help? Talk to us on  079 6900 2111 or Request Callback</div>

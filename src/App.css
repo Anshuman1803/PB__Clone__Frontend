@@ -2267,7 +2267,7 @@ mobile .mobileNavbar__Conainer {
   border: 0.25px solid hsla(0, 0%, 43.9%, .2);
   left: 50%;
   top: -54%;
-  height: 4vh;
+  height: 30px;
 }
 
 .EA_programSyllabus_numbering {
@@ -3085,6 +3085,78 @@ mobile .mobileNavbar__Conainer {
   width: 70%;
 }
 
+.CP_bottomCard_Container {
+  width: 80%;
+  background: #fff;
+  box-shadow: 0px 0px 8px rgba(168, 164, 164, .1607843137);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3em auto;
+  border-top: 0.5px solid #c2c2c2;
+  border-bottom: 0.5px solid #c2c2c2;
+  padding: 1em 0em;
+}
+
+.CP_bottomContainer_heading {
+  color: #3f3c3c;
+  font-weight: 500;
+  font-size: 2vw;
+  margin-bottom: 1em;
+}
+
+.CP_bottomCard_Box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 35%);
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+  padding: 3em 0em;
+}
+
+.CP__Bottom_card {
+  min-height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5em;
+  border-radius: 5px;
+  gap: 20px;
+}
+
+.CP__Bottom_card:nth-child(1) {
+  border-bottom: 4px solid #df3897;
+  border-right: 4px solid #df3897;
+}
+
+.CP__Bottom_card:nth-child(2) {
+  border-bottom: 4px solid #0398d3;
+  border-right: 4px solid #0398d3;
+}
+
+.CP__Bottom_card:nth-child(3) {
+  border-bottom: 4px solid #7914a3;
+  border-right: 4px solid #7914a3;
+}
+
+.CP__Bottom_card:nth-child(4) {
+  border-bottom: 4px solid #eb9a00;
+  border-right: 4px solid #eb9a00;
+}
+
+.CP_bottomCard_imges {
+  width: 40px;
+}
+
+.CP_bottomCard_DESC {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: #151414;
+  width: calc(100% - 40px);
+}
 
 /* FullStackProgramCompo */
 .FullStackProgramCompo__mainContainer {
@@ -4273,6 +4345,18 @@ mobile .mobileNavbar__Conainer {
     width: 100%;
   }
 
+  .CP_bottomContainer_heading {
+    font-size: 3vw;
+  }
+
+  .CP_bottomCard_Container {
+    width: 100%;
+  }
+
+  .CP_bottomCard_DESC {
+    font-size: 1.8vw;
+  }
+
   .StatesBox_title {
     font-size: 5vw;
   }
@@ -4603,6 +4687,13 @@ mobile .mobileNavbar__Conainer {
 
   .CP_mentorInforContainer_Heading:nth-child(2) {
     font-size: 3.5vw;
+  }
+  .CP_bottomCard_DESC{
+    font-size: 3vw;
+  }
+
+  .CP_bottomCard_Box {
+    grid-template-columns: 95%;
   }
 
   .StatesBox_title {
@@ -4963,7 +5054,14 @@ mobile .mobileNavbar__Conainer {
     margin: 20px auto;
     text-align: center;
   }
-
+  .CP_bottomCard_DESC{
+    font-size: 4vw;
+  }
+  .CP_bottomContainer_heading{
+    font-size: 4vw;
+    width: 95%;
+    text-align: center;
+  }
   .StatesBox_title {
     font-size: 7vw;
   }
@@ -5024,9 +5122,11 @@ mobile .mobileNavbar__Conainer {
   .EA_placementCompanyPostersContainer {
     grid-template-columns: repeat(3, 100px);
   }
+
   .EA_newBatchInformation_mainheading {
     font-size: 5vw;
   }
+
   .Project_title {
     font-size: 3vw;
   }
@@ -5322,5 +5422,9 @@ mobile .mobileNavbar__Conainer {
   .PBMentors__BottomCOntainer {
     padding: 0;
     grid-template-columns: repeat(auto-fit, minmax(95%, 95%));
+  }
+
+  .CP_bottomContainer_heading{
+   font-size: 6vw;
   }
 }
