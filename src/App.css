@@ -781,17 +781,134 @@ mobile .mobileNavbar__Conainer {
   grid-column: 2/3;
   grid-row: 2/3;
 }
-.HomePageBottom__posterContainer{
+
+.HomePageBottom__posterContainer {
   width: 100%;
-min-height: 50px;
+  min-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 30px 0px;
 }
-.homePageBottom_poster{
+
+.homePageBottom_poster {
   width: 100%;
 }
+
+.homePage__FounderDetails_container {
+  background: #fdf0d7;
+  display: flex;
+  justify-content: center;
+  padding: 2em 0em;
+  gap: 10px;
+  position: relative;
+}
+
+.Left_FounderDeatilsBox {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 0em;
+}
+
+.Left__FouderDetailsCard {
+  width: 420px;
+  min-height: 550px;
+  background: #fff;
+  box-shadow: 0 3px 32px rgba(0, 0, 0, .1607843137254902);
+  text-align: center;
+  position: relative;
+  border-radius: 4px;
+  padding: 1em;
+}
+
+.Left__FounderDetailsCard_posterContainer {
+  width: 100%;
+  height: 350px;
+  background: url("./Assets/FoundPosterBG.svg");
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.FounderDetails_cardPoster {
+  height: 100%;
+  object-fit: contain;
+}
+
+.FounderDetails_Card_metnorName {
+  color: #f78077;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.FounderDetails_Card_metnorPost {
+  color: #858585;
+  font-size: 18px;
+}
+
+.FounderDetails_MentorPrevCompanyPoster {
+  margin-top: 10px;
+}
+
+.Right_FounderDeatilsBox {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Right_FounderDetailsBox_MainHeading {
+  font-weight: 500;
+  font-size: 2.5vw;
+  color: #f78077;
+  font-weight: 600;
+  width: 90%;
+}
+
+.Right_FounderDetailsBox_SecondaryHeading {
+  color: #858585;
+  font-size: 2vw;
+  font-weight: 500;
+  width: 80%;
+  margin: 1em 0em 0.7em 0em;
+}
+
+.Hompage__hrLINE {
+  margin-top: 20px;
+  border-width: 1px;
+  border-color: #b6b6b6;
+  width: 90%;
+}
+
+.Right_FounderDetailsBox_TernaryHeading {
+  margin: 0.6em 0em;
+  color: #858585;
+  font-size: 1.8vw;
+  font-weight: 500;
+}
+
+.Right_FounderDeatilsBox_KnowMoreButton {
+  margin: 0;
+}
+
+.homePage_KnowMetnor__posterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #bcf2fb;
+  padding: 2em 0em 0em 0em;
+}
+
+.homePage_knowMentors__Poster {
+  object-fit: contain;
+  width: 100%;
+}
+
+
 /* User Form Contaienr & LOGIN AND REGISTER */
 .UserForm__MainContainer {
   background-image: url("https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/blue-background.webp");
@@ -2309,9 +2426,11 @@ min-height: 50px;
   font-size: 29px;
   cursor: pointer;
 }
-.activeProfessional{
+
+.activeProfessional {
   border: 1px solid #00afec;
 }
+
 /*  */
 
 /* Unauthorized Page */
@@ -3731,6 +3850,20 @@ min-height: 50px;
   .EA_programSyllabus_content_heading {
     font-size: 1.6vw;
   }
+
+  .Right_FounderDetailsBox_MainHeading {
+    font-size: 3.5vw;
+    width: 100%;
+  }
+
+  .Right_FounderDetailsBox_SecondaryHeading {
+    font-size: 3vw;
+    width: 100%;
+  }
+
+  .Right_FounderDetailsBox_TernaryHeading {
+    font-size: 2.5vw;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -4128,6 +4261,34 @@ min-height: 50px;
   .EA_ProgramSyllabus_ContentBox {
     justify-content: center;
   }
+
+  .homePage__FounderDetails_container {
+    flex-direction: column;
+  }
+
+  .homePage__FounderDetails_container,
+  .Hompage__hrLINE,
+  .Left_FounderDeatilsBox,
+  .Right_FounderDeatilsBox {
+    width: 100%;
+  }
+
+  .Right_FounderDeatilsBox {
+    padding: 0em 1em;
+  }
+
+  .Right_FounderDetailsBox_MainHeading {
+    font-size: 4vw;
+  }
+
+  .Right_FounderDetailsBox_SecondaryHeading {
+    font-size: 3.5vw;
+  }
+
+  .Right_FounderDetailsBox_TernaryHeading {
+    font-size: 3vw;
+  }
+
 }
 
 @media screen and (max-width: 650px) {
@@ -4326,6 +4487,17 @@ min-height: 50px;
   .CurrentProjectPoster {
     width: 70%;
   }
+  .Right_FounderDetailsBox_MainHeading {
+    font-size: 5vw;
+  }
+
+  .Right_FounderDetailsBox_SecondaryHeading {
+    font-size: 4.5vw;
+  }
+
+  .Right_FounderDetailsBox_TernaryHeading {
+    font-size: 3.5vw;
+  }
 }
 
 @media screen and (max-width: 585px) {
@@ -4424,7 +4596,8 @@ min-height: 50px;
     flex-direction: column;
   }
 
-  .Poup_formItem, .formPopup__ProfessioanlButtonContainer {
+  .Poup_formItem,
+  .formPopup__ProfessioanlButtonContainer {
     margin: 10px 0px;
   }
 
@@ -4432,6 +4605,9 @@ min-height: 50px;
   .Poup_formItem,
   .formPopup__ProfessioanlButtonContainer {
     width: 100%;
+  }
+  .Left__FouderDetailsCard{
+    width: 95%;
   }
 }
 
@@ -4658,6 +4834,18 @@ min-height: 50px;
   .EA_ProgramSyllabus_plusICon {
     right: 5px;
   }
+
+  .Right_FounderDetailsBox_MainHeading {
+    font-size: 7vw;
+  }
+
+  .Right_FounderDetailsBox_SecondaryHeading {
+    font-size: 6vw;
+  }
+
+  .Right_FounderDetailsBox_TernaryHeading {
+    font-size: 5.5vw;
+  }
 }
 
 @media screen and (max-width: 376px) {
@@ -4678,6 +4866,7 @@ min-height: 50px;
   .StepContainer__SecondArrowImages {
     right: 60vw;
   }
+
   .CourseType__CardArrowButton {
     width: 40px;
     height: 40px;
@@ -4841,7 +5030,8 @@ min-height: 50px;
   .EA_ProgramSyllabus_Content {
     font-size: 14px;
   }
-  .popup__formItemBox{
+
+  .popup__formItemBox {
     padding: 0.5em;
   }
 }

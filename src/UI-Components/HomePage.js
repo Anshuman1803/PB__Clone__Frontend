@@ -20,14 +20,14 @@ import CarrerThirdIMg from '../Assets/CarrerImgThree.svg'
 import CurriculumICON from '../Assets/industry_vetted_curriculum.svg'
 import PlacementICON from '../Assets/exclusive_placement.svg'
 import ProjectICON from '../Assets/real_life_projects.svg'
-// import FounderImg from './Assets/mamta_mentor.png'
+import FounderImg from '../Assets/mamta_mentor.png'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
 
 function HomePage() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [])
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, [])
     return (
         <section className='homeSection__Container'>
 
@@ -173,6 +173,39 @@ function HomePage() {
                 <h3 className='LeftContainer__headingText headingFirst'>Are you an Experienced Professional willing to Switch?</h3>
 
             </div>
+
+            <div className="homePage_KnowMentorMainContainer">
+                <div className="homePage__FounderDetails_container">
+
+                    <div className="Left_FounderDeatilsBox">
+                        <div className="Left__FouderDetailsCard">
+                            <div className="Left__FounderDetailsCard_posterContainer">
+                                <img src={FounderImg} alt="Mamta_mentor" className='FounderDetails_cardPoster' />
+                            </div>
+                            <p className='FounderDetails_Card_metnorName'>Mamta Kumari</p>
+                            <p className='FounderDetails_Card_metnorPost'>Co-Founder PrepBytes</p>
+                            <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Amazon%2Bsam.png" alt="CompanyPoster" className='FounderDetails_MentorPrevCompanyPoster' />
+                        </div>
+                    </div>
+                    <div className="Right_FounderDeatilsBox">
+                        <h2 className="Right_FounderDetailsBox_MainHeading">Attend Free sessions with industry experts and get valuable guidance</h2>
+                        <h3 className="Right_FounderDetailsBox_SecondaryHeading">How to master competitive coding?</h3>
+                        <button className='Right_FounderDeatilsBox_KnowMoreButton knowMoreButton'>Know More</button>
+                        <hr className='Hompage__hrLINE' />
+                        <h4 className='Right_FounderDetailsBox_TernaryHeading'>How to crack coding interviews?</h4>
+                        <button className='Right_FounderDeatilsBox_KnowMoreButton knowMoreButton'>Know More</button>
+
+                    </div>
+                </div>
+      
+                <div className='homePage_KnowMetnor__posterContainer'>
+                    <picture >
+                        <source media="(max-width: 475px)" srcSet="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Selected_pool_of(mobile)+(1).webp" />
+                        <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/Bespoke+Mentors.webp" alt="Mentors" className='homePage_knowMentors__Poster' />
+                    </picture>
+                </div>
+            </div>
+
 
             <div className="HomePageBottom__posterContainer">
                 <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/you_could_be_the(web_1366).png" alt="Poster" className='homePageBottom_poster' />
