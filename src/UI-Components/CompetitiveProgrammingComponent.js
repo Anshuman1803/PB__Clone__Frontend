@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react'
 
 import Footer from './Footer'
 import PaymentPopup from '../PaymentInegration/PaymentPopup';
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addTempCourse } from '../ReduxSlice/UserReduxSlice'
 function CompetitiveProgrammingComponent() {
-  const dispatch = useDispatch();
+  const { userEmail } = useSelector((state) => state.AppUser.UserDetails.User[0]);
   const [IsPaymentClick, setIsPaymentClick] = useState(false);
+  const dispatch = useDispatch();
 
   const [tempData, setTempData] = useState({
     "testID": 1,
@@ -14,7 +15,8 @@ function CompetitiveProgrammingComponent() {
     "testTitle": "master-competitive-programming",
     "testCategory": 'Programming-Course',
     "testPrice": 25000,
-    "testDate": "1st May"
+    "testDate": "1st May",
+    "userEmail": userEmail
   });
 
   useEffect(() => {
@@ -294,23 +296,23 @@ function CompetitiveProgrammingComponent() {
           <div className="CP_bottomCard_Box">
 
             <div className="CP__Bottom_card">
-              <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/1.webp" alt="Number" className='CP_bottomCard_imges'/>
-            <p className="CP_bottomCard_DESC">4 star and above in CodeChef</p>
+              <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/1.webp" alt="Number" className='CP_bottomCard_imges' />
+              <p className="CP_bottomCard_DESC">4 star and above in CodeChef</p>
             </div>
 
             <div className="CP__Bottom_card">
-              <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/2.webp" alt="Number" className='CP_bottomCard_imges'/>
-            <p className="CP_bottomCard_DESC">Crack contests like Facebook Hacker Cup, Google Kickstart, ACM ICPC</p>
+              <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/2.webp" alt="Number" className='CP_bottomCard_imges' />
+              <p className="CP_bottomCard_DESC">Crack contests like Facebook Hacker Cup, Google Kickstart, ACM ICPC</p>
             </div>
 
             <div className="CP__Bottom_card">
-              <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/3.webp" alt="Number" className='CP_bottomCard_imges'/>
-            <p className="CP_bottomCard_DESC">Candidate master and above in CodeForces</p>
+              <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/3.webp" alt="Number" className='CP_bottomCard_imges' />
+              <p className="CP_bottomCard_DESC">Candidate master and above in CodeForces</p>
             </div>
 
             <div className="CP__Bottom_card">
-              <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/4.webp" alt="Number" className='CP_bottomCard_imges'/>
-            <p className="CP_bottomCard_DESC">Specialist and above in SPOJ.com</p>
+              <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/4.webp" alt="Number" className='CP_bottomCard_imges' />
+              <p className="CP_bottomCard_DESC">Specialist and above in SPOJ.com</p>
             </div>
 
 

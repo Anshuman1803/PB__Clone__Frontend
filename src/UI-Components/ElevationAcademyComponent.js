@@ -4,7 +4,7 @@ import poster from "../Assets/FormPopupImgae.svg"
 import axios from 'axios'
 import Loader from './Loader';
 import PaymentPopup from '../PaymentInegration/PaymentPopup';
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addTempCourse } from '../ReduxSlice/UserReduxSlice'
 
 function ElevationAcademyComponent() {
@@ -366,7 +366,6 @@ function ElevationAcademyComponent() {
 export default ElevationAcademyComponent
 
 
-
 function PopupForm({ closeFun }) {
 
   const [IstermChecked, setTermChecked] = useState(false)
@@ -374,6 +373,7 @@ function PopupForm({ closeFun }) {
   const [IsUserLoading, setIsUserLoading] = useState(false);
   const [ShowPaymentPopup, setShowPaymentPopup] = useState(false);
   const dispatch = useDispatch();
+  const { userEmail } = useSelector((state) => state.AppUser.UserDetails.User[0]);
   const [userDetails, setUserDetails] = useState({
     "userName": "",
     "userEmail": "",
@@ -388,6 +388,7 @@ function PopupForm({ closeFun }) {
     "testTitle": "Elevation Academy",
     "testCategory": "Full-Stack-Web Development",
     "testPrice": 70000,
+    "userEmail" : userEmail,
   }
 
   const canclePayment = (e) => {

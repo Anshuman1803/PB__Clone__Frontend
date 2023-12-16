@@ -6,17 +6,17 @@ import Loader from '../Loader';
 function Dashboard() {
   const [activeSidebar, setActivesidebar] = useState(false);
   const [testData, setTestData] = useState([])
-  const { isLoggedIN } = useSelector((state) => state.AppUser.UserDetails);
+  const { isLoggedIN, User } = useSelector((state) => state.AppUser.UserDetails);
 
 
   const [isLoading, setIsloading] = useState(false)
   useEffect(() => {
     setIsloading(true)
-    axios.get("https://pb-clone.onrender.com/getTestdata").then((response) => {
+    axios.get(`https://pb-clone.onrender.com/getTestdata/${User[0].userEmail}`).then((response) => {
       setTestData(response.data);
       setIsloading(false)
     })
-  }, [])
+  }, [User])
   return (
     <>
 

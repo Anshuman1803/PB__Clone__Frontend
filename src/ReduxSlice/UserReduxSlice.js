@@ -14,7 +14,6 @@ const UserReduxSlice = createSlice({
     initialState,
     reducers: {
         userLoginAction(state, action) {
-            console.log(action.payload)
             state.UserDetails.User.push(action.payload);
             state.UserDetails.isLoggedIN = true;
             localStorage.setItem("User", JSON.stringify(state.UserDetails.User));
@@ -36,7 +35,6 @@ const UserReduxSlice = createSlice({
         confirmOrder(state, action) {
             state.UserDetails.myOrder.push(action.payload);
             localStorage.setItem("myOrder", JSON.stringify(state.UserDetails.myOrder));
-
             axios.post("https://pb-clone.onrender.com/storeData",action.payload).then((response)=>{
                 console.log(response.data)
             })

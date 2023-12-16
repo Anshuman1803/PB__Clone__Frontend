@@ -3,12 +3,14 @@ import Footer from './Footer'
 import axios from 'axios'
 import Loader from './Loader';
 import PaymentPopup from '../PaymentInegration/PaymentPopup';
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 import { addTempCourse } from '../ReduxSlice/UserReduxSlice'
+
 function MockTestComponent() {
   const [isLoading, setIsloading] = useState(false)
   const [TestData, setTestData] = useState([]);
   const [IsPaymentClick, setIsPaymentClick] = useState(false)
+  const { userEmail } = useSelector((state) => state.AppUser.UserDetails.User[0]);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,6 +27,7 @@ function MockTestComponent() {
   }
   const handleBuyNow = (e, testData) => {
     e.preventDefault();
+    testData.userEmail = userEmail
     dispatch(addTempCourse(testData));
     setIsPaymentClick(true)
   }

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import PaymentPopup from '../PaymentInegration/PaymentPopup';
-import { useDispatch } from 'react-redux'
 import { addTempCourse } from '../ReduxSlice/UserReduxSlice'
 import FSPbottomPoster from "../Assets/FSP_Bottom.webp"
 import Footer from './Footer'
+import { useDispatch, useSelector } from 'react-redux'
 function FullStackProgramComponent() {
+    const { userEmail } = useSelector((state) => state.AppUser.UserDetails.User[0]);
   const dispatch = useDispatch();
   const [IsPaymentClick, setIsPaymentClick] = useState(false);
   const [tempData, setTempData] = useState({
@@ -13,7 +14,8 @@ function FullStackProgramComponent() {
     "testTitle": "Full Stack Web Development",
     "testCategory": 'Web-Development',
     "testPrice": 30000,
-    "testDate": "1st May"
+    "testDate": "1st May",
+    "userEmail" : userEmail
   });
   useEffect(() => {
     window.scrollTo(0, 0);
