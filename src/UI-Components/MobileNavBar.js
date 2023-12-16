@@ -12,7 +12,7 @@ function MobileNavBar({handleHideNav}) {
 
             {isLoggedIN && <div className="mobileNav__UserBox">
                 <p className="mobileNav__userGreeting"><i className="fa-solid fa-user"></i>Hi {User[0]?.userName}</p>
-                <Link to="/user/dashboard" className='mobileNav__userGreeting'><i className="fa-solid fa-chalkboard-user"></i>My Dashboard</Link>
+                <Link to="/user/dashboard" className='mobileNav__userGreeting' onClick={handleHideNav}><i className="fa-solid fa-chalkboard-user"></i>My Dashboard</Link>
             </div>}
 
             <Link onClick={handleHideNav} to="/mockTest" className='mobilenav__items'>Mock Tests</Link>
@@ -29,8 +29,9 @@ function MobileNavBar({handleHideNav}) {
 
             {isLoggedIN ? <Link className='mobilenav__items Mobilenav__loginSignUpLink' onClick={() => {
                 dispatch(userLogOut());
+                handleHideNav();
                 navigateTO("/")
-            }}>Log Out</Link> : <Link to="/user/login" className='mobilenav__items Mobilenav__loginSignUpLink'>Login/SignUp</Link>}
+            }}>Log Out</Link> : <Link to="/user/login" className='mobilenav__items Mobilenav__loginSignUpLink' onClick={handleHideNav}>Login/SignUp</Link>}
         </aside>
     )
 }

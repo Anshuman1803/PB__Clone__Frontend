@@ -31,7 +31,7 @@ function UserLogin() {
       axios.post("https://pb-clone.onrender.com/user/login", userDetails).then((response) => {
 
         if (response.data.UserDetails) {
-          dispath(userLoginAction(response.data.UserDetails))
+          dispath(userLoginAction(response.data.UserDetails[0]))
           navigateTO("/");
           setIsUserLoading(false);
           return

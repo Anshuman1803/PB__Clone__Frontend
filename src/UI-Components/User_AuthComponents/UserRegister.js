@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import axios from "axios"
+import { useNavigate } from 'react-router-dom'
+import { userLoginAction } from '../../ReduxSlice/UserReduxSlice'
+import { useDispatch } from 'react-redux'
 function UserRegister() {
+  const navigateTO = useNavigate();
+  const dispath = useDispatch();
   const [IsUserLoading, setIsUserLoading] = useState(false);
   const [IstermChecked, setTermChecked] = useState(false)
   // const [IsShowPass, setIsShowPass] = useState(false);
@@ -36,6 +41,12 @@ function UserRegister() {
       axios.post("https://pb-clone.onrender.com/user/register", userDetails).then((response) => {
         setMessage({ "msgVal": response.data.resMsg })
         setIsUserLoading(false)
+        if (response.data.resMsg === "Registred Successfully.") {
+          dispath(userLoginAction(response.data.userDetails))
+          navigateTO("/");
+          setIsUserLoading(false);
+          return
+        }
       })
     }
   }

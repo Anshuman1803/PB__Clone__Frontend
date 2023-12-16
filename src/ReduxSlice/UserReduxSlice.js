@@ -14,7 +14,8 @@ const UserReduxSlice = createSlice({
     initialState,
     reducers: {
         userLoginAction(state, action) {
-            state.UserDetails.User.push(action.payload[0]);
+            console.log(action.payload)
+            state.UserDetails.User.push(action.payload);
             state.UserDetails.isLoggedIN = true;
             localStorage.setItem("User", JSON.stringify(state.UserDetails.User));
         },
