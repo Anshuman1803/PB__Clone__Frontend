@@ -75,8 +75,9 @@ function HeaderComponent() {
                             </div>
                             {
                                 useDropDownShow && <div className="dropDownContainer userDropownContainer">
-                                    <Link to="/user/dashboard" className='dropDownContainer__Item'><i className="fa-solid fa-chalkboard-user"> </i>My Dashboard </Link>
+                                    <Link to="/user/dashboard" className='dropDownContainer__Item' onClick={()=> setUserDropDown(false)}><i className="fa-solid fa-chalkboard-user"> </i>My Dashboard </Link>
                                     <span style={{ "color": "#ff8787" }} className='dropDownContainer__Item' onClick={() => {
+                                        setUserDropDown(false)
                                         dispatch(userLogOut());
                                         navigateTO("/")
                                     }} >Log Out</span>
