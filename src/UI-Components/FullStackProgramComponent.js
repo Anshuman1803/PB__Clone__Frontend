@@ -5,7 +5,7 @@ import FSPbottomPoster from "../Assets/FSP_Bottom.webp"
 import Footer from './Footer'
 import { useDispatch, useSelector } from 'react-redux'
 function FullStackProgramComponent() {
-    const { userEmail } = useSelector((state) => state.AppUser.UserDetails.User[0]);
+  const { User } = useSelector((state) => state.AppUser.UserDetails);
   const dispatch = useDispatch();
   const [IsPaymentClick, setIsPaymentClick] = useState(false);
   const [tempData, setTempData] = useState({
@@ -15,7 +15,7 @@ function FullStackProgramComponent() {
     "testCategory": 'Web-Development',
     "testPrice": 30000,
     "testDate": "1st May",
-    "userEmail" : userEmail
+    "userEmail": User.length > 0 ? User[0].userEmail : ""
   });
   useEffect(() => {
     window.scrollTo(0, 0);

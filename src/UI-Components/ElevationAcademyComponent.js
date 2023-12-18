@@ -373,7 +373,7 @@ function PopupForm({ closeFun }) {
   const [IsUserLoading, setIsUserLoading] = useState(false);
   const [ShowPaymentPopup, setShowPaymentPopup] = useState(false);
   const dispatch = useDispatch();
-  const { userEmail } = useSelector((state) => state.AppUser.UserDetails.User[0]);
+  const { User } = useSelector((state) => state.AppUser.UserDetails);
   const [userDetails, setUserDetails] = useState({
     "userName": "",
     "userEmail": "",
@@ -388,7 +388,7 @@ function PopupForm({ closeFun }) {
     "testTitle": "Elevation Academy",
     "testCategory": "Full-Stack-Web Development",
     "testPrice": 70000,
-    "userEmail" : userEmail,
+    "userEmail": User.length > 0 ? User[0].userEmail : ""
   }
 
   const canclePayment = (e) => {

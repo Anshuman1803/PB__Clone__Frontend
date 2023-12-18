@@ -5,10 +5,10 @@ import PaymentPopup from '../PaymentInegration/PaymentPopup';
 import { useDispatch, useSelector } from 'react-redux'
 import { addTempCourse } from '../ReduxSlice/UserReduxSlice'
 function CompetitiveProgrammingComponent() {
-  const { userEmail } = useSelector((state) => state.AppUser.UserDetails.User[0]);
+  const { User } = useSelector((state) => state.AppUser.UserDetails);
   const [IsPaymentClick, setIsPaymentClick] = useState(false);
   const dispatch = useDispatch();
-
+  
   const [tempData, setTempData] = useState({
     "testID": 1,
     "testImg": 'https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/homepage/master_competetive_pgm.webp',
@@ -16,8 +16,9 @@ function CompetitiveProgrammingComponent() {
     "testCategory": 'Programming-Course',
     "testPrice": 25000,
     "testDate": "1st May",
-    "userEmail": userEmail
+    "userEmail": User.length > 0 ? User[0].userEmail : ""
   });
+  console.log(tempData)
 
   useEffect(() => {
     window.scrollTo(0, 0);
