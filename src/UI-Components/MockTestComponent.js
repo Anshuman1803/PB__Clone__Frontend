@@ -10,7 +10,7 @@ function MockTestComponent() {
   const [isLoading, setIsloading] = useState(false)
   const [TestData, setTestData] = useState([]);
   const [IsPaymentClick, setIsPaymentClick] = useState(false)
-  const { userEmail } = useSelector((state) => state.AppUser.UserDetails.User[0]);
+  const { User } = useSelector((state) => state.AppUser.UserDetails);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -27,7 +27,7 @@ function MockTestComponent() {
   }
   const handleBuyNow = (e, testData) => {
     e.preventDefault();
-    testData.userEmail = userEmail
+    testData.userEmail = User.length > 0 ? User[0].userEmail : ""
     dispatch(addTempCourse(testData));
     setIsPaymentClick(true)
   }
